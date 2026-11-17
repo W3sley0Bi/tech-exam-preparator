@@ -1,6 +1,6 @@
 # AZ-900 Prep
 
-Exam prep for AZ-900 (exam Tue 17 Nov 2026, ready target Sat 14 Nov).
+Exam prep for AZ-900 (Microsoft Azure Fundamentals).
 
 | Folder | What |
 |---|---|

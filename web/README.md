@@ -3,7 +3,7 @@
 Plain HTML/CSS/JS study app for AZ-900 (Microsoft Azure Fundamentals).
 
 - **Questions**: 472 exam questions scraped from examprepper.co (AZ-900, exam id 63)
-- **Notes**: your Obsidian notes (`AZ-900`)
+- **Notes**: Obsidian markdown notes in `notes/` (images in `notes/img/`)
 - **Official**: skills outline from the Microsoft Learn study guide (skills measured as of July 20, 2026)
 
 ## Learn path (start here)
@@ -38,7 +38,7 @@ Progress is saved in the browser's localStorage. Use Dashboard → Export/Import
 ## Rebuild after editing notes
 
 ```bash
-cp /path/to/vault/*.md notes/
+# optional: copy updated notes from your Obsidian vault into notes/
 python3 build.py
 ```
 
