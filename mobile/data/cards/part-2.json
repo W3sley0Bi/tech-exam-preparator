@@ -1,0 +1,437 @@
+[
+ {
+  "skill": "microsoft-entra-id-and-entra-domain-serv",
+  "facts": [
+   "Microsoft Entra ID (formerly Azure AD) is cloud identity and access management; no domain controllers or VMs needed",
+   "Entra ID uses REST/HTTPS protocols: SAML, OAuth, OpenID Connect - not Kerberos/NTLM/LDAP",
+   "Microsoft Entra Domain Services gives managed domain services: domain join, group policy, LDAP, Kerberos/NTLM",
+   "Entra Connect syncs on-premises AD identities to Entra ID (hybrid identity)",
+   "Entra ID is the identity provider for Microsoft 365, Azure portal and SaaS apps; supports dynamic group membership"
+  ],
+  "pick": [
+   {
+    "when": "Sync on-premises AD accounts to the cloud",
+    "use": "Microsoft Entra Connect"
+   },
+   {
+    "when": "Legacy app needs LDAP/Kerberos/domain join without running DCs",
+    "use": "Microsoft Entra Domain Services"
+   },
+   {
+    "when": "Cloud identity provider for SaaS and Azure",
+    "use": "Microsoft Entra ID"
+   },
+   {
+    "when": "Collect and analyze Entra ID security events automatically",
+    "use": "Microsoft Sentinel"
+   }
+  ],
+  "traps": [
+   "Entra ID is not Active Directory in the cloud: no group policy, LDAP or Kerberos (that is Domain Services)",
+   "Entra Connect syncs identities; it does not provide domain join"
+  ]
+ },
+ {
+  "skill": "authentication-sso-mfa-passwordless",
+  "facts": [
+   "Authentication proves identity; authorization decides what you can access",
+   "SSO: sign in once with one credential to access multiple apps/resources",
+   "MFA needs two or more of: something you know, have, or are",
+   "Passwordless options: Windows Hello for Business, Microsoft Authenticator app, FIDO2 security keys",
+   "Self-service password reset (SSPR) lets users reset passwords without admin help; Entra Password Protection blocks weak passwords"
+  ],
+  "pick": [
+   {
+    "when": "Sign in once to access many apps",
+    "use": "Single sign-on (SSO)"
+   },
+   {
+    "when": "Biometric or PIN tied to the device, no password",
+    "use": "Windows Hello for Business"
+   },
+   {
+    "when": "Physical USB/NFC key for passwordless sign-in",
+    "use": "FIDO2 security key"
+   },
+   {
+    "when": "Users reset own forgotten password",
+    "use": "Self-service password reset"
+   },
+   {
+    "when": "Require a second verification factor",
+    "use": "Multi-factor authentication"
+   }
+  ],
+  "traps": [
+   "Password plus security question is not MFA - both are 'something you know'",
+   "SSO does not add a second factor"
+  ]
+ },
+ {
+  "skill": "external-identities",
+  "facts": [
+   "External identities let people outside your org access your resources using their own identity",
+   "B2B collaboration: invite guest users (partners) who use their own credentials to access your apps",
+   "B2C: Azure AD B2C is a customer identity and access management service for customer-facing apps",
+   "Microsoft Entra External ID is the newer offering covering workforce collaboration and customer scenarios",
+   "Guests sign in with their own work, school or social identity; you control their access"
+  ],
+  "pick": [
+   {
+    "when": "Partners/vendors access your resources with their own credentials",
+    "use": "B2B collaboration (guest users)"
+   },
+   {
+    "when": "Customers sign up/sign in to your consumer app with social accounts",
+    "use": "Azure AD B2C / External ID for customers"
+   }
+  ],
+  "traps": [
+   "B2B is for partners/guests; B2C is for customers of your own apps"
+  ]
+ },
+ {
+  "skill": "microsoft-entra-conditional-access",
+  "facts": [
+   "Conditional Access evaluates signals (user, location, device, app, risk) and applies if-then policies",
+   "Typical decisions: allow access, block access, or require MFA / compliant device / password change",
+   "Policies are enforced after first-factor authentication completes",
+   "Requires Microsoft Entra ID P1 or higher; risk-based policies need P2 (Identity Protection)",
+   "Security defaults are the free baseline that enforces MFA for everyone when not using Conditional Access"
+  ],
+  "pick": [
+   {
+    "when": "Require MFA only when sign-in is from outside the corporate network",
+    "use": "Conditional Access"
+   },
+   {
+    "when": "Block sign-ins from specific countries",
+    "use": "Conditional Access (location condition)"
+   },
+   {
+    "when": "Allow access only from compliant devices",
+    "use": "Conditional Access (device condition)"
+   }
+  ],
+  "traps": [
+   "Conditional Access is not the first line of defence: it applies after the first factor",
+   "It is not RBAC: it controls sign-in, not resource permissions"
+  ]
+ },
+ {
+  "skill": "azure-role-based-access-control-rbac",
+  "facts": [
+   "RBAC grants access through role assignments: security principal + role definition + scope",
+   "Scope hierarchy: management group > subscription > resource group > resource; permissions inherit downward",
+   "Built-in roles: Owner (full + assign access), Contributor (full, no assigning access), Reader (view only)",
+   "User Access Administrator manages user access to resources only",
+   "RBAC is allow-based and additive; it is enforced by Azure Resource Manager"
+  ],
+  "pick": [
+   {
+    "when": "Create/manage all resources but cannot grant access",
+    "use": "Contributor"
+   },
+   {
+    "when": "Full access including delegating access",
+    "use": "Owner"
+   },
+   {
+    "when": "View resources only",
+    "use": "Reader"
+   },
+   {
+    "when": "Manage who has access to Azure resources only",
+    "use": "User Access Administrator"
+   }
+  ],
+  "traps": [
+   "Contributor cannot assign roles - only Owner/User Access Administrator can",
+   "RBAC controls resource actions; Azure Policy controls resource properties"
+  ]
+ },
+ {
+  "skill": "zero-trust",
+  "facts": [
+   "Zero Trust assumes breach: never trust, always verify, regardless of network location",
+   "Guiding principles: verify explicitly, use least-privilege access, assume breach",
+   "Every request is authenticated and authorized using all available data points",
+   "Six pillars: identities, devices, applications, data, infrastructure, networks",
+   "Replaces the idea of a trusted corporate network perimeter"
+  ],
+  "pick": [
+   {
+    "when": "Verify every access request explicitly, even from inside the network",
+    "use": "Zero Trust model"
+   },
+   {
+    "when": "Limit user access with just-in-time and just-enough access",
+    "use": "Least privilege (Zero Trust principle)"
+   }
+  ],
+  "traps": [
+   "Zero Trust is not perimeter/firewall-only security",
+   "Defense in depth is layered; Zero Trust is verify-everything - distinct models"
+  ]
+ },
+ {
+  "skill": "defense-in-depth-model",
+  "facts": [
+   "Defense in depth uses multiple layers so a breach of one layer does not compromise others",
+   "Layers outside-in: physical security, identity and access, perimeter, network, compute, application, data",
+   "Physical security is the outermost layer; data is the innermost, what attackers ultimately want",
+   "Identity & access layer: SSO, MFA, Conditional Access, audit events",
+   "Perimeter: DDoS protection and firewalls; Network: segmentation, NSGs, deny by default"
+  ],
+  "pick": [
+   {
+    "when": "Protect against DDoS at the network edge",
+    "use": "Perimeter layer (Azure DDoS Protection)"
+   },
+   {
+    "when": "Limit connectivity between resources with NSGs",
+    "use": "Network layer"
+   },
+   {
+    "when": "Enforce MFA and Conditional Access",
+    "use": "Identity and access layer"
+   }
+  ],
+  "traps": [
+   "Layers are ordered physical -> data; do not put identity after data",
+   "DDoS protection belongs to perimeter, not network or compute"
+  ]
+ },
+ {
+  "skill": "microsoft-defender-for-cloud",
+  "facts": [
+   "Defender for Cloud is a cloud security posture management (CSPM) and workload protection (CWPP) tool",
+   "Secure Score measures your security posture; higher score means fewer risks, with recommendations to improve",
+   "Gives security recommendations and threat alerts for Azure, on-premises and other clouds (multicloud)",
+   "Free tier covers CSPM basics; enhanced Defender plans add workload threat protection",
+   "Not a SIEM: Microsoft Sentinel is the SIEM/SOAR service"
+  ],
+  "pick": [
+   {
+    "when": "Assess and improve security posture with Secure Score",
+    "use": "Microsoft Defender for Cloud"
+   },
+   {
+    "when": "Threat protection for servers, storage, SQL workloads",
+    "use": "Microsoft Defender for Cloud plans"
+   },
+   {
+    "when": "Collect and analyze security events across the enterprise (SIEM/SOAR)",
+    "use": "Microsoft Sentinel"
+   }
+  ],
+  "traps": [
+   "Defender for Cloud is not Sentinel: posture/protection vs SIEM/SOAR",
+   "Secure Score is about posture, not cost or compliance reporting"
+  ]
+ },
+ {
+  "skill": "factors-that-can-affect-costs",
+  "facts": [
+   "Cost factors: resource type, consumption, maintenance, geography/region, network traffic, subscription type",
+   "Inbound (ingress) data transfer is free; outbound (egress) data is charged; data between zones/regions may be charged",
+   "Reservations (1 or 3 years) save up to ~72% on VMs vs pay-as-you-go",
+   "Azure Hybrid Benefit uses existing Windows Server/SQL licenses with Software Assurance to cut costs",
+   "Spot VMs use spare capacity at big discounts but can be evicted; auto-scaling and right-sizing reduce spend"
+  ],
+  "pick": [
+   {
+    "when": "Reduce VM cost with a 1- or 3-year commitment",
+    "use": "Azure Reservations"
+   },
+   {
+    "when": "Reuse on-premises Windows Server licenses in Azure",
+    "use": "Azure Hybrid Benefit"
+   },
+   {
+    "when": "Cheap interruptible workloads",
+    "use": "Azure Spot VMs"
+   },
+   {
+    "when": "Match resource size to actual use",
+    "use": "Right-size / auto-scaling"
+   }
+  ],
+  "traps": [
+   "Inbound data transfer is free; outbound is what costs money",
+   "Hybrid Benefit needs Software Assurance or qualifying subscriptions"
+  ]
+ },
+ {
+  "skill": "pricing-calculator",
+  "facts": [
+   "Pricing calculator estimates the cost of Azure services you plan to deploy, before deployment",
+   "You configure services, region, tier and quantity to get a cost estimate you can export or share",
+   "TCO calculator (compare on-premises to Azure) has been retired; Pricing calculator is the estimating tool",
+   "It does not track actual spending; Microsoft Cost Management does that",
+   "Available publicly at azure.microsoft.com; no sign-in required"
+  ],
+  "pick": [
+   {
+    "when": "Estimate monthly cost of planned Azure resources",
+    "use": "Azure Pricing calculator"
+   },
+   {
+    "when": "Compare on-premises costs vs Azure migration",
+    "use": "TCO calculator (legacy) / Azure Migrate business case"
+   }
+  ],
+  "traps": [
+   "Pricing calculator is forecasting before deploy, not analysing past spend",
+   "Do not pick Cost Management for pre-deployment estimates"
+  ]
+ },
+ {
+  "skill": "cost-management-capabilities",
+  "facts": [
+   "Microsoft Cost Management monitors, allocates and optimizes costs for Azure (and AWS) in one place",
+   "Cost analysis shows current and past spend by resource, resource group, tag, subscription",
+   "Budgets set spending thresholds and trigger alerts when forecast or actual cost reaches them",
+   "Budgets alert; they do not stop or block resource usage by default",
+   "Azure Advisor gives cost recommendations (e.g. shut down idle VMs, buy reservations)"
+  ],
+  "pick": [
+   {
+    "when": "Analyze and break down current spend",
+    "use": "Cost analysis in Microsoft Cost Management"
+   },
+   {
+    "when": "Get notified when spend crosses a threshold",
+    "use": "Budgets / cost alerts"
+   },
+   {
+    "when": "Recommendations to lower costs",
+    "use": "Azure Advisor"
+   },
+   {
+    "when": "Estimate cost of planned deployment",
+    "use": "Pricing calculator"
+   }
+  ],
+  "traps": [
+   "A budget does not cap or stop spending - it only alerts",
+   "Cost Management shows actual costs; Pricing calculator estimates future costs"
+  ]
+ },
+ {
+  "skill": "purpose-of-tags",
+  "facts": [
+   "Tags are name/value metadata pairs applied to resources, resource groups and subscriptions",
+   "Used to organize resources for billing, cost reporting, ownership, environment (e.g. Dept=Finance)",
+   "Tags are not inherited by default; use Azure Policy to enforce or inherit them",
+   "A resource can have up to 50 tags",
+   "Tags can filter resources and group costs in Cost Management"
+  ],
+  "pick": [
+   {
+    "when": "Group costs by department or project in billing reports",
+    "use": "Tags"
+   },
+   {
+    "when": "Require a tag on every new resource",
+    "use": "Azure Policy"
+   },
+   {
+    "when": "Identify resources by environment or owner",
+    "use": "Tags"
+   }
+  ],
+  "traps": [
+   "Tags do not control access (that is RBAC) and are not inherited automatically",
+   "Tags do not prevent deletion (that is resource locks)"
+  ]
+ },
+ {
+  "skill": "microsoft-purview",
+  "facts": [
+   "Microsoft Purview is a family of data governance, risk and compliance solutions",
+   "Unified data governance: map data estate, classify data, track lineage, data catalog",
+   "Risk and compliance: information protection, data loss prevention, eDiscovery, audit, insider risk",
+   "Service Trust Portal provides Microsoft compliance docs, audit reports and certifications",
+   "Compliance Manager (Purview) gives a compliance score and improvement actions"
+  ],
+  "pick": [
+   {
+    "when": "Govern and catalog data across on-premises, multicloud and SaaS",
+    "use": "Microsoft Purview"
+   },
+   {
+    "when": "Get Microsoft audit reports and compliance documentation",
+    "use": "Service Trust Portal"
+   },
+   {
+    "when": "Assess compliance posture with a score",
+    "use": "Purview Compliance Manager"
+   }
+  ],
+  "traps": [
+   "Purview governs data; Defender for Cloud secures workloads",
+   "Service Trust Portal is documentation, not a policy enforcement tool"
+  ]
+ },
+ {
+  "skill": "azure-policy",
+  "facts": [
+   "Azure Policy enforces organizational standards and assesses compliance of resources at scale",
+   "Evaluates resource properties against rules; effects include Audit, Deny, Append, DeployIfNotExists",
+   "Initiatives group multiple policy definitions to achieve a goal",
+   "Applied at management group, subscription, resource group scope; inherited downward",
+   "Can remediate existing noncompliant resources; Azure Blueprints is being deprecated in favor of Template Specs/Deployment Stacks"
+  ],
+  "pick": [
+   {
+    "when": "Restrict resource creation to certain regions",
+    "use": "Azure Policy"
+   },
+   {
+    "when": "Require a tag on all resources",
+    "use": "Azure Policy"
+   },
+   {
+    "when": "Group several policies into one compliance goal",
+    "use": "Policy initiative"
+   },
+   {
+    "when": "Control which actions a user can perform",
+    "use": "Azure RBAC"
+   }
+  ],
+  "traps": [
+   "Policy governs resources; RBAC governs users - an Owner can still be blocked by Policy",
+   "Policy is not a lock: it does not stop deletion"
+  ]
+ },
+ {
+  "skill": "resource-locks",
+  "facts": [
+   "Resource locks prevent accidental deletion or modification of resources",
+   "Two lock types: CanNotDelete (read and modify allowed) and ReadOnly (no modify, no delete)",
+   "Locks apply to all users regardless of role, including Owners",
+   "Locks are inherited by child resources from subscription/resource group scope",
+   "To delete a locked resource you must first remove the lock (needs Microsoft.Authorization/locks permissions)"
+  ],
+  "pick": [
+   {
+    "when": "Prevent accidental deletion but still allow changes",
+    "use": "CanNotDelete lock"
+   },
+   {
+    "when": "Make resource completely unchangeable",
+    "use": "ReadOnly lock"
+   },
+   {
+    "when": "Stop users from deleting a resource group's contents",
+    "use": "Lock at resource group scope"
+   }
+  ],
+  "traps": [
+   "Locks override RBAC: even Owners cannot delete until the lock is removed",
+   "ReadOnly can block changes you expect to work (e.g. listing keys on a storage account)"
+  ]
+ }
+]

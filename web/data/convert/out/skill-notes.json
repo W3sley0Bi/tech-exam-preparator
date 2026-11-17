@@ -1,0 +1,428 @@
+{
+ "define-cloud-computing": [
+  {
+   "doc": "concepts",
+   "h": "whats-cloud-computing"
+  }
+ ],
+ "describe-the-shared-responsibility-model": [
+  {
+   "doc": "concepts",
+   "h": "share-responsability-model"
+  }
+ ],
+ "define-cloud-models-including-public-pri": [
+  {
+   "doc": "concepts",
+   "h": "define-cloud-models"
+  }
+ ],
+ "identify-appropriate-use-cases-for-each-": [
+  {
+   "doc": "concepts",
+   "h": "define-cloud-models"
+  }
+ ],
+ "describe-the-consumption-based-model": [
+  {
+   "doc": "concepts",
+   "h": "describe-the-consumption-based"
+  }
+ ],
+ "compare-cloud-pricing-models": [
+  {
+   "doc": "concepts",
+   "h": "describe-the-consumption-based"
+  }
+ ],
+ "describe-serverless": [
+  {
+   "doc": "architecture",
+   "h": "azure-functions"
+  }
+ ],
+ "high-availability-and-scalability": [
+  {
+   "doc": "concepts",
+   "h": "describe-the-benefits-of-high-availability-and-scalability-in-the-cloud"
+  },
+  {
+   "doc": "concepts",
+   "h": "high-availability"
+  },
+  {
+   "doc": "concepts",
+   "h": "scalability"
+  }
+ ],
+ "reliability-and-predictability": [
+  {
+   "doc": "concepts",
+   "h": "describe-the-benefits-of-reliability-and-predictability-in-the-cloud"
+  }
+ ],
+ "security-and-governance": [
+  {
+   "doc": "concepts",
+   "h": "describe-the-benefits-of-security-and-governance-in-the-cloud"
+  }
+ ],
+ "manageability": [
+  {
+   "doc": "concepts",
+   "h": "describe-the-benefits-of-manageability-in-the-cloud"
+  }
+ ],
+ "infrastructure-as-a-service-iaas": [
+  {
+   "doc": "concepts",
+   "h": "infrastructure-as-a-service"
+  },
+  {
+   "doc": "concepts",
+   "h": "cloud-services-types-iaas-paas-saas"
+  }
+ ],
+ "platform-as-a-service-paas": [
+  {
+   "doc": "concepts",
+   "h": "platform-as-a-service"
+  },
+  {
+   "doc": "concepts",
+   "h": "cloud-services-types-iaas-paas-saas"
+  }
+ ],
+ "software-as-a-service-saas": [
+  {
+   "doc": "concepts",
+   "h": "software-as-a-service"
+  },
+  {
+   "doc": "concepts",
+   "h": "cloud-services-types-iaas-paas-saas"
+  }
+ ],
+ "use-cases-for-iaas-paas-and-saas": [
+  {
+   "doc": "concepts",
+   "h": "cloud-services-types-iaas-paas-saas"
+  }
+ ],
+ "regions-region-pairs-and-sovereign-regio": [
+  {
+   "doc": "architecture",
+   "h": "azure-physical-infrastructure"
+  }
+ ],
+ "availability-zones": [
+  {
+   "doc": "architecture",
+   "h": "azure-physical-infrastructure"
+  }
+ ],
+ "azure-datacenters": [
+  {
+   "doc": "architecture",
+   "h": "azure-physical-infrastructure"
+  }
+ ],
+ "resources-and-resource-groups": [
+  {
+   "doc": "architecture",
+   "h": "resources-and-resource-groups"
+  }
+ ],
+ "subscriptions": [
+  {
+   "doc": "architecture",
+   "h": "subscriptions"
+  }
+ ],
+ "management-groups": [
+  {
+   "doc": "architecture",
+   "h": "azure-management-groups"
+  }
+ ],
+ "hierarchy-of-resource-groups-subscriptio": [
+  {
+   "doc": "architecture",
+   "h": "azure-management-infrastructure"
+  },
+  {
+   "doc": "architecture",
+   "h": "azure-management-groups"
+  }
+ ],
+ "compare-compute-types-containers-vms-fun": [
+  {
+   "doc": "architecture",
+   "h": "azure-virtual-machines"
+  },
+  {
+   "doc": "architecture",
+   "h": "azure-containers"
+  },
+  {
+   "doc": "architecture",
+   "h": "azure-functions"
+  }
+ ],
+ "vm-options-vms-vm-scale-sets-availabilit": [
+  {
+   "doc": "architecture",
+   "h": "azure-virtual-machines"
+  },
+  {
+   "doc": "architecture",
+   "h": "azure-virtual-desktop"
+  }
+ ],
+ "resources-required-for-virtual-machines": [
+  {
+   "doc": "architecture",
+   "h": "azure-virtual-machines"
+  }
+ ],
+ "application-hosting-web-apps-containers-": [
+  {
+   "doc": "architecture",
+   "h": "application-hosting-options"
+  },
+  {
+   "doc": "architecture",
+   "h": "azure-app-service"
+  }
+ ],
+ "virtual-networking-vnets-subnets-peering": [
+  {
+   "doc": "architecture",
+   "h": "azure-virtual-networking"
+  },
+  {
+   "doc": "architecture",
+   "h": "connect-virtual-networks"
+  },
+  {
+   "doc": "architecture",
+   "h": "describe-azure-dns"
+  }
+ ],
+ "public-and-private-endpoints": [
+  {
+   "doc": "architecture",
+   "h": "internet-communications"
+  },
+  {
+   "doc": "architecture",
+   "h": "communicate-between-azure-resources"
+  }
+ ],
+ "compare-azure-storage-services": [
+  {
+   "doc": "architecture",
+   "h": "azure-storage-services"
+  }
+ ],
+ "storage-tiers": [
+  {
+   "doc": "architecture",
+   "h": "azure-storage-accounts"
+  }
+ ],
+ "redundancy-options": [
+  {
+   "doc": "architecture",
+   "h": "azure-storage-redundancy"
+  }
+ ],
+ "storage-account-options-and-storage-type": [
+  {
+   "doc": "architecture",
+   "h": "azure-storage-accounts"
+  }
+ ],
+ "moving-files-azcopy-storage-explorer-azu": [
+  {
+   "doc": "architecture",
+   "h": "azure-movement-options"
+  }
+ ],
+ "migration-azure-migrate-azure-data-box": [
+  {
+   "doc": "architecture",
+   "h": "azure-data-migration-options"
+  }
+ ],
+ "microsoft-entra-id-and-entra-domain-serv": [
+  {
+   "doc": "architecture",
+   "h": "describe-azure-directory-services"
+  }
+ ],
+ "authentication-sso-mfa-passwordless": [
+  {
+   "doc": "architecture",
+   "h": "describe-azure-authentication-methods"
+  }
+ ],
+ "external-identities": [
+  {
+   "doc": "architecture",
+   "h": "describe-azure-external-identities"
+  }
+ ],
+ "microsoft-entra-conditional-access": [
+  {
+   "doc": "architecture",
+   "h": "describe-azure-conditional-access"
+  }
+ ],
+ "azure-role-based-access-control-rbac": [
+  {
+   "doc": "architecture",
+   "h": "describe-azure-role-based-access-control"
+  }
+ ],
+ "zero-trust": [
+  {
+   "doc": "architecture",
+   "h": "describe-zero-trust-model"
+  }
+ ],
+ "defense-in-depth-model": [
+  {
+   "doc": "architecture",
+   "h": "describe-defense-in-depth"
+  }
+ ],
+ "microsoft-defender-for-cloud": [
+  {
+   "doc": "architecture",
+   "h": "describe-microsoft-defender-for-cloud"
+  }
+ ],
+ "factors-that-can-affect-costs": [
+  {
+   "doc": "management",
+   "h": "describe-factors-that-can-affect-costs-in-azure"
+  },
+  {
+   "doc": "management",
+   "h": "describe-cost-optimization-options-in-azure"
+  }
+ ],
+ "pricing-calculator": [
+  {
+   "doc": "management",
+   "h": "explore-the-pricing-calculator"
+  }
+ ],
+ "cost-management-capabilities": [
+  {
+   "doc": "management",
+   "h": "describe-the-microsoft-cost-management-tool"
+  }
+ ],
+ "purpose-of-tags": [
+  {
+   "doc": "management",
+   "h": "describe-the-purpose-of-tags"
+  }
+ ],
+ "microsoft-purview": [
+  {
+   "doc": "management",
+   "h": "describe-the-purpose-of-microsoft-purview"
+  },
+  {
+   "doc": "management",
+   "h": "describe-the-purpose-of-the-service-trust-portal"
+  }
+ ],
+ "azure-policy": [
+  {
+   "doc": "management",
+   "h": "describe-the-purpose-of-azure-policy"
+  }
+ ],
+ "resource-locks": [
+  {
+   "doc": "management",
+   "h": "describe-the-purpose-of-resource-locks"
+  }
+ ],
+ "azure-portal": [
+  {
+   "doc": "management",
+   "h": "describe-tools-for-interacting-with-azure"
+  }
+ ],
+ "cloud-shell-azure-cli-azure-powershell": [
+  {
+   "doc": "management",
+   "h": "describe-tools-for-interacting-with-azure"
+  }
+ ],
+ "azure-arc": [
+  {
+   "doc": "management",
+   "h": "describe-the-purpose-of-azure-arc"
+  }
+ ],
+ "infrastructure-as-code-iac": [
+  {
+   "doc": "management",
+   "h": "arm-templates"
+  },
+  {
+   "doc": "management",
+   "h": "bicep"
+  },
+  {
+   "doc": "management",
+   "h": "describe-features-and-tools-for-managing-and-deploying-azure-resources"
+  }
+ ],
+ "azure-resource-manager-arm-and-arm-templ": [
+  {
+   "doc": "management",
+   "h": "describe-azure-resource-manager-and-azure-arm-templates"
+  },
+  {
+   "doc": "management",
+   "h": "arm-templates"
+  }
+ ],
+ "azure-advisor": [
+  {
+   "doc": "management",
+   "h": "describe-the-purpose-of-azure-advisor"
+  }
+ ],
+ "azure-service-health": [
+  {
+   "doc": "management",
+   "h": "describe-azure-service-health"
+  }
+ ],
+ "azure-monitor-log-analytics-alerts-appli": [
+  {
+   "doc": "management",
+   "h": "describe-azure-monitor"
+  },
+  {
+   "doc": "management",
+   "h": "azure-log-analytics"
+  },
+  {
+   "doc": "management",
+   "h": "azure-monitor-alerts"
+  }
+ ],
+ "slas-and-composite-slas": [],
+ "service-lifecycle-preview-and-general-av": [],
+ "azure-support-plans": [],
+ "retired-or-renamed-services-blueprints-a": []
+}

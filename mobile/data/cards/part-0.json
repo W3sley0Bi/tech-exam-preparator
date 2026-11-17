@@ -1,0 +1,452 @@
+[
+ {
+  "skill": "define-cloud-computing",
+  "facts": [
+   "Cloud computing = delivery of computing services over the internet (compute, storage, databases, networking, AI, IoT).",
+   "Public cloud avoids upfront hardware purchase: minimizes CapEx and ongoing datacenter operational costs.",
+   "Elasticity: scale resources up or down quickly as demand changes.",
+   "Cloud Adoption Framework for Azure stages: Strategy, Plan, Ready, Adopt (Migrate/Innovate), Govern, Manage.",
+   "First CAF stage is Define strategy."
+  ],
+  "pick": [
+   {
+    "when": "Extra resources while minimizing CapEx and OpEx",
+    "use": "Public cloud (Azure)"
+   },
+   {
+    "when": "First stage of Cloud Adoption Framework",
+    "use": "Define strategy"
+   }
+  ],
+  "traps": [
+   "CAF first stage is Strategy, not Plan or Ready.",
+   "Public cloud does not remove your responsibility for data and identities."
+  ]
+ },
+ {
+  "skill": "describe-the-shared-responsibility-model",
+  "facts": [
+   "Customer ALWAYS responsible for: data/information, devices, accounts and identities.",
+   "Provider ALWAYS responsible for: physical datacenter, physical network, physical hosts.",
+   "Varies by model: OS, network controls, applications, identity and directory infrastructure.",
+   "Customer responsibility order, most to least: On-premises, IaaS, PaaS, SaaS.",
+   "In SaaS, customer still owns data, accounts/identities and device access; provider runs the rest."
+  ],
+  "pick": [
+   {
+    "when": "Physical security of datacenter",
+    "use": "Cloud provider"
+   },
+   {
+    "when": "Data, accounts, identities in any model",
+    "use": "Customer"
+   },
+   {
+    "when": "Patch the OS on a VM (IaaS)",
+    "use": "Customer"
+   },
+   {
+    "when": "Patch the OS in PaaS/SaaS",
+    "use": "Cloud provider"
+   }
+  ],
+  "traps": [
+   "Responsibility shared in SaaS: data, accounts, devices, identity - not the OS or app.",
+   "Physical hosts are never the customer's, even in IaaS."
+  ]
+ },
+ {
+  "skill": "define-cloud-models-including-public-pri",
+  "facts": [
+   "Public cloud: owned and operated by a third party; hardware shared between multiple tenants; no CapEx.",
+   "Private cloud: used by a single organization; hosted in own datacenter or by a third party; you keep the hardware.",
+   "Hybrid cloud: combines public and private (on-premises) environments.",
+   "You do not have to start with private to build hybrid; public plus on-premises is hybrid.",
+   "Multicloud: using multiple public cloud providers.",
+   "Azure Arc manages resources across on-premises, multicloud and edge; Azure VMware Solution moves VMware workloads to Azure."
+  ],
+  "pick": [
+   {
+    "when": "Hardware owned by third party, shared by multiple tenants",
+    "use": "Public cloud"
+   },
+   {
+    "when": "Burst capacity while keeping sensitive data on-premises",
+    "use": "Hybrid cloud"
+   },
+   {
+    "when": "Single organization, own datacenter",
+    "use": "Private cloud"
+   },
+   {
+    "when": "Manage on-premises and other-cloud servers from Azure",
+    "use": "Azure Arc"
+   },
+   {
+    "when": "Move VMware VMs from datacenter to Azure",
+    "use": "Azure VMware Solution"
+   }
+  ],
+  "traps": [
+   "Private cloud still means you maintain the datacenter; cannot close it.",
+   "Hybrid does not require migrating from private first."
+  ]
+ },
+ {
+  "skill": "identify-appropriate-use-cases-for-each-",
+  "facts": [
+   "Public: no CapEx, pay-as-you-go, rapid scaling, minimal maintenance of hardware.",
+   "Private: full control, strict compliance or data-residency needs, legacy systems that cannot move.",
+   "Hybrid: temporary demand spikes (burst to public) and extra security layers for sensitive data.",
+   "Hybrid allows keeping sensitive data on-premises while using public cloud for other workloads.",
+   "Multicloud: avoid vendor lock-in or use best service from each provider."
+  ],
+  "pick": [
+   {
+    "when": "Handle temporary increase in demand",
+    "use": "Hybrid cloud"
+   },
+   {
+    "when": "Regulatory need to keep full control of hardware",
+    "use": "Private cloud"
+   },
+   {
+    "when": "Avoid capital expenditure on servers",
+    "use": "Public cloud"
+   },
+   {
+    "when": "Use more than one public provider",
+    "use": "Multicloud"
+   }
+  ],
+  "traps": [
+   "Private cloud has higher cost and fewer cloud benefits, not lower cost."
+  ]
+ },
+ {
+  "skill": "describe-the-consumption-based-model",
+  "facts": [
+   "Consumption-based (pay-as-you-go): pay only for the resources you use; no upfront cost.",
+   "CapEx = upfront spend on physical infrastructure; value depreciates over time.",
+   "OpEx = ongoing spend on services over time; cloud is OpEx.",
+   "Migrating on-premises VMs to Azure pay-as-you-go shifts spending from CapEx to OpEx.",
+   "Consumption model: no upfront cost, no termination fees, stop paying when you stop using, billed per usage (often per second/minute)."
+  ],
+  "pick": [
+   {
+    "when": "Pay only for what you use, no upfront cost",
+    "use": "Consumption-based model / OpEx"
+   },
+   {
+    "when": "Buying servers and building a datacenter",
+    "use": "CapEx"
+   },
+   {
+    "when": "Staff salaries, monthly usage bills",
+    "use": "OpEx"
+   }
+  ],
+  "traps": [
+   "Building datacenter infrastructure is CapEx, not OpEx.",
+   "Moving to Azure pay-as-you-go does not convert OpEx to CapEx."
+  ]
+ },
+ {
+  "skill": "compare-cloud-pricing-models",
+  "facts": [
+   "Pay-as-you-go: no commitment, billed on usage, highest per-unit price, most flexible.",
+   "Reserved Instances: commit 1 or 3 years for VMs and other resources; discount up to ~72%.",
+   "Azure Hybrid Benefit: reuse existing Windows Server/SQL Server licenses with Software Assurance to cut cost.",
+   "Spot VMs: use unused capacity at deep discount; can be evicted; for interruptible workloads.",
+   "Azure Pricing Calculator estimates cost of a planned solution; TCO Calculator compares on-premises vs Azure."
+  ],
+  "pick": [
+   {
+    "when": "Steady 24/7 workload, commit for 1 or 3 years",
+    "use": "Azure Reserved Instances"
+   },
+   {
+    "when": "Reuse on-premises Windows Server license",
+    "use": "Azure Hybrid Benefit"
+   },
+   {
+    "when": "Interruptible batch workload at lowest cost",
+    "use": "Spot VMs"
+   },
+   {
+    "when": "Estimate monthly cost of planned Azure services",
+    "use": "Pricing Calculator"
+   },
+   {
+    "when": "Compare on-premises cost to Azure",
+    "use": "TCO Calculator"
+   }
+  ],
+  "traps": [
+   "Pricing Calculator estimates Azure cost; TCO Calculator compares vs on-premises.",
+   "Spot VMs can be evicted - not for critical workloads."
+  ]
+ },
+ {
+  "skill": "describe-serverless",
+  "facts": [
+   "Serverless: provider manages servers; you focus on code; scales automatically; pay only when code runs.",
+   "Azure Functions: event-driven, run small pieces of code on triggers (HTTP, timer, queue).",
+   "Azure Logic Apps: low-code/no-code workflows with connectors; also serverless.",
+   "Azure Event Grid is a serverless event routing service.",
+   "Servers still exist, but you do not provision or manage them."
+  ],
+  "pick": [
+   {
+    "when": "Run code in response to an event without managing servers",
+    "use": "Azure Functions"
+   },
+   {
+    "when": "Automate email notification workflow by rule, low-code",
+    "use": "Azure Logic Apps"
+   },
+   {
+    "when": "Serverless computing in Azure",
+    "use": "Azure Functions"
+   }
+  ],
+  "traps": [
+   "Functions = code-first; Logic Apps = designer/connector workflows.",
+   "Serverless does not mean no servers; they are abstracted."
+  ]
+ },
+ {
+  "skill": "high-availability-and-scalability",
+  "facts": [
+   "High availability = maximum uptime; guaranteed through SLAs expressed as a percentage.",
+   "Higher SLA (99.99% vs 99.9%) means less allowed downtime; 100% is impractical and costly.",
+   "Vertical scaling (scale up/down): add or remove CPU/RAM on an existing VM.",
+   "Horizontal scaling (scale out/in): add or remove instances; handles increased demand.",
+   "Availability Zones protect against datacenter failure; availability sets protect against rack/host failure within a datacenter.",
+   "Elasticity/autoscale adapts resources automatically to demand."
+  ],
+  "pick": [
+   {
+    "when": "Service stays up if a datacenter fails",
+    "use": "Availability Zones"
+   },
+   {
+    "when": "Increase VM size (more CPU/RAM)",
+    "use": "Vertical scaling"
+   },
+   {
+    "when": "Add more VM instances for more load",
+    "use": "Horizontal scaling"
+   },
+   {
+    "when": "Automatically adjust instance count to demand",
+    "use": "Autoscaling (VM Scale Sets)"
+   },
+   {
+    "when": "Spread VMs across racks inside one datacenter",
+    "use": "Availability set"
+   }
+  ],
+  "traps": [
+   "Zones = separate datacenters; availability sets = same datacenter.",
+   "Each Azure service has its own SLA; composite SLA is lower than individual ones."
+  ]
+ },
+ {
+  "skill": "reliability-and-predictability",
+  "facts": [
+   "Reliability: ability to recover from failures and keep functioning; Azure Well-Architected Framework pillar.",
+   "Region pairs and Availability Zones keep workloads running if one location fails.",
+   "Azure Site Recovery replicates VMs to another region for disaster recovery.",
+   "Predictability covers performance (autoscale, load balancing, HA) and cost.",
+   "Azure Pricing Calculator and Cost Management help forecast spend."
+  ],
+  "pick": [
+   {
+    "when": "Disaster recovery for Azure VMs in another region",
+    "use": "Azure Site Recovery"
+   },
+   {
+    "when": "Keep servers available if a datacenter is offline long-term",
+    "use": "Region pair / replicate to another region"
+   },
+   {
+    "when": "Forecast cloud cost",
+    "use": "Pricing Calculator"
+   }
+  ],
+  "traps": [
+   "Zones protect within a region; region pairs/Site Recovery protect against region loss."
+  ]
+ },
+ {
+  "skill": "security-and-governance",
+  "facts": [
+   "Cloud providers offer built-in security tooling and compliance certifications.",
+   "Governance: use Azure Policy to enforce standards and assess compliance of resources.",
+   "Microsoft Defender for Cloud: posture management and threat protection across workloads.",
+   "IaaS gives most control and most security responsibility; PaaS/SaaS shift more to the provider.",
+   "Cloud supports governance via templates, policies, auditing and role-based access."
+  ],
+  "pick": [
+   {
+    "when": "Enforce organizational standards on resources",
+    "use": "Azure Policy"
+   },
+   {
+    "when": "Assess security posture and protect workloads",
+    "use": "Microsoft Defender for Cloud"
+   }
+  ],
+  "traps": []
+ },
+ {
+  "skill": "manageability",
+  "facts": [
+   "Management OF the cloud: autoscaling, templates/ARM-Bicep deployments, monitoring and alerts, auto-patching.",
+   "Management IN the cloud: portal, CLI, PowerShell, SDKs, APIs, Cloud Shell.",
+   "Templates (ARM/Bicep) deploy consistent environments repeatedly - infrastructure as code.",
+   "Azure Monitor and alerts provide visibility; Azure Advisor gives recommendations.",
+   "Azure Resource Manager is the deployment and management layer for all Azure tools."
+  ],
+  "pick": [
+   {
+    "when": "Deploy many identical custom VMs repeatedly",
+    "use": "ARM template / Bicep"
+   },
+   {
+    "when": "Manage Azure from command line",
+    "use": "Azure CLI / PowerShell / Cloud Shell"
+   }
+  ],
+  "traps": [
+   "Managing cloud resources via portal/CLI is management IN the cloud."
+  ]
+ },
+ {
+  "skill": "infrastructure-as-a-service-iaas",
+  "facts": [
+   "IaaS: provider manages hardware, network connectivity, physical security.",
+   "Customer manages OS, patching, configuration, middleware, apps, data.",
+   "Azure Virtual Machines are the classic IaaS example.",
+   "Most flexible model and most customer management.",
+   "Use for lift-and-shift migration, test/dev environments, and apps needing OS-level control or legacy software."
+  ],
+  "pick": [
+   {
+    "when": "Lift-and-shift of on-premises server",
+    "use": "IaaS (Azure VMs)"
+   },
+   {
+    "when": "Need to install and control the operating system",
+    "use": "IaaS"
+   },
+   {
+    "when": "Legacy app/database moving to cloud",
+    "use": "IaaS"
+   },
+   {
+    "when": "Custom apps with prerequisite software installed",
+    "use": "IaaS (VMs)"
+   }
+  ],
+  "traps": [
+   "Azure SQL Database is PaaS; a SQL Server installed on a VM is IaaS."
+  ]
+ },
+ {
+  "skill": "platform-as-a-service-paas",
+  "facts": [
+   "PaaS: provider also manages OS, middleware, runtime, development tools.",
+   "Customer manages applications and data.",
+   "Examples: Azure App Service, Azure SQL Database, Azure Functions.",
+   "PaaS gives no access to the underlying OS; least admin effort for hosting web apps among VM-vs-PaaS choices.",
+   "Fits development frameworks and analytics/business intelligence."
+  ],
+  "pick": [
+   {
+    "when": "Host web app with minimal administrative effort",
+    "use": "Azure App Service (PaaS)"
+   },
+   {
+    "when": "Managed relational database, no server patching",
+    "use": "Azure SQL Database"
+   },
+   {
+    "when": "Development framework without managing OS",
+    "use": "PaaS"
+   }
+  ],
+  "traps": [
+   "PaaS does not provide OS access; that is IaaS.",
+   "Azure Functions is serverless but also classed as PaaS."
+  ]
+ },
+ {
+  "skill": "software-as-a-service-saas",
+  "facts": [
+   "SaaS: provider manages everything except customer data, identities/access, and device posture.",
+   "Microsoft 365 (Exchange Online, Teams, etc.) is SaaS.",
+   "SaaS requires the least management from the customer.",
+   "Customer only configures the application and manages their data and users.",
+   "Dynamics 365 and Outlook.com are also SaaS."
+  ],
+  "pick": [
+   {
+    "when": "Minimize customer management responsibility",
+    "use": "SaaS"
+   },
+   {
+    "when": "Microsoft 365",
+    "use": "SaaS"
+   },
+   {
+    "when": "Hosted email/CRM used as-is",
+    "use": "SaaS"
+   }
+  ],
+  "traps": [
+   "Still customer-owned in SaaS: data, accounts/identities, devices."
+  ]
+ },
+ {
+  "skill": "use-cases-for-iaas-paas-and-saas",
+  "facts": [
+   "IaaS: Azure Virtual Machines, lift-and-shift, test/dev, full OS control.",
+   "PaaS: Azure App Service, Azure SQL Database; develop and host apps without managing OS.",
+   "SaaS: Microsoft 365, ready-made software over the internet.",
+   "Control and responsibility decrease IaaS > PaaS > SaaS; flexibility decreases too.",
+   "Azure SQL Database = PaaS; SQL Server on a VM = IaaS."
+  ],
+  "pick": [
+   {
+    "when": "Azure Virtual Machines",
+    "use": "IaaS"
+   },
+   {
+    "when": "Azure App Service",
+    "use": "PaaS"
+   },
+   {
+    "when": "Azure SQL Database",
+    "use": "PaaS"
+   },
+   {
+    "when": "Microsoft 365",
+    "use": "SaaS"
+   },
+   {
+    "when": "Lift-and-shift migration",
+    "use": "IaaS"
+   },
+   {
+    "when": "Build and deploy apps without managing servers",
+    "use": "PaaS"
+   }
+  ],
+  "traps": [
+   "Do not classify Azure SQL Database as IaaS.",
+   "Dev frameworks and analytics fit PaaS, not SaaS."
+  ]
+ }
+]

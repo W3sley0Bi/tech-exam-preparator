@@ -1,0 +1,559 @@
+[
+ {
+  "skill": "define-cloud-computing",
+  "sections": [
+   {
+    "title": "Cloud versus on-premises benefits",
+    "points": [
+     "Cloud computing delivers compute, storage, networking and more over the internet, on demand, with pay-as-you-use pricing.",
+     "CapEx (up-front hardware and datacenter spend) shifts to OpEx (ongoing, pay-for-what-you-use spend).",
+     "Resources are provisioned rapidly and capacity scales up or down with demand; adding cloud capacity costs less than expanding a datacenter.",
+     "The provider uses virtualization to serve many customers from shared hardware; you do not need to own physical servers.",
+     "Drawbacks to know: cloud offers fewer custom configuration options than on-premises, and it does not reduce administrative complexity by itself."
+    ],
+    "qs": [
+     306,
+     449,
+     452,
+     464
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   },
+   {
+    "title": "Public cloud and hybrid cloud advantage",
+    "points": [
+     "Public cloud: owned and operated by a provider; hardware is shared by multiple organizations (tenants), each isolated from the others.",
+     "Public cloud is not owned by the public, is not open to every member of the public, and is not crowd-sourced.",
+     "Hybrid cloud: on-premises resources plus public cloud capacity; extends existing resources without buying a whole new datacenter."
+    ],
+    "qs": [
+     419,
+     413
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   },
+   {
+    "title": "Cloud Adoption Framework stages",
+    "points": [
+     "The Microsoft Cloud Adoption Framework for Azure guides adoption in stages: Strategy, Plan, Ready, Adopt, then Govern and Manage.",
+     "Define strategy (business justification and outcomes) comes first; planning, readying the environment, and adopting follow."
+    ],
+    "qs": [
+     450
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/overview"
+   }
+  ]
+ },
+ {
+  "skill": "describe-the-shared-responsibility-model",
+  "sections": [
+   {
+    "title": "Who is always responsible for what",
+    "points": [
+     "Provider always: physical datacenter, hosts and network.",
+     "Customer always: information and data, devices/endpoints, and accounts and identities.",
+     "Identity and directory infrastructure is shared in IaaS, PaaS and SaaS.",
+     "Customer responsibility is highest in IaaS, lower in PaaS, and lowest in SaaS."
+    ],
+    "qs": [
+     367,
+     376,
+     447,
+     284
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   },
+   {
+    "title": "Responsibilities by service model",
+    "points": [
+     "IaaS: customer manages OS, patching, applications and network controls; provider manages hardware and datacenter.",
+     "PaaS: provider manages OS and runtime; customer manages their application code and configuration, and user access; network controls are shared.",
+     "SaaS: provider runs the app, OS and infrastructure; customer configures the service, supplies data and manages access/identity.",
+     "Managed services such as Azure Backup are provider-operated platform services; you configure and use them."
+    ],
+    "qs": [
+     373,
+     377,
+     387,
+     441
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   },
+   {
+    "title": "What moving to Azure VMs removes",
+    "points": [
+     "Moving servers to Azure VMs (IaaS) eliminates hardware replacement and physical server security: the provider owns them.",
+     "Still yours on a VM: OS updates, application data backup and permissions to shared documents."
+    ],
+    "qs": [
+     428
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   }
+  ]
+ },
+ {
+  "skill": "define-cloud-models-including-public-pri",
+  "sections": [
+   {
+    "title": "Public cloud characteristics",
+    "points": [
+     "Public cloud: all hardware is owned by the provider and shared between multiple tenants.",
+     "Characteristics: metered (pay-per-use) pricing, self-service management, no CapEx for hardware; not dedicated hardware.",
+     "An organization fully on the public cloud no longer needs its own datacenter; a private cloud or hybrid cloud still does.",
+     "Public cloud resources are virtual; you cannot add your own physical servers to it."
+    ],
+    "qs": [
+     305,
+     316,
+     317,
+     422
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   },
+   {
+    "title": "Private cloud characteristics",
+    "points": [
+     "Private cloud: resources used by one organization, often in its own datacenter; it gives complete control over resources and security.",
+     "A private cloud does not have to be disconnected from the internet.",
+     "Physical servers can be deployed in a private cloud or the on-premises part of a hybrid cloud, not in the public cloud.",
+     "Scaling a VM in the public cloud adds no capital expenditure for the customer; the provider carries it."
+    ],
+    "qs": [
+     274,
+     432,
+     434
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   },
+   {
+    "title": "Hybrid cloud",
+    "points": [
+     "Hybrid cloud: combines on-premises (or private) resources with public cloud and lets workloads run in either place.",
+     "It requires an internal/on-premises network and a public cloud part; you can reach it by starting with public cloud, not only from a private cloud.",
+     "Typical examples: on-premises and Azure VMs connected together; an Azure web app querying an on-premises SQL Server.",
+     "It can extend internal capacity using public cloud resources."
+    ],
+    "qs": [
+     418,
+     426,
+     435,
+     451,
+     458,
+     460
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   },
+   {
+    "title": "Choosing a cloud model by advantage",
+    "points": [
+     "Public: no capital expenditure; pay for what you use.",
+     "Private: complete control over security and resources.",
+     "Hybrid: choice of on-premises or cloud-based resources."
+    ],
+    "qs": [
+     433
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   }
+  ]
+ },
+ {
+  "skill": "identify-appropriate-use-cases-for-each-",
+  "sections": [
+   {
+    "title": "Matching workloads to cloud models",
+    "points": [
+     "Public cloud: variable or growing demand, no hardware investment, fast provisioning.",
+     "Private cloud: need full control over hardware and security, or must keep resources on-premises.",
+     "Hybrid cloud: mix of both; keep some workloads on-premises and use the public cloud for extra capacity or specific services."
+    ],
+    "qs": [],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   }
+  ]
+ },
+ {
+  "skill": "describe-the-consumption-based-model",
+  "sections": [
+   {
+    "title": "Expenditure models",
+    "points": [
+     "CapEx: up-front spending on physical infrastructure. OpEx: ongoing spending on services, paid as used.",
+     "Azure pay-as-you-go and other consumption-based cloud services are OpEx.",
+     "Elastic and scalable describe capabilities, not expenditure models."
+    ],
+    "qs": [
+     2,
+     13,
+     424
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   },
+   {
+    "title": "Consumption-based pricing",
+    "points": [
+     "Consumption-based: you pay only for the resources you use, and can start or stop at any time; there is no fixed charge for unused capacity.",
+     "Pay-as-you-go is a consumption-based model; costs fall because you pay for extra capacity only when needed.",
+     "Serverless computing is an example of consumption-based pricing."
+    ],
+    "qs": [
+     246,
+     278
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   }
+  ]
+ },
+ {
+  "skill": "compare-cloud-pricing-models",
+  "sections": [
+   {
+    "title": "CapEx versus OpEx examples",
+    "points": [
+     "CapEx: building a datacenter, buying servers and other physical infrastructure.",
+     "OpEx: pay-as-you-go cloud usage, electricity, staff salaries, leasing or subscribing to software.",
+     "Migrating to Azure pay-as-you-go moves spending from CapEx to OpEx."
+    ],
+    "qs": [
+     24,
+     429,
+     439
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   },
+   {
+    "title": "Planning for Azure costs",
+    "points": [
+     "Azure uses pay-as-you-go pricing.",
+     "A migrated website therefore brings recurring monthly usage costs, not an up-front purchase."
+    ],
+    "qs": [
+     327
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   }
+  ]
+ },
+ {
+  "skill": "describe-serverless",
+  "sections": [
+   {
+    "title": "Azure Functions",
+    "points": [
+     "Azure Functions: serverless compute that runs your code in response to events (triggers) without you managing servers.",
+     "Functions are stateless by default; Durable Functions add state.",
+     "Not serverless: virtual machines, storage accounts and dedicated hosts."
+    ],
+    "qs": [
+     103,
+     319,
+     42
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview"
+   },
+   {
+    "title": "Azure Logic Apps",
+    "points": [
+     "Logic Apps: serverless workflows built from triggers and actions using connectors, with little or no code.",
+     "Fits rule-based automation such as sending email notifications when an event occurs.",
+     "Compare: Functions runs code you write; Logic Apps orchestrates a workflow."
+    ],
+    "qs": [
+     81
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/logic-apps/logic-apps-overview"
+   }
+  ]
+ },
+ {
+  "skill": "high-availability-and-scalability",
+  "sections": [
+   {
+    "title": "High availability and fault tolerance",
+    "points": [
+     "High availability: a service stays accessible with minimal downtime when a component fails; built into many platform services such as Azure SQL Data Warehouse.",
+     "Availability zones: separate datacenters in a region; spread VMs across zones to survive a datacenter failure.",
+     "Availability sets protect against rack and host failures, within one datacenter."
+    ],
+    "qs": [
+     49,
+     60,
+     353,
+     468
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+   },
+   {
+    "title": "Vertical versus horizontal scaling",
+    "points": [
+     "Vertical scaling (scale up): add CPU or memory to an existing VM.",
+     "Horizontal scaling (scale out): add more instances, such as extra VMs; it can happen automatically or manually.",
+     "A service that supports more instances (20 versus 5) is more scalable.",
+     "Scaling to match demand also helps control costs."
+    ],
+    "qs": [
+     33,
+     303,
+     384,
+     386,
+     463
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+   },
+   {
+    "title": "Elasticity and autoscaling",
+    "points": [
+     "Elasticity: resources are allocated and released automatically as demand changes.",
+     "Autoscaling, such as VM scale sets, is elasticity.",
+     "Elasticity suits uneven usage (a heavy final week each month): you pay only for the capacity you use."
+    ],
+    "qs": [
+     318,
+     370,
+     461
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+   },
+   {
+    "title": "Matching cloud benefits to needs",
+    "points": [
+     "High availability: continuous user experience if a resource fails. Fault tolerance: stays available after a component fails.",
+     "Disaster recovery: restore a service after an outage (backup, replication).",
+     "Scalability/dynamic scalability: increase capacity as demand grows. Elasticity: do so dynamically.",
+     "Agility: quickly deploy, configure and adapt resources. Geo-distribution: deploy to regions close to users. Low latency: fast access.",
+     "Predictability covers performance and cost; manageability covers management of and in the cloud."
+    ],
+    "qs": [
+     302,
+     466,
+     312,
+     355,
+     425,
+     454,
+     467
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+   },
+   {
+    "title": "Azure Machine Learning",
+    "points": [
+     "Azure Machine Learning is the Azure service to build, train, test and deploy machine learning models.",
+     "It is the service to use for predictive analytics and AI solutions."
+    ],
+    "qs": [
+     55
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/machine-learning/overview-what-is-azure-machine-learning"
+   }
+  ]
+ },
+ {
+  "skill": "reliability-and-predictability",
+  "sections": [
+   {
+    "title": "Reliability and fault tolerance",
+    "points": [
+     "Reliability: the system recovers from failures and keeps working.",
+     "Fault tolerance: a service stays available through a failure, including loss of a datacenter, by using redundant components across datacenters.",
+     "Elasticity, scalability and low latency address demand and speed, not failure."
+    ],
+    "qs": [
+     295
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+   },
+   {
+    "title": "Predictability",
+    "points": [
+     "Predictability covers performance: consistent behavior under load.",
+     "Predictability also covers cost: you can forecast and calculate what a service will cost."
+    ],
+    "qs": [
+     314
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+   },
+   {
+    "title": "Azure Site Recovery",
+    "points": [
+     "Azure Site Recovery provides disaster recovery for virtual machines by replicating them to a secondary region.",
+     "Disaster recovery restores a service after an outage; high availability keeps it running."
+    ],
+    "qs": [
+     421,
+     455
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/site-recovery/site-recovery-overview"
+   }
+  ]
+ },
+ {
+  "skill": "security-and-governance",
+  "sections": [
+   {
+    "title": "Security and governance in the cloud",
+    "points": [
+     "Cloud services can meet security, governance and compliance needs with built-in tools and templates.",
+     "Governance includes setting standards and auditing resources for compliance.",
+     "Security is shared: the provider secures the infrastructure; you secure your data and access."
+    ],
+    "qs": [],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+   }
+  ]
+ },
+ {
+  "skill": "manageability",
+  "sections": [
+   {
+    "title": "Manageability in the cloud",
+    "points": [
+     "Management of the cloud: autoscaling, templates, monitoring and alerts to run resources.",
+     "Management in the cloud: portal, CLI, PowerShell and APIs to manage resources."
+    ],
+    "qs": [],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+   },
+   {
+    "title": "Reducing administrative effort",
+    "points": [
+     "Azure Reserved VM Instances are a pricing discount for a 1- or 3-year commitment; they do not reduce administration.",
+     "To cut the effort of deploying many VMs, use automation, templates or scale sets."
+    ],
+    "qs": [
+     143
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+   }
+  ]
+ },
+ {
+  "skill": "infrastructure-as-a-service-iaas",
+  "sections": [
+   {
+    "title": "IaaS characteristics",
+    "points": [
+     "IaaS: you rent virtual infrastructure: VMs, storage and networks. Azure virtual machines are the standard example.",
+     "You install and manage the operating system, so IaaS fits lift-and-shift migrations.",
+     "PaaS and SaaS do not let you install an OS."
+    ],
+    "qs": [
+     388,
+     393,
+     430,
+     431
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/2-describe-infrastructure-service"
+   },
+   {
+    "title": "When to choose IaaS",
+    "points": [
+     "Choose IaaS for apps with prerequisite software, legacy databases or custom OS configuration.",
+     "You need full control of the server; the provider only manages hardware."
+    ],
+    "qs": [
+     438,
+     457
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/2-describe-infrastructure-service"
+   }
+  ]
+ },
+ {
+  "skill": "platform-as-a-service-paas",
+  "sections": [
+   {
+    "title": "PaaS characteristics",
+    "points": [
+     "PaaS: a managed platform where you deploy code and the provider manages OS and infrastructure; no control of the host OS.",
+     "Azure App Service can scale automatically (autoscale), and memory/CPU is increased by changing the pricing tier.",
+     "You maintain application code; PaaS minimizes administrative effort for web apps."
+    ],
+    "qs": [
+     264,
+     380,
+     427,
+     436
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/3-describe-platform-service"
+   },
+   {
+    "title": "Identifying PaaS resources",
+    "points": [
+     "PaaS examples: Azure App Service, Azure SQL Database, Azure Cosmos DB.",
+     "A SQL Server you install on a VM is IaaS; Azure SQL Database is managed by Azure.",
+     "A PaaS-only plan cannot include VMs; Storage accounts are not counted as PaaS here."
+    ],
+    "qs": [
+     337,
+     341,
+     348,
+     359,
+     437,
+     440,
+     446,
+     459
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/3-describe-platform-service"
+   }
+  ]
+ },
+ {
+  "skill": "software-as-a-service-saas",
+  "sections": [
+   {
+    "title": "SaaS characteristics",
+    "points": [
+     "SaaS: provider-hosted, ready-to-use software; customer responsibility is smallest.",
+     "Microsoft 365 is SaaS; IaaS and PaaS require more management."
+    ],
+    "qs": [
+     315,
+     404
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/4-describe-software-service"
+   }
+  ]
+ },
+ {
+  "skill": "use-cases-for-iaas-paas-and-saas",
+  "sections": [
+   {
+    "title": "Classifying Azure services",
+    "points": [
+     "IaaS: Azure virtual machines, a DNS server on a VM, SQL Server on a VM.",
+     "PaaS: Azure App Service, Azure Functions, Azure SQL Database, Azure Cosmos DB, Azure Files.",
+     "SaaS: Microsoft 365, Dynamics 365, Microsoft Intune."
+    ],
+    "qs": [
+     54,
+     308,
+     399,
+     444,
+     448
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/"
+   },
+   {
+    "title": "Picking the model for a requirement",
+    "points": [
+     "IaaS: most control; hosts VMs; suits cloud file servers.",
+     "PaaS: custom apps with minimal OS effort; databases without OS maintenance.",
+     "SaaS: ready-made apps such as an accounting system.",
+     "Deploying virtual machines is IaaS, not PaaS or SaaS.",
+     "Need to change code but not manage the OS: PaaS. Need to work with the server OS: IaaS."
+    ],
+    "qs": [
+     56,
+     326,
+     416,
+     420,
+     456
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/"
+   }
+  ]
+ }
+]

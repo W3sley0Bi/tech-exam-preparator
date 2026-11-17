@@ -1,0 +1,391 @@
+[
+ {
+  "skill": "azure-portal",
+  "facts": [
+   "Azure portal = web-based unified console at portal.azure.com to build, manage, monitor resources",
+   "Customizable dashboards; accessible from any browser and OS, no install",
+   "Azure mobile app (iOS/Android) manages resources from a phone",
+   "Portal blades: Monitor (health/metrics), Defender for Cloud (security recs), Marketplace (VM images, 3rd-party appliances)",
+   "GUI-based; use CLI/PowerShell/ARM for automation and repeatability"
+  ],
+  "pick": [
+   {
+    "when": "manage all Azure resources via a web URL",
+    "use": "portal.azure.com"
+   },
+   {
+    "when": "buy/deploy third-party virtual security appliance",
+    "use": "Azure Marketplace"
+   },
+   {
+    "when": "manage a web app from an iPhone",
+    "use": "Azure mobile app or Azure portal (browser)"
+   },
+   {
+    "when": "browse available VM images",
+    "use": "Azure Marketplace blade"
+   },
+   {
+    "when": "view security recommendations",
+    "use": "Microsoft Defender for Cloud"
+   }
+  ],
+  "traps": [
+   "Azure Monitor is for health/metrics, not security recommendations",
+   "Portal is GUI; not the right answer for scripted repeatable deployments"
+  ]
+ },
+ {
+  "skill": "cloud-shell-azure-cli-azure-powershell",
+  "facts": [
+   "Cloud Shell = browser-based, authenticated shell in portal or shell.azure.com; supports Bash and PowerShell",
+   "Azure CLI: cross-platform commands (az ...), runs on Windows, macOS, Linux",
+   "Azure PowerShell: Az module cmdlets (verb-noun), cross-platform with PowerShell 7",
+   "Cloud Shell has CLI and PowerShell preinstalled; needs no local install; uses Azure Files storage for persistence",
+   "Use CLI/PowerShell scripts for automating tasks; works from any device with a browser (tablet, Android)"
+  ],
+  "pick": [
+   {
+    "when": "manage Azure from a browser on any device without installing tools",
+    "use": "Azure Cloud Shell"
+   },
+   {
+    "when": "run az commands on Windows, macOS, Linux",
+    "use": "Azure CLI"
+   },
+   {
+    "when": "automate with cmdlets in PowerShell",
+    "use": "Azure PowerShell"
+   },
+   {
+    "when": "create a VM from an Android tablet",
+    "use": "Azure portal, Cloud Shell, or Azure mobile app"
+   }
+  ],
+  "traps": [
+   "Cloud Shell is not a local install; it is browser-hosted",
+   "Azure CLI is not Windows-only"
+  ]
+ },
+ {
+  "skill": "azure-arc",
+  "facts": [
+   "Azure Arc extends Azure management to on-premises, multi-cloud and edge resources",
+   "Projects non-Azure resources into Azure Resource Manager as Azure resources",
+   "Manage Windows/Linux servers, Kubernetes clusters, SQL Server, data services via Azure portal",
+   "Lets you apply Azure Policy, tags, RBAC, Monitor and Defender to non-Azure resources",
+   "Run Azure data services on-premises or other clouds with Arc-enabled data services"
+  ],
+  "pick": [
+   {
+    "when": "manage on-premises Windows Server from the Azure portal",
+    "use": "Azure Arc"
+   },
+   {
+    "when": "unified way to project non-Azure resources into ARM",
+    "use": "Azure Arc"
+   },
+   {
+    "when": "govern servers/Kubernetes across on-premises and other clouds",
+    "use": "Azure Arc"
+   },
+   {
+    "when": "consistent multi-cloud and on-premises management platform",
+    "use": "Azure Arc"
+   }
+  ],
+  "traps": [
+   "Not Azure Migrate (that assesses and migrates workloads)",
+   "Not Azure Stack HCI/Hub, which is hardware/infrastructure, not a management plane"
+  ]
+ },
+ {
+  "skill": "infrastructure-as-code-iac",
+  "facts": [
+   "IaC = manage and provision infrastructure through machine-readable definition files instead of manual steps",
+   "Gives consistent, repeatable, version-controllable deployments",
+   "Azure native IaC: ARM templates (JSON) and Bicep (declarative, simpler syntax)",
+   "ARM templates and Bicep are idempotent and declarative",
+   "Azure DevOps/GitHub provide version control and pipelines to deploy IaC"
+  ],
+  "pick": [
+   {
+    "when": "repeatedly deploy and remove many identically configured VMs from templates",
+    "use": "Azure Resource Manager templates/Bicep (IaC)"
+   },
+   {
+    "when": "version control tools to manage code",
+    "use": "Azure DevOps (Repos)"
+   },
+   {
+    "when": "simpler syntax than JSON for Azure deployments",
+    "use": "Bicep"
+   }
+  ],
+  "traps": [
+   "Azure DevOps manages code and pipelines; it is not itself the template language",
+   "Declarative IaC states desired end state, not step-by-step commands"
+  ]
+ },
+ {
+  "skill": "azure-resource-manager-arm-and-arm-templ",
+  "facts": [
+   "ARM is the deployment and management service for Azure; all tools (portal, CLI, PowerShell, SDK, REST) call it",
+   "Resource groups are logical containers for related resources; resource can be in only one group",
+   "ARM templates are declarative JSON files describing resources to deploy",
+   "Templates are idempotent and reusable, giving consistent deployments across environments",
+   "Deploys resources in correct dependency order and in parallel where possible",
+   "Azure Policy defines rules for what can be deployed; ARM templates define what to deploy"
+  ],
+  "pick": [
+   {
+    "when": "automate creation of the same 20 resources for each business unit",
+    "use": "ARM templates"
+   },
+   {
+    "when": "consistent, repeatable deployment of resources across environments",
+    "use": "ARM templates"
+   },
+   {
+    "when": "group, organize and manage resources with shared lifecycle",
+    "use": "Resource group"
+   },
+   {
+    "when": "enforce rules on what resources may be deployed",
+    "use": "Azure Policy"
+   }
+  ],
+  "traps": [
+   "Azure Policy restricts/audits; it does not deploy resources",
+   "Resource locks and tags do not automate deployment"
+  ]
+ },
+ {
+  "skill": "azure-advisor",
+  "facts": [
+   "Azure Advisor is a free personalized cloud consultant giving best-practice recommendations",
+   "Five categories: Reliability, Security, Performance, Cost, Operational Excellence",
+   "Identifies underutilized or idle resources, e.g. VMs, to cut cost",
+   "Recommends VMs not protected by Azure Backup, and reserved instance savings",
+   "Recommendations based on your resource configuration and usage telemetry",
+   "Compare usage against best practices; Advisor score shows adherence"
+  ],
+  "pick": [
+   {
+    "when": "identify underutilized or unused VMs",
+    "use": "Azure Advisor"
+   },
+   {
+    "when": "compare cloud usage to best practices",
+    "use": "Azure Advisor"
+   },
+   {
+    "when": "recommendations to improve cost, security, reliability, performance",
+    "use": "Azure Advisor"
+   },
+   {
+    "when": "VMs not protected by Azure Backup",
+    "use": "Azure Advisor"
+   }
+  ],
+  "traps": [
+   "Advisor recommends; it does not enforce (Azure Policy enforces)",
+   "Not Service Health, which reports Azure platform incidents"
+  ]
+ },
+ {
+  "skill": "azure-service-health",
+  "facts": [
+   "Azure Service Health = Azure status + Service Health + Resource Health",
+   "Azure status: global view of Azure service health, public, no sign-in",
+   "Service Health: personalized view of service issues, planned maintenance, health advisories for your subscriptions/regions",
+   "Resource Health: health of your individual resources, e.g. a specific VM",
+   "Configure Service Health alerts to be notified of incidents and planned maintenance",
+   "Planned maintenance events appear in Service Health"
+  ],
+  "pick": [
+   {
+    "when": "notified of planned Microsoft maintenance affecting your subscription",
+    "use": "Azure Service Health"
+   },
+   {
+    "when": "view service outage notifications affecting a VM's region",
+    "use": "Azure Service Health"
+   },
+   {
+    "when": "health of a specific resource such as a VM",
+    "use": "Resource Health"
+   },
+   {
+    "when": "global Azure status for all regions",
+    "use": "Azure status page"
+   }
+  ],
+  "traps": [
+   "Azure Monitor is for your resource metrics/logs, not Microsoft platform incidents",
+   "Advisor gives recommendations, not outage notices"
+  ]
+ },
+ {
+  "skill": "azure-monitor-log-analytics-alerts-appli",
+  "facts": [
+   "Azure Monitor collects, analyzes and acts on telemetry from Azure and on-premises",
+   "Two data types: metrics (numeric) and logs",
+   "Log Analytics: query logs with KQL in a Log Analytics workspace; central repository for events from multiple resources",
+   "Alerts proactively notify or trigger actions via action groups (email, SMS, webhook)",
+   "Application Insights: APM for live web apps; detects performance anomalies",
+   "Activity Log: subscription-level control-plane events (who did what, e.g. stopped a VM); kept 90 days"
+  ],
+  "pick": [
+   {
+    "when": "collect events from many resources into one central repository",
+    "use": "Log Analytics workspace (Azure Monitor)"
+   },
+   {
+    "when": "auto-send alert when admin stops a VM",
+    "use": "Azure Monitor alert (activity log alert)"
+   },
+   {
+    "when": "monitor performance of a live web app",
+    "use": "Application Insights"
+   },
+   {
+    "when": "see which user turned off a VM",
+    "use": "Azure Activity Log"
+   },
+   {
+    "when": "run queries across log data",
+    "use": "Log Analytics (KQL)"
+   }
+  ],
+  "traps": [
+   "Activity Log holds 90 days; older needs export to a workspace",
+   "Azure Monitor is not Service Health (platform incidents) or Advisor (recommendations)"
+  ]
+ },
+ {
+  "skill": "slas-and-composite-slas",
+  "facts": [
+   "SLA = Microsoft's commitment to uptime/connectivity, expressed as a percentage (e.g. 99.9%)",
+   "Composite SLA = multiply the SLAs of dependent services together",
+   "Composite SLA is lower than the lowest individual SLA when services are chained serially",
+   "Higher SLA comes from redundancy, e.g. Availability Zones or multiple regions",
+   "Free services and preview services have no financial SLA",
+   "Violating an SLA gives service credits; more nines means less allowed downtime"
+  ],
+  "pick": [
+   {
+    "when": "app depends on web app 99.95% and SQL DB 99.99%",
+    "use": "Multiply: about 99.94% composite"
+   },
+   {
+    "when": "increase availability beyond a single instance",
+    "use": "Deploy across Availability Zones or regions"
+   },
+   {
+    "when": "VM with premium SSD single instance",
+    "use": "99.9% SLA"
+   },
+   {
+    "when": "VMs in two or more Availability Zones",
+    "use": "99.99% SLA"
+   }
+  ],
+  "traps": [
+   "Composite SLA is not the average or the highest value",
+   "Adding a dependency lowers the composite SLA; adding redundancy raises it"
+  ]
+ },
+ {
+  "skill": "service-lifecycle-preview-and-general-av",
+  "facts": [
+   "Private preview: invite-only for selected customers",
+   "Public preview: available to all customers; also called public beta",
+   "Preview services are excluded from SLAs and may have limited or no support",
+   "Public preview often offered at reduced price; terms in preview supplemental terms",
+   "General availability (GA): released for production use, covered by SLA and support",
+   "Typical path: private preview, public preview, then GA",
+   "Modern Lifecycle Policy: minimum 12 months notice before end of support if no successor (excludes free/preview)"
+  ],
+  "pick": [
+   {
+    "when": "evaluate a new feature before release, available to anyone",
+    "use": "Public preview"
+   },
+   {
+    "when": "service with production SLA and full support",
+    "use": "General availability (GA)"
+   },
+   {
+    "when": "limited invited customers evaluate feature",
+    "use": "Private preview"
+   }
+  ],
+  "traps": [
+   "Preview services are not covered by SLA",
+   "Private preview is invite-only; public preview is open to all"
+  ]
+ },
+ {
+  "skill": "azure-support-plans",
+  "facts": [
+   "Plans: Basic (free), Developer, Standard, Professional Direct, Premier/Unified",
+   "Basic: included for all; billing/subscription support, 24/7 self-help, Advisor, Service Health",
+   "Basic cannot open technical support requests; paid plans can",
+   "Developer, Standard, Professional Direct allow technical support tickets",
+   "Standard and above add 24/7 access to support engineers; Premier adds TAM and architecture help",
+   "Support plan is per subscription; Pro Direct and Premier offer architectural guidance"
+  ],
+  "pick": [
+   {
+    "when": "open technical support request",
+    "use": "Developer, Standard, Professional Direct or Premier"
+   },
+   {
+    "when": "free, billing and subscription issues only",
+    "use": "Basic"
+   },
+   {
+    "when": "architectural review from Microsoft at least cost",
+    "use": "Professional Direct"
+   },
+   {
+    "when": "designated technical account manager",
+    "use": "Premier (Unified)"
+   }
+  ],
+  "traps": [
+   "Basic cannot open technical tickets; it can only open billing/subscription cases",
+   "Support plans do not change service SLAs"
+  ]
+ },
+ {
+  "skill": "retired-or-renamed-services-blueprints-a",
+  "facts": [
+   "Azure Active Directory is now Microsoft Entra ID",
+   "Azure Security Center and Azure Defender are now Microsoft Defender for Cloud",
+   "Azure Sentinel is now Microsoft Sentinel",
+   "Azure Blueprints bundled ARM templates, RBAC, policy and locks; being retired, replaced by template specs and deployment stacks",
+   "Azure Germany: separate sovereign cloud, closed and migrated to global Azure regions",
+   "Classic administrator roles (Co-administrator, Service Administrator) retired in favor of Azure RBAC"
+  ],
+  "pick": [
+   {
+    "when": "package templates, policies, RBAC into repeatable environment (legacy)",
+    "use": "Azure Blueprints"
+   },
+   {
+    "when": "replace Azure Active Directory name",
+    "use": "Microsoft Entra ID"
+   },
+   {
+    "when": "cloud security posture management (formerly Security Center)",
+    "use": "Microsoft Defender for Cloud"
+   }
+  ],
+  "traps": [
+   "Azure Germany was not limited to German residents and is no longer an active offering",
+   "Old exams use old names; map them to Entra, Defender for Cloud, Sentinel"
+  ]
+ }
+]

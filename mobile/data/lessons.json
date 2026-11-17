@@ -1,0 +1,2644 @@
+[
+ {
+  "skill": "define-cloud-computing",
+  "sections": [
+   {
+    "title": "Cloud versus on-premises benefits",
+    "points": [
+     "Cloud computing delivers compute, storage, networking and more over the internet, on demand, with pay-as-you-use pricing.",
+     "CapEx (up-front hardware and datacenter spend) shifts to OpEx (ongoing, pay-for-what-you-use spend).",
+     "Resources are provisioned rapidly and capacity scales up or down with demand; adding cloud capacity costs less than expanding a datacenter.",
+     "The provider uses virtualization to serve many customers from shared hardware; you do not need to own physical servers.",
+     "Drawbacks to know: cloud offers fewer custom configuration options than on-premises, and it does not reduce administrative complexity by itself."
+    ],
+    "qs": [
+     306,
+     449,
+     452,
+     464
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   },
+   {
+    "title": "Public cloud and hybrid cloud advantage",
+    "points": [
+     "Public cloud: owned and operated by a provider; hardware is shared by multiple organizations (tenants), each isolated from the others.",
+     "Public cloud is not owned by the public, is not open to every member of the public, and is not crowd-sourced.",
+     "Hybrid cloud: on-premises resources plus public cloud capacity; extends existing resources without buying a whole new datacenter."
+    ],
+    "qs": [
+     419,
+     413
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   },
+   {
+    "title": "Cloud Adoption Framework stages",
+    "points": [
+     "The Microsoft Cloud Adoption Framework for Azure guides adoption in stages: Strategy, Plan, Ready, Adopt, then Govern and Manage.",
+     "Define strategy (business justification and outcomes) comes first; planning, readying the environment, and adopting follow."
+    ],
+    "qs": [
+     450
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/overview"
+   }
+  ]
+ },
+ {
+  "skill": "describe-the-shared-responsibility-model",
+  "sections": [
+   {
+    "title": "Who is always responsible for what",
+    "points": [
+     "Provider always: physical datacenter, hosts and network.",
+     "Customer always: information and data, devices/endpoints, and accounts and identities.",
+     "Identity and directory infrastructure is shared in IaaS, PaaS and SaaS.",
+     "Customer responsibility is highest in IaaS, lower in PaaS, and lowest in SaaS."
+    ],
+    "qs": [
+     367,
+     376,
+     447,
+     284
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   },
+   {
+    "title": "Responsibilities by service model",
+    "points": [
+     "IaaS: customer manages OS, patching, applications and network controls; provider manages hardware and datacenter.",
+     "PaaS: provider manages OS and runtime; customer manages their application code and configuration, and user access; network controls are shared.",
+     "SaaS: provider runs the app, OS and infrastructure; customer configures the service, supplies data and manages access/identity.",
+     "Managed services such as Azure Backup are provider-operated platform services; you configure and use them."
+    ],
+    "qs": [
+     373,
+     377,
+     387,
+     441
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   },
+   {
+    "title": "What moving to Azure VMs removes",
+    "points": [
+     "Moving servers to Azure VMs (IaaS) eliminates hardware replacement and physical server security: the provider owns them.",
+     "Still yours on a VM: OS updates, application data backup and permissions to shared documents."
+    ],
+    "qs": [
+     428
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   }
+  ]
+ },
+ {
+  "skill": "define-cloud-models-including-public-pri",
+  "sections": [
+   {
+    "title": "Public cloud characteristics",
+    "points": [
+     "Public cloud: all hardware is owned by the provider and shared between multiple tenants.",
+     "Characteristics: metered (pay-per-use) pricing, self-service management, no CapEx for hardware; not dedicated hardware.",
+     "An organization fully on the public cloud no longer needs its own datacenter; a private cloud or hybrid cloud still does.",
+     "Public cloud resources are virtual; you cannot add your own physical servers to it."
+    ],
+    "qs": [
+     305,
+     316,
+     317,
+     422
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   },
+   {
+    "title": "Private cloud characteristics",
+    "points": [
+     "Private cloud: resources used by one organization, often in its own datacenter; it gives complete control over resources and security.",
+     "A private cloud does not have to be disconnected from the internet.",
+     "Physical servers can be deployed in a private cloud or the on-premises part of a hybrid cloud, not in the public cloud.",
+     "Scaling a VM in the public cloud adds no capital expenditure for the customer; the provider carries it."
+    ],
+    "qs": [
+     274,
+     432,
+     434
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   },
+   {
+    "title": "Hybrid cloud",
+    "points": [
+     "Hybrid cloud: combines on-premises (or private) resources with public cloud and lets workloads run in either place.",
+     "It requires an internal/on-premises network and a public cloud part; you can reach it by starting with public cloud, not only from a private cloud.",
+     "Typical examples: on-premises and Azure VMs connected together; an Azure web app querying an on-premises SQL Server.",
+     "It can extend internal capacity using public cloud resources."
+    ],
+    "qs": [
+     418,
+     426,
+     435,
+     451,
+     458,
+     460
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   },
+   {
+    "title": "Choosing a cloud model by advantage",
+    "points": [
+     "Public: no capital expenditure; pay for what you use.",
+     "Private: complete control over security and resources.",
+     "Hybrid: choice of on-premises or cloud-based resources."
+    ],
+    "qs": [
+     433
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   }
+  ]
+ },
+ {
+  "skill": "identify-appropriate-use-cases-for-each-",
+  "sections": [
+   {
+    "title": "Matching workloads to cloud models",
+    "points": [
+     "Public cloud: variable or growing demand, no hardware investment, fast provisioning.",
+     "Private cloud: need full control over hardware and security, or must keep resources on-premises.",
+     "Hybrid cloud: mix of both; keep some workloads on-premises and use the public cloud for extra capacity or specific services."
+    ],
+    "qs": [],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   }
+  ]
+ },
+ {
+  "skill": "describe-the-consumption-based-model",
+  "sections": [
+   {
+    "title": "Expenditure models",
+    "points": [
+     "CapEx: up-front spending on physical infrastructure. OpEx: ongoing spending on services, paid as used.",
+     "Azure pay-as-you-go and other consumption-based cloud services are OpEx.",
+     "Elastic and scalable describe capabilities, not expenditure models."
+    ],
+    "qs": [
+     2,
+     13,
+     424
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   },
+   {
+    "title": "Consumption-based pricing",
+    "points": [
+     "Consumption-based: you pay only for the resources you use, and can start or stop at any time; there is no fixed charge for unused capacity.",
+     "Pay-as-you-go is a consumption-based model; costs fall because you pay for extra capacity only when needed.",
+     "Serverless computing is an example of consumption-based pricing."
+    ],
+    "qs": [
+     246,
+     278
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   }
+  ]
+ },
+ {
+  "skill": "compare-cloud-pricing-models",
+  "sections": [
+   {
+    "title": "CapEx versus OpEx examples",
+    "points": [
+     "CapEx: building a datacenter, buying servers and other physical infrastructure.",
+     "OpEx: pay-as-you-go cloud usage, electricity, staff salaries, leasing or subscribing to software.",
+     "Migrating to Azure pay-as-you-go moves spending from CapEx to OpEx."
+    ],
+    "qs": [
+     24,
+     429,
+     439
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   },
+   {
+    "title": "Planning for Azure costs",
+    "points": [
+     "Azure uses pay-as-you-go pricing.",
+     "A migrated website therefore brings recurring monthly usage costs, not an up-front purchase."
+    ],
+    "qs": [
+     327
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/"
+   }
+  ]
+ },
+ {
+  "skill": "describe-serverless",
+  "sections": [
+   {
+    "title": "Azure Functions",
+    "points": [
+     "Azure Functions: serverless compute that runs your code in response to events (triggers) without you managing servers.",
+     "Functions are stateless by default; Durable Functions add state.",
+     "Not serverless: virtual machines, storage accounts and dedicated hosts."
+    ],
+    "qs": [
+     103,
+     319,
+     42
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview"
+   },
+   {
+    "title": "Azure Logic Apps",
+    "points": [
+     "Logic Apps: serverless workflows built from triggers and actions using connectors, with little or no code.",
+     "Fits rule-based automation such as sending email notifications when an event occurs.",
+     "Compare: Functions runs code you write; Logic Apps orchestrates a workflow."
+    ],
+    "qs": [
+     81
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/logic-apps/logic-apps-overview"
+   }
+  ]
+ },
+ {
+  "skill": "high-availability-and-scalability",
+  "sections": [
+   {
+    "title": "High availability and fault tolerance",
+    "points": [
+     "High availability: a service stays accessible with minimal downtime when a component fails; built into many platform services such as Azure SQL Data Warehouse.",
+     "Availability zones: separate datacenters in a region; spread VMs across zones to survive a datacenter failure.",
+     "Availability sets protect against rack and host failures, within one datacenter."
+    ],
+    "qs": [
+     49,
+     60,
+     353,
+     468
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+   },
+   {
+    "title": "Vertical versus horizontal scaling",
+    "points": [
+     "Vertical scaling (scale up): add CPU or memory to an existing VM.",
+     "Horizontal scaling (scale out): add more instances, such as extra VMs; it can happen automatically or manually.",
+     "A service that supports more instances (20 versus 5) is more scalable.",
+     "Scaling to match demand also helps control costs."
+    ],
+    "qs": [
+     33,
+     303,
+     384,
+     386,
+     463
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+   },
+   {
+    "title": "Elasticity and autoscaling",
+    "points": [
+     "Elasticity: resources are allocated and released automatically as demand changes.",
+     "Autoscaling, such as VM scale sets, is elasticity.",
+     "Elasticity suits uneven usage (a heavy final week each month): you pay only for the capacity you use."
+    ],
+    "qs": [
+     318,
+     370,
+     461
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+   },
+   {
+    "title": "Matching cloud benefits to needs",
+    "points": [
+     "High availability: continuous user experience if a resource fails. Fault tolerance: stays available after a component fails.",
+     "Disaster recovery: restore a service after an outage (backup, replication).",
+     "Scalability/dynamic scalability: increase capacity as demand grows. Elasticity: do so dynamically.",
+     "Agility: quickly deploy, configure and adapt resources. Geo-distribution: deploy to regions close to users. Low latency: fast access.",
+     "Predictability covers performance and cost; manageability covers management of and in the cloud."
+    ],
+    "qs": [
+     302,
+     466,
+     312,
+     355,
+     425,
+     454,
+     467
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+   },
+   {
+    "title": "Azure Machine Learning",
+    "points": [
+     "Azure Machine Learning is the Azure service to build, train, test and deploy machine learning models.",
+     "It is the service to use for predictive analytics and AI solutions."
+    ],
+    "qs": [
+     55
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/machine-learning/overview-what-is-azure-machine-learning"
+   }
+  ]
+ },
+ {
+  "skill": "reliability-and-predictability",
+  "sections": [
+   {
+    "title": "Reliability and fault tolerance",
+    "points": [
+     "Reliability: the system recovers from failures and keeps working.",
+     "Fault tolerance: a service stays available through a failure, including loss of a datacenter, by using redundant components across datacenters.",
+     "Elasticity, scalability and low latency address demand and speed, not failure."
+    ],
+    "qs": [
+     295
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+   },
+   {
+    "title": "Predictability",
+    "points": [
+     "Predictability covers performance: consistent behavior under load.",
+     "Predictability also covers cost: you can forecast and calculate what a service will cost."
+    ],
+    "qs": [
+     314
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+   },
+   {
+    "title": "Azure Site Recovery",
+    "points": [
+     "Azure Site Recovery provides disaster recovery for virtual machines by replicating them to a secondary region.",
+     "Disaster recovery restores a service after an outage; high availability keeps it running."
+    ],
+    "qs": [
+     421,
+     455
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/site-recovery/site-recovery-overview"
+   }
+  ]
+ },
+ {
+  "skill": "security-and-governance",
+  "sections": [
+   {
+    "title": "Security and governance in the cloud",
+    "points": [
+     "Cloud services can meet security, governance and compliance needs with built-in tools and templates.",
+     "Governance includes setting standards and auditing resources for compliance.",
+     "Security is shared: the provider secures the infrastructure; you secure your data and access."
+    ],
+    "qs": [],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+   }
+  ]
+ },
+ {
+  "skill": "manageability",
+  "sections": [
+   {
+    "title": "Manageability in the cloud",
+    "points": [
+     "Management of the cloud: autoscaling, templates, monitoring and alerts to run resources.",
+     "Management in the cloud: portal, CLI, PowerShell and APIs to manage resources."
+    ],
+    "qs": [],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+   },
+   {
+    "title": "Reducing administrative effort",
+    "points": [
+     "Azure Reserved VM Instances are a pricing discount for a 1- or 3-year commitment; they do not reduce administration.",
+     "To cut the effort of deploying many VMs, use automation, templates or scale sets."
+    ],
+    "qs": [
+     143
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+   }
+  ]
+ },
+ {
+  "skill": "infrastructure-as-a-service-iaas",
+  "sections": [
+   {
+    "title": "IaaS characteristics",
+    "points": [
+     "IaaS: you rent virtual infrastructure: VMs, storage and networks. Azure virtual machines are the standard example.",
+     "You install and manage the operating system, so IaaS fits lift-and-shift migrations.",
+     "PaaS and SaaS do not let you install an OS."
+    ],
+    "qs": [
+     388,
+     393,
+     430,
+     431
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/2-describe-infrastructure-service"
+   },
+   {
+    "title": "When to choose IaaS",
+    "points": [
+     "Choose IaaS for apps with prerequisite software, legacy databases or custom OS configuration.",
+     "You need full control of the server; the provider only manages hardware."
+    ],
+    "qs": [
+     438,
+     457
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/2-describe-infrastructure-service"
+   }
+  ]
+ },
+ {
+  "skill": "platform-as-a-service-paas",
+  "sections": [
+   {
+    "title": "PaaS characteristics",
+    "points": [
+     "PaaS: a managed platform where you deploy code and the provider manages OS and infrastructure; no control of the host OS.",
+     "Azure App Service can scale automatically (autoscale), and memory/CPU is increased by changing the pricing tier.",
+     "You maintain application code; PaaS minimizes administrative effort for web apps."
+    ],
+    "qs": [
+     264,
+     380,
+     427,
+     436
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/3-describe-platform-service"
+   },
+   {
+    "title": "Identifying PaaS resources",
+    "points": [
+     "PaaS examples: Azure App Service, Azure SQL Database, Azure Cosmos DB.",
+     "A SQL Server you install on a VM is IaaS; Azure SQL Database is managed by Azure.",
+     "A PaaS-only plan cannot include VMs; Storage accounts are not counted as PaaS here."
+    ],
+    "qs": [
+     337,
+     341,
+     348,
+     359,
+     437,
+     440,
+     446,
+     459
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/3-describe-platform-service"
+   }
+  ]
+ },
+ {
+  "skill": "software-as-a-service-saas",
+  "sections": [
+   {
+    "title": "SaaS characteristics",
+    "points": [
+     "SaaS: provider-hosted, ready-to-use software; customer responsibility is smallest.",
+     "Microsoft 365 is SaaS; IaaS and PaaS require more management."
+    ],
+    "qs": [
+     315,
+     404
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/4-describe-software-service"
+   }
+  ]
+ },
+ {
+  "skill": "use-cases-for-iaas-paas-and-saas",
+  "sections": [
+   {
+    "title": "Classifying Azure services",
+    "points": [
+     "IaaS: Azure virtual machines, a DNS server on a VM, SQL Server on a VM.",
+     "PaaS: Azure App Service, Azure Functions, Azure SQL Database, Azure Cosmos DB, Azure Files.",
+     "SaaS: Microsoft 365, Dynamics 365, Microsoft Intune."
+    ],
+    "qs": [
+     54,
+     308,
+     399,
+     444,
+     448
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/"
+   },
+   {
+    "title": "Picking the model for a requirement",
+    "points": [
+     "IaaS: most control; hosts VMs; suits cloud file servers.",
+     "PaaS: custom apps with minimal OS effort; databases without OS maintenance.",
+     "SaaS: ready-made apps such as an accounting system.",
+     "Deploying virtual machines is IaaS, not PaaS or SaaS.",
+     "Need to change code but not manage the OS: PaaS. Need to work with the server OS: IaaS."
+    ],
+    "qs": [
+     56,
+     326,
+     416,
+     420,
+     456
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/"
+   }
+  ]
+ },
+ {
+  "skill": "regions-region-pairs-and-sovereign-regio",
+  "sections": [
+   {
+    "title": "Regions and datacenters",
+    "points": [
+     "A region is a set of datacenters deployed within a latency-defined perimeter and connected by a dedicated low-latency regional network.",
+     "A geography (such as North America) contains multiple regions, so it is not a single region.",
+     "Not every region is guaranteed to have multiple datacenters; zones group one or more datacenters.",
+     "Many resources require you to choose a region at deploy time; data transfer between regions is billed, not always free."
+    ],
+    "qs": [
+     26,
+     51,
+     400
+    ]
+   },
+   {
+    "title": "Azure Government",
+    "points": [
+     "Azure Government is a separate Azure cloud built for US government compliance and security requirements.",
+     "Eligible customers: US federal, state, local and tribal government entities, and US contractors/partners that serve them.",
+     "Non-US government entities and contractors (for example European or Canadian) are not eligible.",
+     "Azure Government is operated by Microsoft."
+    ],
+    "qs": [
+     185,
+     197,
+     223
+    ]
+   },
+   {
+    "title": "Azure China",
+    "points": [
+     "Azure in China is a distinct, separate instance of Azure, physically isolated from global Azure.",
+     "It is operated by 21Vianet, not by Microsoft.",
+     "It does not have feature parity with global Azure and is not limited to access from inside China."
+    ],
+    "qs": [
+     207
+    ]
+   }
+  ]
+ },
+ {
+  "skill": "availability-zones",
+  "sections": [
+   {
+    "title": "What availability zones are",
+    "points": [
+     "Availability zones are physically separate groups of one or more datacenters within a single Azure region, each with independent power, cooling and networking.",
+     "They are not spread across regions or continents, and they do not replicate data to multiple regions.",
+     "Not every Azure region supports availability zones; supporting regions have at least three.",
+     "Zones work with many services and with both Windows and Linux VMs, not only Windows Server VMs."
+    ],
+    "qs": [
+     11,
+     22,
+     25
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/reliability/availability-zones-overview"
+   },
+   {
+    "title": "Failures that zones protect against",
+    "points": [
+     "Availability zones protect against datacenter-level (zone) failures, including smaller failures such as a rack or server.",
+     "They do not protect against a full region outage; use multiple regions for that.",
+     "Zone-redundant resources, including managed disks, survive the loss of one zone.",
+     "Failure scope, smallest to largest: server, datacenter/zone, region."
+    ],
+    "qs": [
+     32,
+     40,
+     469
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/reliability/availability-zones-overview"
+   },
+   {
+    "title": "Surviving a single datacenter failure",
+    "points": [
+     "Deploying VMs to two or more availability zones keeps services running if one datacenter fails.",
+     "Deploying VMs to two or more regions also survives a datacenter failure (and a region failure), at greater cost and complexity.",
+     "Resource groups are only a management container and give no physical separation.",
+     "A single scale set is not by itself zone-resilient unless it is configured to span zones."
+    ],
+    "qs": [
+     27,
+     36,
+     59,
+     61,
+     471,
+     472
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/reliability/availability-zones-overview"
+   },
+   {
+    "title": "VM SLA of 99.99 percent",
+    "points": [
+     "Two or more VM instances spread across two or more availability zones in the same region give a 99.99 percent VM SLA.",
+     "Minimum for that SLA: 2 virtual machines in 2 availability zones.",
+     "An availability set (same datacenter) gives a lower SLA than zones."
+    ],
+    "qs": [
+     20,
+     121
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/reliability/availability-zones-overview"
+   }
+  ]
+ },
+ {
+  "skill": "azure-datacenters",
+  "sections": [
+   {
+    "title": "Datacenters, zones, and regions",
+    "points": [
+     "A datacenter is the physical facility; Azure groups datacenters into availability zones and regions.",
+     "A region holds datacenters within a latency-defined perimeter, joined by a low-latency network.",
+     "An availability zone is a logical grouping of one or more physically separate datacenters with independent power, cooling and networking."
+    ],
+    "qs": [],
+    "link": "https://learn.microsoft.com/en-us/azure/reliability/availability-zones-overview"
+   }
+  ]
+ },
+ {
+  "skill": "resources-and-resource-groups",
+  "sections": [
+   {
+    "title": "Resource group behavior",
+    "points": [
+     "A resource group stores metadata about its resources; its resources can be in different regions.",
+     "Each resource exists in exactly one resource group, and resource groups cannot be nested.",
+     "Deleting a resource group deletes all resources in it.",
+     "Resources can communicate with resources in other resource groups.",
+     "Tags and permissions: permissions assigned on a group are inherited by its resources; tags are not inherited automatically."
+    ],
+    "qs": [
+     18,
+     65,
+     443
+    ]
+   },
+   {
+    "title": "Where resources are placed",
+    "points": [
+     "Every Azure resource, such as a VM, is deployed into a resource group within a subscription.",
+     "A storage account is a resource itself, not a container for VMs."
+    ],
+    "qs": [
+     336
+    ]
+   }
+  ]
+ },
+ {
+  "skill": "subscriptions",
+  "sections": [
+   {
+    "title": "Subscriptions, tenants, and administrators",
+    "points": [
+     "A subscription trusts exactly one Microsoft Entra tenant; a tenant can have many subscriptions.",
+     "You can change the directory associated with a subscription.",
+     "If a subscription expires, the Entra tenant is not deleted.",
+     "Subscriptions are managed with Entra accounts, not only Microsoft accounts; a subscription has one account administrator.",
+     "Separate Entra directories per division create more admin overhead than subscriptions."
+    ],
+    "qs": [
+     3,
+     10,
+     453
+    ]
+   },
+   {
+    "title": "Multiple subscriptions and moving resources",
+    "points": [
+     "One account can manage multiple subscriptions, and a company can use resources from many.",
+     "Subscriptions cannot be merged; instead move resources between subscriptions.",
+     "VMs and their associated resources can be moved to a different subscription."
+    ],
+    "qs": [
+     6,
+     7,
+     46
+    ]
+   },
+   {
+    "title": "Subscription as billing and limit boundary",
+    "points": [
+     "Create a subscription first as the container for billing and resources when starting in Azure.",
+     "Costs are billed per subscription, so give each department its own subscription to use different payment options.",
+     "Subscription quotas/limits are raised by creating a new support request (quota increase)."
+    ],
+    "qs": [
+     17,
+     243,
+     9
+    ]
+   },
+   {
+    "title": "Free trial and ownership",
+    "points": [
+     "After a free trial expires you cannot start VMs; convert to pay-as-you-go to continue.",
+     "The Owner role manages resources but does not transfer the subscription; billing account administrators do.",
+     "A spending limit on a trial is fixed."
+    ],
+    "qs": [
+     239,
+     285
+    ]
+   }
+  ]
+ },
+ {
+  "skill": "management-groups",
+  "sections": [
+   {
+    "title": "Management groups",
+    "points": [
+     "Management groups sit above subscriptions and let you apply governance, such as Azure Policy and access control, across multiple subscriptions.",
+     "Resource groups organize resources inside one subscription and cannot span subscriptions.",
+     "Azure Policy defines rules; management groups define the scope where they apply."
+    ],
+    "qs": [
+     4,
+     218
+    ]
+   }
+  ]
+ },
+ {
+  "skill": "hierarchy-of-resource-groups-subscriptio",
+  "sections": [
+   {
+    "title": "Scope hierarchy",
+    "points": [
+     "Order, top to bottom: management group, subscription, resource group, resource (such as a VM).",
+     "Settings such as policy and access assigned at a higher scope are inherited below."
+    ],
+    "qs": [
+     410
+    ]
+   },
+   {
+    "title": "Segmenting Azure by department",
+    "points": [
+     "Use separate subscriptions and/or resource groups to segment resources for departments, each with its own administrator.",
+     "Multiple regions do not provide administrative segmentation.",
+     "Multiple Entra directories add administrative effort and are not the usual approach."
+    ],
+    "qs": [
+     5
+    ]
+   }
+  ]
+ },
+ {
+  "skill": "compare-compute-types-containers-vms-fun",
+  "sections": [
+   {
+    "title": "Compare compute services",
+    "points": [
+     "Virtual machines: IaaS; full OS control and OS-level virtualization.",
+     "Container Instances: run containers without managing VMs; portable app environment.",
+     "Azure Kubernetes Service (AKS) and Container Instances both manage containers.",
+     "App Service: PaaS to build, deploy and scale web apps.",
+     "Functions: serverless, event-triggered code. VM Scale Sets: groups of identical VMs."
+    ],
+    "qs": [
+     45,
+     102,
+     394,
+     62,
+     57
+    ]
+   },
+   {
+    "title": "IoT services",
+    "points": [
+     "IoT Hub: managed service for bidirectional communication between IoT devices and Azure; ingests data from millions of sensors.",
+     "IoT Central: fully managed SaaS to connect, monitor and manage IoT devices at scale.",
+     "Azure Sphere: secured MCU hardware, custom Linux OS and security service for IoT devices.",
+     "Data Lake Storage holds large volumes of ingested data."
+    ],
+    "qs": [
+     29,
+     48,
+     83
+    ]
+   },
+   {
+    "title": "AI, analytics, and app services",
+    "points": [
+     "Azure Machine Learning: build, test and deploy predictive analytics.",
+     "Azure Bot Service: conversational bots. Functions: serverless code.",
+     "Databricks: Apache Spark-based analytics. Application Insights: detects anomalies in web apps.",
+     "Cosmos DB is a database, not a predictive analytics tool."
+    ],
+    "qs": [
+     34,
+     85,
+     100,
+     113,
+     124
+    ]
+   },
+   {
+    "title": "Azure DevTest Labs",
+    "points": [
+     "DevTest Labs reduces administrative effort for creating and removing many Windows or Linux VMs repeatedly, with templates and policies.",
+     "It is not a compute type like VMs or scale sets; it is a lab-management service for dev/test VMs."
+    ],
+    "qs": [
+     154
+    ]
+   }
+  ]
+ },
+ {
+  "skill": "vm-options-vms-vm-scale-sets-availabilit",
+  "sections": [
+   {
+    "title": "Azure Virtual Desktop",
+    "points": [
+     "Azure Virtual Desktop is a desktop and app virtualization service delivering cloud-hosted Windows from any location.",
+     "It supports both full desktops and published apps.",
+     "Session hosts are not limited to Windows 10; Windows 11 and Windows Server are also supported.",
+     "A host pool supports multi-session, so connections can exceed the number of session hosts."
+    ],
+    "qs": [
+     30,
+     343,
+     423
+    ]
+   },
+   {
+    "title": "Scale sets and availability sets",
+    "points": [
+     "VM Scale Sets: identically configured VMs that can scale in and out automatically.",
+     "Availability sets: group VMs into fault domains and update domains within a datacenter.",
+     "Availability zones are separate datacenters; load balancers distribute traffic."
+    ],
+    "qs": [
+     344,
+     378
+    ]
+   },
+   {
+    "title": "Azure Spot virtual machines",
+    "points": [
+     "Spot VMs use unused Azure compute capacity at deep discounts; capacity can be reclaimed.",
+     "Reserved VM Instances are a committed-term discount, not unused-capacity pricing."
+    ],
+    "qs": [
+     267
+    ]
+   },
+   {
+    "title": "Deploying many temporary VMs",
+    "points": [
+     "Azure DevTest Labs minimizes effort to create and remove many VMs.",
+     "Microsoft Managed Desktop manages end-user desktops; it is not for deploying batches of VMs.",
+     "Scale sets scale identical VMs, not customized Windows and Linux mixes."
+    ],
+    "qs": [
+     114,
+     132
+    ]
+   }
+  ]
+ },
+ {
+  "skill": "resources-required-for-virtual-machines",
+  "sections": [
+   {
+    "title": "VM dependencies",
+    "points": [
+     "Every Azure VM needs a virtual network (its network interface connects to a subnet), plus a disk and compute.",
+     "A public IP address, service endpoint or Azure Firewall is optional."
+    ],
+    "qs": [
+     307
+    ]
+   }
+  ]
+ },
+ {
+  "skill": "application-hosting-web-apps-containers-",
+  "sections": [
+   {
+    "title": "Content delivery network",
+    "points": [
+     "A CDN caches content such as video at edge locations near users for best worldwide playback.",
+     "Application Gateway, ExpressRoute and Traffic Manager do not cache content at the edge."
+    ],
+    "qs": [
+     82
+    ]
+   },
+   {
+    "title": "App Service plan tiers",
+    "points": [
+     "Free and Shared run on shared VMs and cannot scale out.",
+     "Basic, Standard and Premium run on dedicated VMs; features such as custom domains, TLS/SSL, autoscale and slots depend on tier.",
+     "Needs such as multiple dedicated instances with load balancing, custom domain and SSL point to Standard over Free, Shared or Basic.",
+     "Costs: choose the lowest tier that meets all requirements."
+    ],
+    "qs": [
+     442,
+     462
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/app-service/overview-hosting-plans"
+   }
+  ]
+ },
+ {
+  "skill": "virtual-networking-vnets-subnets-peering",
+  "sections": [
+   {
+    "title": "Virtual network basics",
+    "points": [
+     "A virtual network provides isolation and segmentation; use separate VNets for separate network segments.",
+     "VNets in the same region are not connected by default; VNet names are unique within a resource group.",
+     "Address spaces can overlap in a subscription but must not overlap for peered VNets.",
+     "Peering can connect any two VNets, across regions or subscriptions."
+    ],
+    "qs": [
+     14,
+     311,
+     465,
+     397
+    ]
+   },
+   {
+    "title": "Network security groups",
+    "points": [
+     "An NSG filters inbound and outbound traffic with allow/deny rules; it controls ports and connection types between VMs.",
+     "Associate an NSG with a subnet or a network interface, not with a virtual network.",
+     "Sources can be IP addresses/CIDR, service tags or application security groups.",
+     "Default rules allow VNet and outbound internet traffic and deny other inbound traffic, so NSGs do not block all traffic.",
+     "A local network gateway is not a traffic filter."
+    ],
+    "qs": [
+     130,
+     142,
+     157,
+     160,
+     168,
+     172,
+     173,
+     231,
+     242
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview"
+   },
+   {
+    "title": "Allowing internet access to a VM",
+    "points": [
+     "Allow inbound HTTP/ports to a VM by modifying the NSG rules.",
+     "Traffic Manager is DNS-based load balancing and does not open ports.",
+     "DDoS protection does not allow ports either."
+    ],
+    "qs": [
+     129,
+     166,
+     175,
+     179
+    ]
+   },
+   {
+    "title": "Firewall and DDoS protection",
+    "points": [
+     "Azure Firewall NAT (DNAT) rules let internet users reach a server in a virtual network; network and application rules filter traffic.",
+     "One Azure Firewall can centrally limit inbound traffic across virtual networks.",
+     "DDoS Protection defends against attacks and provides attack reports."
+    ],
+    "qs": [
+     145,
+     276,
+     163,
+     169
+    ]
+   },
+   {
+    "title": "Hybrid connectivity",
+    "points": [
+     "Site-to-Site VPN: on-premises VPN device to an Azure VPN gateway over an encrypted tunnel on the internet.",
+     "Point-to-Site (P2S) VPN connects individual remote client computers to a VNet.",
+     "ExpressRoute: dedicated private connection that does not use the public internet; uses BGP, operates at layer 3; multiple circuits supported.",
+     "To connect on-premises to Azure VMs you need a virtual network (VNet) and a virtual network gateway. The gateway lives in a dedicated 'GatewaySubnet' inside that VNet; a local network gateway represents the on-premises VPN device.",
+     "When asked for the two resources, the answer pair is the virtual network gateway and the virtual network."
+    ],
+    "qs": [
+     8,
+     53,
+     63,
+     165,
+     313,
+     364,
+     402,
+     470
+    ]
+   },
+   {
+    "title": "Azure DNS",
+    "points": [
+     "Azure DNS hosts custom DNS domains and supports both public and private zones.",
+     "Azure VMs can register names in Azure DNS automatically."
+    ],
+    "qs": [
+     406
+    ]
+   },
+   {
+    "title": "User-defined routes and appliances",
+    "points": [
+     "A network virtual appliance is a VM that performs a network function such as a firewall.",
+     "User-defined routes can control traffic beyond a single VNet's subnets.",
+     "NSGs can contain multiple inbound and outbound rules."
+    ],
+    "qs": [
+     403
+    ]
+   },
+   {
+    "title": "Tools for running Azure scripts",
+    "points": [
+     "PowerShell scripts run from Windows, Linux or macOS with Azure PowerShell installed.",
+     "Azure CLI works on Linux/macOS/Windows; Cloud Shell runs in a browser from any OS."
+    ],
+    "qs": [
+     104,
+     127
+    ]
+   }
+  ]
+ },
+ {
+  "skill": "public-and-private-endpoints",
+  "sections": [
+   {
+    "title": "Keeping storage traffic off the internet",
+    "points": [
+     "A service endpoint keeps traffic from a virtual network to an Azure service (such as Storage) on the Microsoft backbone network.",
+     "A private endpoint gives the service a private IP address in your VNet.",
+     "A public endpoint is reachable over the internet; NSGs and VPN Gateway do not make PaaS traffic private."
+    ],
+    "qs": [
+     329
+    ]
+   }
+  ]
+ },
+ {
+  "skill": "compare-azure-storage-services",
+  "sections": [
+   {
+    "title": "Azure Storage services",
+    "points": [
+     "Blob: very large unstructured objects like video. Files: network file shares (SMB) mapped as drives.",
+     "Queue: reliable messaging between applications. Table: key/attribute NoSQL store.",
+     "Disk storage: VM disks; unmanaged VM disks are stored in blob containers.",
+     "Only Blob supports the Archive access tier."
+    ],
+    "qs": [
+     15,
+     12,
+     70,
+     321
+    ]
+   },
+   {
+    "title": "Database and analytics services",
+    "points": [
+     "Cosmos DB: globally distributed NoSQL, JSON documents, multi-region writes.",
+     "SQL Database: managed relational database. Synapse Analytics: MPP data warehouse.",
+     "HDInsight: managed Hadoop/Spark clusters. Data Lake: store large analytics data.",
+     "Machine Learning predicts; IoT Hub ingests device data; Functions runs serverless code."
+    ],
+    "qs": [
+     16,
+     38,
+     78,
+     89,
+     67
+    ]
+   }
+  ]
+ },
+ {
+  "skill": "storage-tiers",
+  "sections": [
+   {
+    "title": "Tier minimum retention and cost",
+    "points": [
+     "Hot: frequently accessed, highest storage cost, lowest access cost.",
+     "Cool: infrequent, at least 30 days. Cold: at least 90 days. Archive: at least 180 days, lowest storage cost.",
+     "Deleting or moving data before the minimum period triggers an early deletion fee."
+    ],
+    "qs": [
+     374,
+     408,
+     415
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview"
+   },
+   {
+    "title": "Archive rehydration",
+    "points": [
+     "Archive is offline: blobs can't be read until rehydrated to hot, cool or cold; this can take hours.",
+     "Archive can't be the default account tier.",
+     "Archive is supported only for LRS, GRS and RA-GRS accounts."
+    ],
+    "qs": [
+     19,
+     342
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview"
+   },
+   {
+    "title": "Setting access tiers",
+    "points": [
+     "The account default tier is hot or cool (or cold), and blob tiers can be changed after upload.",
+     "Archive is set per blob, not at account level.",
+     "Cool and archive are not recommended for active data; archive suits long-term backups.",
+     "Tiering applies to block blobs, not premium storage."
+    ],
+    "qs": [
+     39,
+     320,
+     357
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview"
+   }
+  ]
+ },
+ {
+  "skill": "redundancy-options",
+  "sections": [
+   {
+    "title": "Number of copies",
+    "points": [
+     "LRS keeps 3 copies in one datacenter.",
+     "ZRS 3 copies across zones; GRS 6 copies (3 + 3 in secondary region); GZRS 6 copies.",
+     "Storage always keeps at least three copies, but LRS isn't backed up to another datacenter."
+    ],
+    "qs": [
+     301,
+     309,
+     414,
+     23
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy"
+   },
+   {
+    "title": "Read access to the secondary region",
+    "points": [
+     "GRS does not allow reads from the secondary; RA-GRS does.",
+     "Choose RA-GRS or RA-GZRS for data on multiple nodes in separate regions with reads from both."
+    ],
+    "qs": [
+     110
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy"
+   },
+   {
+    "title": "Ordering redundancy options",
+    "points": [
+     "Least to most redundant: LRS, ZRS, GRS (GZRS highest).",
+     "LRS protects drive/rack failures; ZRS adds zone failures; GRS adds region failures."
+    ],
+    "qs": [
+     69
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy"
+   },
+   {
+    "title": "Premium block blob redundancy",
+    "points": [
+     "Premium block blob accounts support LRS and ZRS only, not geo-redundancy.",
+     "GRS, GZRS and their read-access variants are available for standard general-purpose v2 accounts."
+    ],
+    "qs": [
+     323
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy"
+   }
+  ]
+ },
+ {
+  "skill": "storage-account-options-and-storage-type",
+  "sections": [
+   {
+    "title": "Premium account types",
+    "points": [
+     "Premium performance accounts include block blobs and file shares (and page blobs).",
+     "Standard general-purpose v2 is the standard account type, not a premium type.",
+     "Premium accounts use SSD storage for low latency."
+    ],
+    "qs": [
+     322
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy"
+   },
+   {
+    "title": "Creating storage accounts",
+    "points": [
+     "Create an Azure file share inside a storage account.",
+     "Storage account names must be globally unique across Azure, regardless of region or subscription."
+    ],
+    "qs": [
+     325,
+     345
+    ]
+   }
+  ]
+ },
+ {
+  "skill": "moving-files-azcopy-storage-explorer-azu",
+  "sections": [
+   {
+    "title": "File transfer and sync tools",
+    "points": [
+     "AzCopy: command-line utility to copy blobs or files to or from a storage account.",
+     "Azure Storage Explorer: graphical app for managing storage, not a migration service.",
+     "Azure File Sync: syncs Windows Server files with an Azure Files file share."
+    ],
+    "qs": [
+     52,
+     361,
+     379
+    ]
+   }
+  ]
+ },
+ {
+  "skill": "migration-azure-migrate-azure-data-box",
+  "sections": [
+   {
+    "title": "Data Box and Azure Migrate",
+    "points": [
+     "Azure Data Box is a physical device to move large amounts of data quickly and inexpensively.",
+     "Azure Migrate discovers, assesses and migrates on-premises servers and workloads.",
+     "Azure File Sync syncs files and Databricks is an analytics service."
+    ],
+    "qs": [
+     362
+    ]
+   }
+  ]
+ },
+ {
+  "skill": "microsoft-entra-id-and-entra-domain-serv",
+  "sections": [
+   {
+    "title": "Entra ID as the cloud identity provider",
+    "points": [
+     "Microsoft Entra ID (formerly Azure AD) is a cloud-based identity and access management service. It needs no domain controllers on Azure virtual machines.",
+     "It is the built-in authentication and authorization service for Azure, Microsoft 365 and other SaaS apps; applications request security tokens from it.",
+     "Create and manage users in Microsoft Entra ID (Azure portal > Microsoft Entra ID > Users), not in Subscriptions, Resource groups or Virtual machines.",
+     "A user can hold several licenses, for example Microsoft 365 plus other Microsoft cloud services. Licensing is not limited to one per user.",
+     "Identities from third-party providers or on-premises AD can be trusted through federation, so access to Azure is not limited to cloud-only accounts."
+    ],
+    "qs": [
+     184,
+     372,
+     190,
+     331,
+     181
+    ],
+    "link": "https://learn.microsoft.com/en-us/entra/fundamentals/whatis"
+   },
+   {
+    "title": "Syncing on-premises AD to Entra ID",
+    "points": [
+     "Microsoft Entra Connect (Entra Connect Sync) synchronizes identities from on-premises Active Directory to Microsoft Entra ID.",
+     "To keep users working after moving resources to Azure and retiring the datacenter, sync the existing AD accounts (and optionally password hashes) to Entra ID.",
+     "Synced users keep their existing credentials, so impact on users is minimal. No re-creation or password reset is needed.",
+     "MFA adds sign-in security but does not create identities in the cloud. Guest accounts are for external users, not for migrating your own staff."
+    ],
+    "qs": [
+     44,
+     191,
+     253
+    ],
+    "link": "https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/how-to-connect-sync-whatis"
+   },
+   {
+    "title": "Devices, groups and SSO in Entra ID",
+    "points": [
+     "Windows 10/11 devices can be Microsoft Entra joined (or hybrid joined) so users sign in with Entra credentials; iOS and Android devices can be registered.",
+     "Group Policy is an on-premises Active Directory feature; you cannot create Group Policy objects in Microsoft Entra ID (device management uses Intune).",
+     "Groups in Entra ID support dynamic membership rules that add or remove members automatically from user or device attributes.",
+     "Users are organized with groups and administrative units. Resource groups organize Azure resources, not users.",
+     "Entra ID provides single sign-on (SSO) and can manage access to on-premises apps (for example through Application Proxy)."
+    ],
+    "qs": [
+     35,
+     214,
+     201
+    ],
+    "link": "https://learn.microsoft.com/en-us/entra/identity/devices/overview"
+   },
+   {
+    "title": "Analyzing Entra security events with Sentinel",
+    "points": [
+     "Microsoft Sentinel is a cloud-native SIEM/SOAR that collects and analyzes security events, including Entra ID sign-in and audit logs, through data connectors.",
+     "Microsoft Entra Connect only synchronizes identities. Key Vault stores secrets. Synapse Analytics is an analytics service, not a security-event service."
+    ],
+    "qs": [
+     155
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/sentinel/overview"
+   }
+  ]
+ },
+ {
+  "skill": "authentication-sso-mfa-passwordless",
+  "sections": [
+   {
+    "title": "Authentication versus authorization",
+    "points": [
+     "Authentication proves identity: verifying credentials of a user or service. Authorization decides what an authenticated identity is allowed to access.",
+     "Federation, synchronization and ticketing are different concepts; Conditional Access evaluates sign-in signals to allow or deny access.",
+     "SSO lets users sign in once with one set of credentials for several apps. It does not require the Microsoft Authenticator app.",
+     "MFA requires more than one verification element (for example password plus a phone prompt) to identify a user."
+    ],
+    "qs": [
+     158,
+     216,
+     228,
+     229
+    ],
+    "link": "https://learn.microsoft.com/en-us/entra/fundamentals/whatis"
+   },
+   {
+    "title": "Single sign-on with Entra ID",
+    "points": [
+     "Microsoft Entra ID enables SSO to many cloud and on-premises applications with a single set of credentials.",
+     "Key Vault stores secrets, application security groups group VMs for network rules, and Defender for Cloud assesses security posture. None provide SSO."
+    ],
+    "qs": [
+     156,
+     199
+    ],
+    "link": "https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/what-is-single-sign-on"
+   },
+   {
+    "title": "How multi-factor authentication works",
+    "points": [
+     "MFA combines factors from categories: something you know (password), something you have (phone, security key), something you are (biometric).",
+     "Valid verification methods include Microsoft Authenticator, SMS, voice call and hardware tokens. Photo ID and passport numbers are not methods.",
+     "MFA works in cloud-only environments. It does not require syncing on-premises identities or deploying federation.",
+     "MFA can be required for administrators only or for any user account."
+    ],
+    "qs": [
+     187,
+     206
+    ],
+    "link": "https://learn.microsoft.com/en-us/entra/identity/authentication/concept-mfa-howitworks"
+   },
+   {
+    "title": "Password, MFA and passwordless compared",
+    "points": [
+     "Password only: low security, convenient. It is the weakest option.",
+     "MFA: high security but adds steps, so less convenient.",
+     "Passwordless (Windows Hello for Business, Microsoft Authenticator, FIDO2 security keys): high security and convenient, with no password to steal."
+    ],
+    "qs": [
+     412
+    ],
+    "link": "https://learn.microsoft.com/en-us/entra/identity/authentication/concept-authentication-passwordless"
+   }
+  ]
+ },
+ {
+  "skill": "external-identities",
+  "sections": [
+   {
+    "title": "Microsoft Entra External ID basics",
+    "points": [
+     "External identities let people outside your organization (partners, vendors, customers) access your apps and resources using their own identities.",
+     "B2B collaboration: invite external users as guests who sign in with their own organizational or social identity.",
+     "B2C / customer identity: provide sign-up and sign-in for consumer-facing apps, separate from the workforce directory."
+    ],
+    "qs": [],
+    "link": "https://learn.microsoft.com/en-us/entra/external-id/external-identities-overview"
+   }
+  ]
+ },
+ {
+  "skill": "microsoft-entra-conditional-access",
+  "sections": [
+   {
+    "title": "Conditional Access evaluates sign-in signals",
+    "points": [
+     "Conditional Access is the Microsoft Entra policy engine that combines signals (user, location, device, application, risk) to make access decisions.",
+     "Decisions include block access, grant access, or grant with requirements such as MFA or a compliant device.",
+     "To limit access to apps to users whose devices meet requirements (such as being compliant or patched), create a Conditional Access policy.",
+     "Azure Firewall, Bastion and Azure Policy do not make sign-in decisions for Entra-integrated applications; managed identities and Intune are not signal engines."
+    ],
+    "qs": [
+     195,
+     392
+    ],
+    "link": "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview"
+   },
+   {
+    "title": "Identity Protection, PIM and Defender for Identity",
+    "points": [
+     "Microsoft Entra ID Protection detects risky sign-ins and users (such as anonymous IP addresses) and drives risk-based policies: require MFA or force a password change.",
+     "Privileged Identity Management (PIM) manages just-in-time, time-bound and approved elevation of privileged roles. It does not react to risky sign-ins.",
+     "Microsoft Defender for Identity (formerly Azure ATP) uses sensors installed on on-premises domain controllers to detect threats and compromised identities.",
+     "Microsoft Entra Connect Health monitors the health of the sync infrastructure, not sign-in risk."
+    ],
+    "qs": [
+     164,
+     188,
+     208,
+     220
+    ],
+    "link": "https://learn.microsoft.com/en-us/entra/id-protection/overview-identity-protection"
+   }
+  ]
+ },
+ {
+  "skill": "azure-role-based-access-control-rbac",
+  "sections": [
+   {
+    "title": "Scope and assigning Azure roles",
+    "points": [
+     "Azure RBAC scopes: management group, subscription, resource group, resource. Assignments at a parent scope are inherited by child scopes.",
+     "To give a user permissions on many VMs at once, place them in the same resource group and assign the role at the resource group.",
+     "Assign roles from Access control (IAM) on the chosen scope (management group, subscription, resource group or resource).",
+     "Azure RBAC roles also grant permissions to services such as Azure Virtual Desktop. Tags, resource groups and application security groups do not grant permissions."
+    ],
+    "qs": [
+     58,
+     109,
+     310
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/role-based-access-control/overview"
+   },
+   {
+    "title": "Roles and role assignments",
+    "points": [
+     "Azure has built-in roles (Owner, Contributor, Reader) and supports custom roles when built-in ones don't fit.",
+     "A user can have multiple role assignments, and a scope such as a resource group can have the Owner role assigned to multiple users."
+    ],
+    "qs": [
+     174
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/role-based-access-control/overview"
+   },
+   {
+    "title": "Identity sources and federation",
+    "points": [
+     "Access to Azure resources is not limited to Entra ID accounts: federation allows identities from on-premises AD or other providers to be used.",
+     "Azure has built-in authentication (Entra ID) and authorization (RBAC) services."
+    ],
+    "qs": [
+     226
+    ],
+    "link": "https://learn.microsoft.com/en-us/entra/fundamentals/whatis"
+   },
+   {
+    "title": "Network isolation is not RBAC",
+    "points": [
+     "Azure routes traffic automatically between subnets in a virtual network, so all VMs in one virtual network can communicate by default.",
+     "To prevent a VM from connecting to others, deploy it to a separate virtual network (or restrict traffic with NSGs).",
+     "Resource group, OS and number of NICs do not isolate network traffic; resource groups are logical containers for management."
+    ],
+    "qs": [
+     37
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview"
+   }
+  ]
+ },
+ {
+  "skill": "zero-trust",
+  "sections": [
+   {
+    "title": "Zero Trust principles",
+    "points": [
+     "Zero Trust assumes no implicit trust based on network location. Every access request is authenticated, authorized and encrypted.",
+     "Verify explicitly: use all available signals such as identity, location, device health and data classification.",
+     "Use least privilege access: limit access with just-in-time and just-enough access and risk-based adaptive policies.",
+     "Assume breach: minimize blast radius with segmentation, end-to-end encryption, and use analytics to detect threats."
+    ],
+    "qs": [],
+    "link": "https://learn.microsoft.com/en-us/security/zero-trust/zero-trust-overview"
+   }
+  ]
+ },
+ {
+  "skill": "defense-in-depth-model",
+  "sections": [
+   {
+    "title": "Defense-in-depth layers",
+    "points": [
+     "Layers from outside in: physical security, identity and access, perimeter, network, compute, application, data.",
+     "Physical security: surveillance cameras and datacenter access controls. Identity and access: MFA, conditional access, SSO.",
+     "Perimeter: DDoS protection and firewalls at the network edge. Network: segmentation and NSGs. Compute: patching and endpoint protection.",
+     "Application: secure code and secrets management. Data: encryption of stored and transmitted data."
+    ],
+    "qs": [
+     140,
+     146,
+     161,
+     356
+    ],
+    "link": "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/"
+   },
+   {
+    "title": "Azure Key Vault for secrets and certificates",
+    "points": [
+     "Azure Key Vault securely stores and controls access to secrets, keys, and certificates (passwords, API keys, connection strings, TLS certificates).",
+     "Use it to avoid exposing administrative credentials in automated deployment scripts; applications and servers retrieve secrets at runtime.",
+     "Azure Information Protection classifies and protects documents and email; MFA verifies identity; Defender for Cloud assesses posture. None store certificates or secrets.",
+     "Storage accounts are not designed for secure secret management."
+    ],
+    "qs": [
+     134,
+     159,
+     171,
+     170,
+     176,
+     186
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/key-vault/general/overview"
+   },
+   {
+    "title": "Azure Disk Encryption prerequisite",
+    "points": [
+     "Azure Disk Encryption uses BitLocker (Windows) or DM-Crypt (Linux) and stores encryption keys and secrets in Azure Key Vault.",
+     "Create the Key Vault before enabling disk encryption on the VM."
+    ],
+    "qs": [
+     141
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/virtual-machines/disk-encryption-overview"
+   },
+   {
+    "title": "Network filtering versus encryption",
+    "points": [
+     "Azure Firewall and network security groups filter traffic by rules. They do not encrypt traffic.",
+     "Encryption in transit comes from protocols such as TLS/HTTPS or IPsec VPN, which VMs can use.",
+     "To make a VM reachable over HTTP, allow inbound port 80 (for example with an NSG rule). A DDoS protection plan only mitigates attacks, it does not open access."
+    ],
+    "qs": [
+     138,
+     177
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/security/fundamentals/encryption-overview"
+   }
+  ]
+ },
+ {
+  "skill": "microsoft-defender-for-cloud",
+  "sections": [
+   {
+    "title": "Defender for Cloud posture and compliance",
+    "points": [
+     "Microsoft Defender for Cloud (formerly Security Center and Azure Defender) is a cloud security posture management (CSPM) and workload protection (CWP) platform.",
+     "It shows secure score, security recommendations, and a regulatory compliance dashboard with downloadable reports.",
+     "It monitors Azure resources and also on-premises and multicloud resources.",
+     "Basic features such as continuous assessment, recommendations and secure score are free; enhanced security features (Defender plans) are paid."
+    ],
+    "qs": [
+     139,
+     304,
+     151,
+     153,
+     182
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction"
+   },
+   {
+    "title": "Just-in-time VM access",
+    "points": [
+     "Just-in-time (JIT) VM access, a Defender for Cloud feature, locks down inbound management ports (such as RDP and SSH) on VMs.",
+     "Access is opened temporarily on request for a limited time, reducing attack surface.",
+     "Bastion provides browser-based RDP/SSH, Firewall filters traffic, Front Door is a web delivery service. They are not the JIT feature."
+    ],
+    "qs": [
+     152,
+     167
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-overview"
+   },
+   {
+    "title": "Microsoft Sentinel as SIEM",
+    "points": [
+     "Microsoft Sentinel is a cloud-native SIEM (security information and event management) and SOAR (security orchestration, automation and response) solution.",
+     "Data connectors collect logs from Azure, Microsoft 365, Entra ID, Windows firewall logs on VMs and more. Data is stored in a Log Analytics workspace, not a storage account.",
+     "It analyzes events with analytics rules, creates incidents, and can remediate automatically using automation rules and playbooks.",
+     "Azure Analysis Services, Cognitive Services and Information Protection are not SIEM solutions."
+    ],
+    "qs": [
+     135,
+     149,
+     136,
+     178
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/sentinel/overview"
+   },
+   {
+    "title": "Automating response with Sentinel playbooks",
+    "points": [
+     "Playbooks are Azure Logic Apps workflows that run in response to alerts or incidents to automate and orchestrate threat response.",
+     "They are attached to analytics rules or automation rules and can run automatically.",
+     "Workbooks visualize collected data; they do not respond to threats. Adaptive network hardening and adaptive application controls belong to Defender for Cloud."
+    ],
+    "qs": [
+     144,
+     147,
+     162
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/sentinel/automate-responses-with-playbooks"
+   },
+   {
+    "title": "Matching security services to tasks",
+    "points": [
+     "Microsoft Sentinel: SIEM, analyze security logs. Microsoft Defender for Cloud: secure score, recommendations, compliance. Azure Key Vault: store secrets, keys and certificates.",
+     "Microsoft Entra ID: identity and sign-in. Azure Lighthouse: cross-tenant management for service providers."
+    ],
+    "qs": [
+     137,
+     148
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/defender-for-cloud/secure-score-security-controls"
+   },
+   {
+    "title": "Azure Firewall scope",
+    "points": [
+     "Azure Firewall is a managed, stateful firewall as a service with central policies and logging across multiple subscriptions and virtual networks.",
+     "NSGs and application security groups filter at the subnet/NIC level within one virtual network scope. DDoS Protection mitigates volumetric attacks."
+    ],
+    "qs": [
+     133
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/firewall/overview"
+   }
+  ]
+ },
+ {
+  "skill": "factors-that-can-affect-costs",
+  "sections": [
+   {
+    "title": "What influences the cost of a resource",
+    "points": [
+     "Cost factors: resource type and size, service tier, Azure region, and usage. Prices differ between regions for the same service.",
+     "Outbound data volume affects cost; the type of processed data does not. Inbound transfer does not add cost.",
+     "Storage: the price varies by region, and read/write operations and cross-region transfers are billable in general-purpose v2 accounts.",
+     "A reservation commits to a resource for a term for a discount; it does not reserve capacity at a specific datacenter.",
+     "An Azure SQL Database cannot be stopped to save money; scale the tier or use serverless auto-pause."
+    ],
+    "qs": [
+     339,
+     247,
+     258
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/cost-management-billing/understand/plan-manage-costs"
+   },
+   {
+    "title": "Bandwidth: inbound versus outbound",
+    "points": [
+     "Inbound data transfer (ingress) to Azure is free, including over VPN and ExpressRoute.",
+     "Outbound data transfer (egress) from Azure to on-premises or the internet is billed and its price varies by region.",
+     "Data transfer between services in the same region is not charged; transfers between regions are billed for the source's outbound traffic.",
+     "Resource groups are logical containers and incur no cost."
+    ],
+    "qs": [
+     255,
+     260,
+     291
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/cost-management-billing/understand/plan-manage-costs"
+   },
+   {
+    "title": "Virtual machine billing and cost flexibility",
+    "points": [
+     "Stopped (Deallocated) VMs aren't billed for compute, but disks (OS and data) and other resources like public IPs continue to incur charges.",
+     "A VM stopped from inside the guest OS stays allocated and is still billed. Stop (deallocate) it from the portal to stop compute charges.",
+     "Two VMs of the same size do not always cost the same: disks, region, OS, licensing and usage time all differ.",
+     "Reservations and savings plans lower VM cost versus pay-as-you-go. The cloud shifts spending from CapEx to OpEx and allows a mix."
+    ],
+    "qs": [
+     270,
+     273,
+     286
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/virtual-machines/states-billing"
+   },
+   {
+    "title": "Reservations and Azure Hybrid Benefit",
+    "points": [
+     "Azure Reservations are available for one-year or three-year terms. Three years is the longest term for reserved VM instances and gives the highest discount.",
+     "Azure Hybrid Benefit lets you use existing Windows Server and SQL Server licenses with Software Assurance (or subscriptions) on Azure to reduce licensing cost.",
+     "Deallocating VMs or setting budgets doesn't reduce license cost. Budgets only alert; reservations discount compute rather than licenses."
+    ],
+    "qs": [
+     241,
+     279,
+     351
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-sql/azure-hybrid-benefit"
+   },
+   {
+    "title": "Azure free account limits",
+    "points": [
+     "A free account gives $200 credit for the first 30 days plus limited quantities of certain services free for 12 months.",
+     "Only a subset of services and tiers are included. Credit or free quantities expire, after which pay-as-you-go rates apply.",
+     "Limits apply per service (for example 5 GB blob storage), so unlimited web apps or 2 TB uploads are not included.",
+     "Free accounts are limited per person and not repeatable on the same Microsoft account."
+    ],
+    "qs": [
+     244,
+     265
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/avoid-charges-free-account"
+   },
+   {
+    "title": "Agreements and Marketplace pricing",
+    "points": [
+     "An Enterprise Agreement (EA) requires a predetermined (commitment) spend. Outbound traffic cost differs by region.",
+     "Third-party Marketplace offerings are priced by the publisher, not by Microsoft."
+    ],
+    "qs": [
+     277
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/cost-management-billing/understand/plan-manage-costs"
+   },
+   {
+    "title": "Idle resources that do and don't cost",
+    "points": [
+     "Public IP addresses (standard SKU) are billed, so deleting unused ones reduces cost.",
+     "Network interfaces, Microsoft Entra users and groups, and resource groups are not billed. Deleting them does not reduce cost."
+    ],
+    "qs": [
+     287,
+     296
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/advisor/advisor-cost-recommendations"
+   }
+  ]
+ },
+ {
+  "skill": "pricing-calculator",
+  "sections": [
+   {
+    "title": "TCO calculator",
+    "points": [
+     "The Total Cost of Ownership (TCO) calculator compares the cost of running workloads on-premises with running them in Azure.",
+     "It includes datacenter costs such as hardware, electricity, space, and IT labor, so it can show savings from reduced power use after migrating.",
+     "It produces shareable reports with graphs and is available to anyone, with no Azure account required."
+    ],
+    "qs": [
+     31,
+     261,
+     401
+    ]
+   },
+   {
+    "title": "Pricing calculator versus TCO",
+    "points": [
+     "The Azure pricing calculator estimates the monthly cost of Azure services you configure (region, size, tier, usage), for new deployments.",
+     "Azure Migrate assesses servers for migration readiness and sizing; Database Migration Assistant checks SQL compatibility; neither estimates power savings."
+    ],
+    "qs": []
+   }
+  ]
+ },
+ {
+  "skill": "cost-management-capabilities",
+  "sections": [
+   {
+    "title": "Cost analysis in Cost Management",
+    "points": [
+     "Cost Management is available to anyone with access to a billing account, subscription, resource group or management group, including pay-as-you-go subscriptions.",
+     "Cost analysis views costs by scope (management group, subscription, resource group) and usage over time, such as the last three months.",
+     "No Enterprise Agreement or Software Assurance is required."
+    ],
+    "qs": [
+     107,
+     238
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/overview-cost-management"
+   },
+   {
+    "title": "Budgets and cost alerts",
+    "points": [
+     "Budgets in Cost Management track spend against a threshold and send email alerts when actual or forecasted cost reaches a percentage.",
+     "Budgets only alert; they do not stop resources. Advisor recommendations and IAM do not send cost-limit alerts.",
+     "Tags help categorize costs but a budget is what tracks cost against a limit."
+    ],
+    "qs": [
+     252,
+     335,
+     350
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-acm-create-budgets"
+   },
+   {
+    "title": "Reducing cost of idle resources",
+    "points": [
+     "Delete unused public IP addresses, which are billed. Unused user accounts, groups and network interfaces are not billed.",
+     "Azure Advisor cost recommendations identify idle resources."
+    ],
+    "qs": [
+     256,
+     288,
+     289
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/advisor/advisor-cost-recommendations"
+   },
+   {
+    "title": "Stopping virtual machines to save cost",
+    "points": [
+     "Stop a VM from the Azure portal (or CLI) so it is deallocated and compute billing stops.",
+     "Shutting down or disconnecting from inside the guest OS leaves the VM allocated and still billed."
+    ],
+    "qs": [
+     268
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/virtual-machines/states-billing"
+   }
+  ]
+ },
+ {
+  "skill": "purpose-of-tags",
+  "sections": [
+   {
+    "title": "Tags for cost reporting and accountability",
+    "points": [
+     "Tags are key-value metadata (for example Department = Finance) applied to resources, resource groups and subscriptions.",
+     "Cost reports can be grouped and filtered by tag, so you can report cost per department, office or cost center and track budgets.",
+     "Locks, policies and templates do not group costs; tags do. Budgets and alerts do not identify who owns a resource."
+    ],
+    "qs": [
+     257,
+     281,
+     340
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources"
+   },
+   {
+    "title": "Tag rules and limits",
+    "points": [
+     "A resource can have multiple tags (up to 50 tag name-value pairs on most resources).",
+     "Resources do not inherit tags from the resource group or subscription; use Azure Policy to apply or inherit tags.",
+     "Tags can be applied through ARM templates. Tags are metadata and do not enforce naming standards; Azure Policy does that."
+    ],
+    "qs": [
+     204,
+     391
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-policies"
+   }
+  ]
+ },
+ {
+  "skill": "microsoft-purview",
+  "sections": [
+   {
+    "title": "Trust Center and Service Trust Portal",
+    "points": [
+     "Microsoft Trust Center is a public site with information on security, privacy, compliance offerings, policies and features across Microsoft cloud products. No Azure subscription is needed.",
+     "Use it to check whether Azure complies with your regional or industry requirements. It is not part of Defender for Cloud.",
+     "The Service Trust Portal publishes audit reports, whitepapers and compliance resources for Microsoft cloud services.",
+     "Sign in with a Microsoft cloud services account to reach some content; My Library saves documents in one place."
+    ],
+    "qs": [
+     120,
+     203,
+     225,
+     210,
+     211
+    ],
+    "link": "https://learn.microsoft.com/en-us/microsoft-365/compliance/get-started-with-service-trust-portal"
+   },
+   {
+    "title": "Compliance Manager",
+    "points": [
+     "Microsoft Purview Compliance Manager assesses and tracks regulatory compliance for Microsoft cloud services with pre-built assessments, improvement actions and a compliance score.",
+     "It is opened from the Microsoft Purview portal (formerly Microsoft 365 compliance center) using an admin account.",
+     "Defender for Cloud also has a regulatory compliance dashboard for evaluating Azure resources against standards such as ISO 27001.",
+     "Cloud Shell, Azure Advisor, Service Health and Knowledge Center do not track regulatory standards."
+    ],
+    "qs": [
+     97,
+     272,
+     213,
+     198,
+     209
+    ],
+    "link": "https://learn.microsoft.com/en-us/purview/compliance-manager"
+   },
+   {
+    "title": "Microsoft privacy and data protection documents",
+    "points": [
+     "Microsoft Privacy Statement: which personal data Microsoft collects, how it is processed, and for what purpose.",
+     "Online Services Terms (now the Product Terms and Data Protection Addendum): the contractual commitments for online services.",
+     "Data Protection Addendum: data processing and security terms, including processing, transfer, retention and deletion of customer data."
+    ],
+    "qs": [
+     200,
+     205,
+     215,
+     271
+    ],
+    "link": "https://learn.microsoft.com/en-us/compliance/regulatory/offering-home"
+   },
+   {
+    "title": "Compliance standards and regulations",
+    "points": [
+     "ISO: international standards body across all industries. NIST: US standards institute used by the US government.",
+     "GDPR: EU regulation on data privacy and protection; it applies to organizations that offer goods or services to people in the EU. Azure can be used to build GDPR-compliant solutions.",
+     "Azure Government: a dedicated public cloud for US federal, state and local government agencies."
+    ],
+    "qs": [
+     189,
+     221
+    ],
+    "link": "https://learn.microsoft.com/en-us/compliance/regulatory/gdpr"
+   },
+   {
+    "title": "Information protection and data governance",
+    "points": [
+     "Microsoft Purview Information Protection (formerly Azure Information Protection) classifies and protects documents and emails using sensitivity labels.",
+     "Labels can encrypt documents and email, and apply visual markings such as watermarks automatically when sensitive data like credit card numbers is detected.",
+     "It protects documents and emails, not network traffic, storage accounts or SQL databases.",
+     "Microsoft Purview provides data discovery and classification and data governance; it is not a backup service."
+    ],
+    "qs": [
+     183,
+     196,
+     405
+    ],
+    "link": "https://learn.microsoft.com/en-us/purview/information-protection"
+   }
+  ]
+ },
+ {
+  "skill": "azure-policy",
+  "sections": [
+   {
+    "title": "Policy versus locks, tags and blueprints",
+    "points": [
+     "Azure Policy enforces rules on resource properties, such as allowed regions or allowed VM sizes, and reports compliance.",
+     "Resource locks prevent deletion or modification; tags are metadata for organization and cost tracking; blueprints package templates, policies, role assignments for repeatable environments.",
+     "To restrict where or what resources can be created (and still allow others) use Policy. Locks and RBAC roles cannot target a resource type or region.",
+     "Management groups organize subscriptions; reservations are billing discounts."
+    ],
+    "qs": [
+     43,
+     50,
+     194,
+     212
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/governance/policy/overview"
+   },
+   {
+    "title": "Policy definitions and initiatives",
+    "points": [
+     "A policy definition is a single business rule that describes a compliance condition and the effect.",
+     "An initiative definition is a collection of policy definitions grouped toward one goal and assigned as a single item."
+    ],
+    "qs": [
+     150,
+     217
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/governance/policy/concepts/initiative-definition-structure"
+   },
+   {
+    "title": "Assigning policy and its effect",
+    "points": [
+     "A policy or initiative is assigned to a scope: management group, subscription, resource group or resource.",
+     "The assignment applies to all resources within the scope; it blocks or audits non-compliant deployments depending on the effect.",
+     "Existing non-compliant resources are flagged non-compliant, not removed."
+    ],
+    "qs": [
+     347,
+     382
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/governance/policy/overview"
+   }
+  ]
+ },
+ {
+  "skill": "resource-locks",
+  "sections": [
+   {
+    "title": "Delete versus read-only locks",
+    "points": [
+     "Two lock levels: CanNotDelete (Delete in the portal) and ReadOnly. Delete lock: authorized users can read and modify but not delete.",
+     "ReadOnly lock: users can only read, not update or delete; it is like the Reader role for everyone.",
+     "To prevent accidental deletion while allowing changes (such as creating containers), use a Delete lock; to block changes and deletes, use ReadOnly.",
+     "A ReadOnly lock still prevents deletion, but a Delete lock does not block modification."
+    ],
+    "qs": [
+     193,
+     381,
+     390,
+     411
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources"
+   },
+   {
+    "title": "Lock scope and inheritance",
+    "points": [
+     "Locks can be applied to subscriptions, resource groups and resources, not to users, administrative units or policies.",
+     "A lock at a parent scope is inherited by all child resources, including resources added later. The most restrictive lock wins.",
+     "A resource can have multiple locks. You can add a Delete lock to a resource that has a ReadOnly lock.",
+     "Any Azure resource can have a lock."
+    ],
+    "qs": [
+     224,
+     395,
+     445,
+     389
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources"
+   },
+   {
+    "title": "Locks override user permissions",
+    "points": [
+     "A lock applies to all users and roles, including owners and global administrators.",
+     "To delete a locked resource group, first remove the lock; no tag or policy change replaces that."
+    ],
+    "qs": [
+     227
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources"
+   },
+   {
+    "title": "Locks versus Azure Policy",
+    "points": [
+     "A Policy assignment does not delete or modify existing resources. Non-compliant resources are flagged but continue to function.",
+     "Locks restrict operations on a resource; Policy governs which resources can be created and their configuration."
+    ],
+    "qs": [
+     202
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/governance/policy/overview"
+   }
+  ]
+ },
+ {
+  "skill": "azure-portal",
+  "sections": [
+   {
+    "title": "Azure portal: web-based management",
+    "points": [
+     "The Azure portal is a browser-based console at portal.azure.com for creating and managing all your Azure resources in one place.",
+     "Because it runs in a browser, it works on any OS and device: Windows, macOS, Linux, iOS, Android. Nothing has to be installed.",
+     "It needs an internet connection and a sign-in. Command-line management is a separate option (Azure CLI, Azure PowerShell, Cloud Shell).",
+     "From a phone or tablet, use the Azure portal or Cloud Shell; locally installed tools (Windows PowerShell, Azure Storage Explorer) are not the answer for mobile.",
+     "Cloud services and other resources can be managed from the portal, the command line, or APIs; management is not limited to Windows devices."
+    ],
+    "qs": [
+     68,
+     84,
+     324,
+     112,
+     119,
+     123
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-portal/azure-portal-overview"
+   },
+   {
+    "title": "Marketplace and portal blades",
+    "points": [
+     "Azure Marketplace: catalog to find, try, and buy Microsoft and third-party solutions, such as VM images and security appliances, to deploy to a subscription.",
+     "Microsoft Store is for consumer/Microsoft products, not Azure deployments; a subscription is a billing and access boundary, not a store.",
+     "Monitor blade: monitor health and performance of services and resources.",
+     "Advisor blade: personalized recommendations, including security; Microsoft Defender for Cloud is the dedicated security posture service."
+    ],
+    "qs": [
+     41,
+     47,
+     79
+    ]
+   }
+  ]
+ },
+ {
+  "skill": "cloud-shell-azure-cli-azure-powershell",
+  "sections": [
+   {
+    "title": "Azure Cloud Shell",
+    "points": [
+     "Cloud Shell is an authenticated, browser-accessible shell for managing Azure. Nothing needs to be installed locally.",
+     "Start it from a web browser: the Azure portal toolbar or shell.azure.com. It works from any OS, including Android tablets and Chrome OS.",
+     "You choose Bash or PowerShell as the experience. Azure CLI (az) commands run in both.",
+     "To create a VM from an Android tablet: the Azure portal, Cloud Shell (Bash), or Cloud Shell (PowerShell). The PowerApps portal does not manage Azure VMs.",
+     "Azure CLI is not installed by default on Windows 11; Cloud Shell has it preinstalled."
+    ],
+    "qs": [
+     80,
+     117,
+     90,
+     385,
+     300,
+     383,
+     398,
+     93,
+     105,
+     118
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/cloud-shell/overview"
+   },
+   {
+    "title": "Azure CLI: where it runs",
+    "points": [
+     "Azure CLI (az commands) is cross-platform: install it on Windows, macOS, or Linux.",
+     "On Windows you can run az from Command Prompt or Windows PowerShell (or Windows Terminal). Tools like Firewall or Network and Sharing Center are unrelated.",
+     "Azure CLI and Azure PowerShell both run on Windows, Linux, and macOS; the Azure portal works in any browser.",
+     "So a Windows 10, Ubuntu, or macOS computer can use the Azure CLI, Azure PowerShell, and the portal."
+    ],
+    "qs": [
+     94,
+     95,
+     116,
+     96
+    ]
+   },
+   {
+    "title": "Azure PowerShell: running PowerShell scripts",
+    "points": [
+     "Azure PowerShell (the Az module) manages Azure with PowerShell cmdlets and is cross-platform: Windows, macOS, and Linux.",
+     "To run a PowerShell script that creates resources you need PowerShell with the Az module installed, or Cloud Shell (PowerShell) from a browser.",
+     "Having only Azure CLI tools installed does not let you run PowerShell scripts; CLI uses az commands.",
+     "The Az module needs a supported PowerShell version (Windows PowerShell 5.1 or PowerShell 7.x). Old PowerShell Core 6.0 is out of support.",
+     "Valid hosts: Windows with the Az module, Chrome OS using Cloud Shell, or macOS/Linux with a supported PowerShell and Az."
+    ],
+    "qs": [
+     71,
+     72,
+     74,
+     101,
+     371,
+     115
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/cloud-shell/overview"
+   }
+  ]
+ },
+ {
+  "skill": "azure-arc",
+  "sections": [
+   {
+    "title": "Azure Arc projects non-Azure resources",
+    "points": [
+     "Azure Arc extends Azure Resource Manager to resources outside Azure: you project them into Azure and manage them like Azure resources.",
+     "On-premises Windows Server and Linux servers (physical or virtual) can be managed from the Azure portal by connecting them to Arc.",
+     "Azure Arc is the answer for a unified way to project and manage non-Azure resources in ARM.",
+     "Not Arc: Azure AD Connect syncs identities; Azure Migrate assesses and moves workloads; Front Door is a web traffic service; AKS runs Kubernetes in Azure."
+    ],
+    "qs": [
+     122,
+     349,
+     360
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-arc/overview"
+   },
+   {
+    "title": "Arc for hybrid and multicloud governance",
+    "points": [
+     "Arc supports servers, Kubernetes clusters, and data services (SQL Server, PostgreSQL) hosted on-premises, at the edge, or in other clouds.",
+     "It applies Azure management and governance (Azure Policy, Azure Monitor, RBAC) consistently across hybrid and multicloud environments.",
+     "Arc-enabled Kubernetes can manage clusters at scale, and third-party or non-Azure databases can be managed as Arc-enabled data services.",
+     "Azure Policy defines rules; Arc is what extends compliance and monitoring reach to resources outside Azure."
+    ],
+    "qs": [
+     365,
+     366
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-arc/overview"
+   }
+  ]
+ },
+ {
+  "skill": "infrastructure-as-code-iac",
+  "sections": [
+   {
+    "title": "Azure DevTest Labs",
+    "points": [
+     "DevTest Labs lets teams quickly create and remove environments (VMs) from ARM templates, with policies, quotas, and auto-shutdown to control cost.",
+     "It minimizes admin effort for developers who repeatedly deploy and delete many VMs.",
+     "Scale sets: autoscale identical VMs. Reserved VM Instances: discounted committed-use pricing. Azure Virtual Desktop: hosted desktops."
+    ],
+    "qs": [
+     91
+    ]
+   },
+   {
+    "title": "Azure DevOps services: Repos",
+    "points": [
+     "Azure DevOps is a set of development services: Repos, Pipelines, Boards, Test Plans, and Artifacts.",
+     "Azure Repos: Git (and TFVC) version control tools to manage code.",
+     "Azure Pipelines: CI/CD builds and deployments. Azure Boards: work tracking.",
+     "Infrastructure as code (templates, scripts) is stored and versioned in source control such as Repos."
+    ],
+    "qs": [
+     126
+    ]
+   }
+  ]
+ },
+ {
+  "skill": "azure-resource-manager-arm-and-arm-templ",
+  "sections": [
+   {
+    "title": "ARM templates: repeatable deployments",
+    "points": [
+     "ARM templates are declarative JSON files that define infrastructure; this is infrastructure as code.",
+     "One template can define many resources and be deployed repeatedly with the same result, so each resource does not need its own template.",
+     "Deploy templates through the Azure portal, Azure CLI, Azure PowerShell, or REST API.",
+     "For identical resources across business units, use ARM templates. Management groups organize subscriptions; API Management publishes APIs; scale sets scale VMs.",
+     "Resource groups are logical containers; Azure Policy enforces rules on what can be deployed. Neither deploys resources from a definition."
+    ],
+    "qs": [
+     66,
+     77,
+     88,
+     98,
+     106,
+     328,
+     332,
+     363
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/overview"
+   },
+   {
+    "title": "ARM as the management layer and APIs",
+    "points": [
+     "Azure Resource Manager is the deployment and management service for Azure. Every tool (portal, CLI, PowerShell, SDKs) calls the ARM REST APIs.",
+     "A desktop application interacts with Azure and manages resources by calling APIs (REST/SDKs).",
+     "Templates describe what to deploy; CLI and Cloud Shell are tools that call the APIs."
+    ],
+    "qs": [
+     354
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview"
+   }
+  ]
+ },
+ {
+  "skill": "azure-advisor",
+  "sections": [
+   {
+    "title": "What Azure Advisor does",
+    "points": [
+     "Advisor is a free personalized cloud consultant: it analyzes your resource configuration and usage and recommends best practices.",
+     "Recommendation categories: Reliability, Security, Operational excellence, Performance, and Cost.",
+     "It covers resources across multiple subscriptions and can alert you to new recommendations.",
+     "It does not estimate costs of a planned solution (pricing calculator), assess on-premises migration (Azure Migrate), or integrate AD (Azure AD Connect).",
+     "Advisor does not list backed-up VMs, configure VM network settings, or set a deadline for acting; acting on security advice improves your secure score."
+    ],
+    "qs": [
+     263,
+     299,
+     92,
+     346,
+     396,
+     86
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/advisor/advisor-overview"
+   },
+   {
+    "title": "Advisor cost recommendations",
+    "points": [
+     "Advisor identifies underutilized or idle resources, such as VMs with low CPU use, and suggests resizing, shutting down, or buying reservations.",
+     "Use Advisor to get recommendations that reduce Azure costs.",
+     "Cost Management + Billing analyzes spending and budgets. The pricing calculator estimates new deployments. Reservations are a discount, not an analyzer.",
+     "Service Health reports Azure incidents, not savings."
+    ],
+    "qs": [
+     108,
+     409,
+     417
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/advisor/advisor-overview"
+   },
+   {
+    "title": "Advisor versus related services",
+    "points": [
+     "Azure Advisor: recommendations to improve an environment. Azure Monitor: health and performance data. Application Insights: monitors web apps.",
+     "Azure DevOps: integrated code deployment and planning. Azure Cognitive Services (AI services): prebuilt AI APIs.",
+     "In the portal, use the Advisor blade for security recommendations and the Monitor blade for health of services."
+    ],
+    "qs": [
+     76,
+     407
+    ]
+   }
+  ]
+ },
+ {
+  "skill": "azure-service-health",
+  "sections": [
+   {
+    "title": "Azure Service Health scope",
+    "points": [
+     "Azure Service Health gives a personalized view of the health of the Azure services, regions, and resources you use.",
+     "It covers service issues, planned maintenance, and health advisories, and sits alongside Azure status (global) and Resource health (individual resources).",
+     "You can create service health alerts to be notified of incidents and planned maintenance.",
+     "It reports and notifies; it cannot prevent a service failure.",
+     "Azure Advisor gives recommendations; Azure Monitor gives telemetry; neither is the planned maintenance notification service."
+    ],
+    "qs": [
+     338,
+     375,
+     28,
+     73
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/service-health/overview"
+   },
+   {
+    "title": "Finding health notifications in the portal",
+    "points": [
+     "In the portal, Service Health is reached from Help + support and from Azure Monitor.",
+     "Use it to view planned maintenance events and service failure notifications that can affect your subscription.",
+     "For a VM in a region, check Service Health (under Monitor) for outages in that region and service."
+    ],
+    "qs": [
+     75,
+     128
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/service-health/overview"
+   }
+  ]
+ },
+ {
+  "skill": "azure-monitor-log-analytics-alerts-appli",
+  "sections": [
+   {
+    "title": "Azure Monitor as the central data platform",
+    "points": [
+     "Azure Monitor collects, analyzes, and acts on telemetry from Azure, on-premises, and other clouds, across multiple subscriptions.",
+     "Monitor data (metrics and logs) is stored; log data goes to a Log Analytics workspace.",
+     "Log Analytics is the tool where you run Kusto (KQL) queries to compare events across many resources.",
+     "Azure AD activity logs can be routed to Azure Monitor. Azure Monitor integrates with Application Insights and Log Analytics.",
+     "Event Hubs streams events, Stream Analytics processes streams, Service Health is health reporting; they are not the monitoring repository."
+    ],
+    "qs": [
+     21,
+     368,
+     333,
+     358,
+     192
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-monitor/overview"
+   },
+   {
+    "title": "Azure Monitor alerts",
+    "points": [
+     "Alerts notify you or run automation when a condition is met on metrics, logs (including Log Analytics workspace data), or activity log events.",
+     "For example, an activity log alert can fire when an administrator stops a VM.",
+     "Alerts use action groups to send notifications such as email, SMS, voice, or push and to trigger webhooks, runbooks, and Logic Apps.",
+     "Azure Monitor can monitor on-premises computers, not only Azure VMs."
+    ],
+    "qs": [
+     87,
+     125
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-overview"
+   },
+   {
+    "title": "Application Insights",
+    "points": [
+     "Application Insights is an Azure Monitor feature for application performance management.",
+     "Use it for web apps: page load times in the browser, request rates, response times, failures, and dependencies.",
+     "Log Analytics queries log data, Network Watcher diagnoses networks, and alerts only notify."
+    ],
+    "qs": [
+     64,
+     352
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview"
+   },
+   {
+    "title": "Activity log: who did what",
+    "points": [
+     "The Azure activity log records subscription-level events: who did what, and when, for write operations such as stopping a VM.",
+     "Use it to find which user turned off a VM; it keeps data for a limited time (90 days by default)."
+    ],
+    "qs": [
+     131
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/activity-log"
+   }
+  ]
+ },
+ {
+  "skill": "slas-and-composite-slas",
+  "sections": [
+   {
+    "title": "What an SLA guarantees",
+    "points": [
+     "An Azure SLA is a formal Microsoft commitment to performance standards, mainly uptime (availability), not features, bandwidth, or performance.",
+     "Monthly uptime % = (Maximum Available Minutes - Downtime Minutes) / Maximum Available Minutes x 100.",
+     "If the SLA is not met, you receive service credits for that service against your bill, not a refund of other services.",
+     "Azure SLAs vary by service and configuration; most paid services start at 99.9%. Microsoft Entra ID Premium P2 is covered at 99.9%, whereas Free has no SLA.",
+     "Services in preview are excluded from SLAs."
+    ],
+    "qs": [
+     230,
+     334,
+     262,
+     369,
+     259,
+     290,
+     298
+    ]
+   },
+   {
+    "title": "Composite SLAs",
+    "points": [
+     "A composite SLA covers an application that depends on multiple services. Multiply the individual SLAs together.",
+     "Example: 99.95% x 99.99% = 99.94%. 99.9% x 99.99% = 99.89%.",
+     "Do not use the minimum, maximum, or divide. Chaining dependencies lowers the composite.",
+     "Redundant paths (for example, resources in multiple regions) can raise the effective SLA."
+    ],
+    "qs": [
+     248,
+     266
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/reliability/availability-zones-overview"
+   },
+   {
+    "title": "Raising availability for a VM workload",
+    "points": [
+     "VM SLAs rise with redundancy: a single VM with premium storage 99.9%, availability sets 99.95%, two or more VMs across availability zones 99.99%.",
+     "To reach 99.99%, deploy at least two VMs spread across two or more availability zones; one zone or one VM is not enough.",
+     "Deploying to multiple regions can increase guaranteed uptime; buying multiple subscriptions does not."
+    ],
+    "qs": [
+     99,
+     111,
+     249
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/virtual-machines/availability"
+   }
+  ]
+ },
+ {
+  "skill": "service-lifecycle-preview-and-general-av",
+  "sections": [
+   {
+    "title": "Private preview, public preview, GA",
+    "points": [
+     "Typical lifecycle: private preview, public preview, general availability (GA).",
+     "Private preview: invitation only for selected customers. Public preview: available to any customer with an Azure subscription. GA: released to all customers.",
+     "Preview services are visible in the regular portal and can be managed with portal, CLI, and PowerShell; the portal labels previews.",
+     "Preview pricing is often discounted; GA is billed at normal rates, so the price does not drop at GA.",
+     "After GA, services continue to receive new features, and existing preview resources generally need not be recreated."
+    ],
+    "qs": [
+     232,
+     237,
+     245,
+     254
+    ]
+   },
+   {
+    "title": "Preview terms: SLA and support",
+    "points": [
+     "Public preview services are excluded from SLAs; each preview defines its own terms and support.",
+     "There is no standard SLA percentage for previews.",
+     "Previews can technically be used in production but this is not recommended, because there is no SLA guarantee.",
+     "Private previews do not require a separate portal."
+    ],
+    "qs": [
+     269,
+     275,
+     280
+    ]
+   },
+   {
+    "title": "Modern Lifecycle Policy",
+    "points": [
+     "The Modern Lifecycle Policy applies to continuously serviced products and services.",
+     "If there is no successor, Microsoft gives at least 12 months' notice before ending support (excluding free services and previews).",
+     "There is no fixed five-year mainstream support term under this policy (that is the Fixed Policy)."
+    ],
+    "qs": [
+     250,
+     283
+    ]
+   }
+  ]
+ },
+ {
+  "skill": "azure-support-plans",
+  "sections": [
+   {
+    "title": "Support plan tiers",
+    "points": [
+     "Basic: included with all subscriptions; 24/7 billing and subscription support, docs, forums, Advisor, and Service Health.",
+     "Developer: business-hours technical support by email. Standard: 24/7 technical support by phone and email.",
+     "Professional Direct: Standard-level support plus architectural guidance. Premier: highest tier for enterprise customers with an Enterprise Agreement.",
+     "An Azure free account has the Basic plan. Community forums are open to everyone, not only pay-as-you-go.",
+     "Support requests can be opened under every plan, including Basic (nontechnical for Basic); the plan decides the support type and response."
+    ],
+    "qs": [
+     1,
+     293,
+     282,
+     292
+    ]
+   },
+   {
+    "title": "Phone and email access to engineers",
+    "points": [
+     "Basic has no technical support. Developer has email only, during business hours.",
+     "Standard, Professional Direct, and Premier include phone and email access to support engineers 24/7.",
+     "The lowest-cost plan with 24/7 phone access to engineers is Standard."
+    ],
+    "qs": [
+     233,
+     234,
+     235,
+     240,
+     297
+    ]
+   },
+   {
+    "title": "Architectural guidance",
+    "points": [
+     "Professional Direct includes architecture support and guidance on workload design.",
+     "It is the lowest-cost plan offering this; Premier costs more, and Standard/Developer lack it."
+    ],
+    "qs": [
+     219,
+     236
+    ]
+   },
+   {
+    "title": "Opening requests and quota increases",
+    "points": [
+     "Create a support request in the Azure portal, from Help + support, or from a resource's Support + troubleshooting menu.",
+     "Quota increases are also requested via Help + support (new support request, quota issue type).",
+     "support.microsoft.com is not where Azure support requests are created."
+    ],
+    "qs": [
+     251,
+     294
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-portal/supportability/how-to-create-azure-support-request"
+   }
+  ]
+ },
+ {
+  "skill": "retired-or-renamed-services-blueprints-a",
+  "sections": [
+   {
+    "title": "Azure Germany",
+    "points": [
+     "Azure Germany was a separate sovereign instance of Azure in German datacenters for data residency.",
+     "It was available to eligible customers and partners globally, not only German residents or German-registered enterprises.",
+     "The service has been retired in favor of Azure regions in Germany."
+    ],
+    "qs": [
+     180
+    ]
+   },
+   {
+    "title": "Azure Blueprints",
+    "points": [
+     "A blueprint packages artifacts into a repeatable definition: ARM templates, Azure Policy assignments, role assignments (RBAC), and resource groups.",
+     "You assign a blueprint to a subscription, not to a resource group.",
+     "Blueprint resource locks (Read Only or Do Not Delete) are enforced by the assignment and re-applied, even if someone removes the lock manually.",
+     "Azure Blueprints (Preview) is scheduled to be retired on January 31, 2027."
+    ],
+    "qs": [
+     222,
+     330
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/governance/blueprints/overview"
+   }
+  ]
+ }
+]

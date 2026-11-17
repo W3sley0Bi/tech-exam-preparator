@@ -1,0 +1,838 @@
+{
+"2": {
+"domain": "concepts",
+"note": ""
+},
+"4": {
+"domain": "architecture",
+"note": ""
+},
+"5": {
+"domain": "architecture",
+"note": ""
+},
+"8": {
+"domain": "architecture",
+"note": "Likely wrong: VMs already exist (VNet present), so the new resources are a virtual network gateway and a gateway subnet; correct answer is AE."
+},
+"9": {
+"domain": "management",
+"note": ""
+},
+"13": {
+"domain": "concepts",
+"note": ""
+},
+"14": {
+"domain": "architecture",
+"note": ""
+},
+"15": {
+"domain": "architecture",
+"note": ""
+},
+"17": {
+"domain": "architecture",
+"note": ""
+},
+"21": {
+"domain": "management",
+"note": ""
+},
+"24": {
+"domain": "concepts",
+"note": ""
+},
+"27": {
+"domain": "architecture",
+"note": ""
+},
+"28": {
+"domain": "management",
+"note": ""
+},
+"34": {
+"domain": "architecture",
+"note": ""
+},
+"36": {
+"domain": "architecture",
+"note": ""
+},
+"40": {
+"domain": "architecture",
+"note": ""
+},
+"41": {
+"domain": "architecture",
+"note": ""
+},
+"44": {
+"domain": "architecture",
+"note": ""
+},
+"47": {
+"domain": "architecture",
+"note": ""
+},
+"49": {
+"domain": "architecture",
+"note": ""
+},
+"50": {
+"domain": "management",
+"note": ""
+},
+"53": {
+"domain": "architecture",
+"note": ""
+},
+"55": {
+"domain": "architecture",
+"note": ""
+},
+"57": {
+"domain": "architecture",
+"note": ""
+},
+"59": {
+"domain": "architecture",
+"note": ""
+},
+"60": {
+"domain": "architecture",
+"note": ""
+},
+"61": {
+"domain": "architecture",
+"note": ""
+},
+"63": {
+"domain": "architecture",
+"note": ""
+},
+"66": {
+"domain": "management",
+"note": ""
+},
+"67": {
+"domain": "architecture",
+"note": ""
+},
+"71": {
+"domain": "management",
+"note": ""
+},
+"72": {
+"domain": "management",
+"note": ""
+},
+"74": {
+"domain": "management",
+"note": ""
+},
+"77": {
+"domain": "management",
+"note": ""
+},
+"80": {
+"domain": "management",
+"note": ""
+},
+"81": {
+"domain": "concepts",
+"note": ""
+},
+"82": {
+"domain": "architecture",
+"note": ""
+},
+"83": {
+"domain": "architecture",
+"note": ""
+},
+"84": {
+"domain": "management",
+"note": ""
+},
+"85": {
+"domain": "architecture",
+"note": ""
+},
+"87": {
+"domain": "management",
+"note": ""
+},
+"88": {
+"domain": "management",
+"note": ""
+},
+"90": {
+"domain": "management",
+"note": ""
+},
+"91": {
+"domain": "architecture",
+"note": ""
+},
+"93": {
+"domain": "architecture",
+"note": ""
+},
+"94": {
+"domain": "architecture",
+"note": ""
+},
+"95": {
+"domain": "architecture",
+"note": ""
+},
+"99": {
+"domain": "architecture",
+"note": ""
+},
+"101": {
+"domain": "management",
+"note": ""
+},
+"103": {
+"domain": "concepts",
+"note": ""
+},
+"104": {
+"domain": "management",
+"note": ""
+},
+"105": {
+"domain": "architecture",
+"note": ""
+},
+"106": {
+"domain": "management",
+"note": ""
+},
+"108": {
+"domain": "management",
+"note": ""
+},
+"110": {
+"domain": "architecture",
+"note": ""
+},
+"111": {
+"domain": "architecture",
+"note": ""
+},
+"114": {
+"domain": "architecture",
+"note": ""
+},
+"116": {
+"domain": "management",
+"note": ""
+},
+"117": {
+"domain": "management",
+"note": ""
+},
+"118": {
+"domain": "management",
+"note": ""
+},
+"119": {
+"domain": "management",
+"note": ""
+},
+"121": {
+"domain": "architecture",
+"note": ""
+},
+"126": {
+"domain": "management",
+"note": ""
+},
+"128": {
+"domain": "management",
+"note": ""
+},
+"129": {
+"domain": "architecture",
+"note": ""
+},
+"130": {
+"domain": "architecture",
+"note": ""
+},
+"132": {
+"domain": "architecture",
+"note": ""
+},
+"133": {
+"domain": "architecture",
+"note": ""
+},
+"134": {
+"domain": "architecture",
+"note": ""
+},
+"135": {
+"domain": "architecture",
+"note": ""
+},
+"141": {
+"domain": "architecture",
+"note": ""
+},
+"142": {
+"domain": "architecture",
+"note": ""
+},
+"143": {
+"domain": "architecture",
+"note": ""
+},
+"147": {
+"domain": "architecture",
+"note": ""
+},
+"149": {
+"domain": "architecture",
+"note": ""
+},
+"151": {
+"domain": "architecture",
+"note": ""
+},
+"154": {
+"domain": "architecture",
+"note": ""
+},
+"155": {
+"domain": "architecture",
+"note": ""
+},
+"159": {
+"domain": "architecture",
+"note": ""
+},
+"163": {
+"domain": "architecture",
+"note": ""
+},
+"165": {
+"domain": "architecture",
+"note": ""
+},
+"166": {
+"domain": "architecture",
+"note": "Two answers required; Azure firewall rule also allows HTTP, so correct answer is BD."
+},
+"169": {
+"domain": "architecture",
+"note": ""
+},
+"170": {
+"domain": "architecture",
+"note": ""
+},
+"171": {
+"domain": "architecture",
+"note": ""
+},
+"172": {
+"domain": "architecture",
+"note": ""
+},
+"175": {
+"domain": "architecture",
+"note": ""
+},
+"176": {
+"domain": "architecture",
+"note": ""
+},
+"177": {
+"domain": "architecture",
+"note": ""
+},
+"178": {
+"domain": "architecture",
+"note": ""
+},
+"179": {
+"domain": "architecture",
+"note": ""
+},
+"180": {
+"domain": "architecture",
+"note": "Outdated: Azure Germany closed in 2021 (migrated to Germany regions); answer D reflects the original offering."
+},
+"185": {
+"domain": "architecture",
+"note": ""
+},
+"186": {
+"domain": "architecture",
+"note": ""
+},
+"188": {
+"domain": "architecture",
+"note": ""
+},
+"190": {
+"domain": "architecture",
+"note": ""
+},
+"191": {
+"domain": "architecture",
+"note": ""
+},
+"194": {
+"domain": "management",
+"note": ""
+},
+"195": {
+"domain": "architecture",
+"note": ""
+},
+"196": {
+"domain": "architecture",
+"note": ""
+},
+"198": {
+"domain": "management",
+"note": "Wrong: correct answer is C, Compliance Manager from the Service Trust Portal."
+},
+"200": {
+"domain": "management",
+"note": ""
+},
+"208": {
+"domain": "architecture",
+"note": ""
+},
+"209": {
+"domain": "management",
+"note": ""
+},
+"212": {
+"domain": "management",
+"note": ""
+},
+"213": {
+"domain": "management",
+"note": ""
+},
+"219": {
+"domain": "management",
+"note": ""
+},
+"220": {
+"domain": "architecture",
+"note": ""
+},
+"225": {
+"domain": "management",
+"note": ""
+},
+"230": {
+"domain": "management",
+"note": ""
+},
+"231": {
+"domain": "architecture",
+"note": ""
+},
+"233": {
+"domain": "management",
+"note": ""
+},
+"234": {
+"domain": "management",
+"note": ""
+},
+"235": {
+"domain": "management",
+"note": ""
+},
+"236": {
+"domain": "management",
+"note": ""
+},
+"238": {
+"domain": "management",
+"note": ""
+},
+"240": {
+"domain": "management",
+"note": ""
+},
+"241": {
+"domain": "management",
+"note": ""
+},
+"242": {
+"domain": "architecture",
+"note": ""
+},
+"243": {
+"domain": "management",
+"note": ""
+},
+"250": {
+"domain": "management",
+"note": ""
+},
+"253": {
+"domain": "architecture",
+"note": ""
+},
+"256": {
+"domain": "management",
+"note": ""
+},
+"261": {
+"domain": "management",
+"note": ""
+},
+"263": {
+"domain": "management",
+"note": ""
+},
+"266": {
+"domain": "management",
+"note": ""
+},
+"275": {
+"domain": "management",
+"note": ""
+},
+"279": {
+"domain": "management",
+"note": ""
+},
+"281": {
+"domain": "management",
+"note": ""
+},
+"283": {
+"domain": "management",
+"note": ""
+},
+"287": {
+"domain": "management",
+"note": ""
+},
+"288": {
+"domain": "management",
+"note": ""
+},
+"289": {
+"domain": "management",
+"note": ""
+},
+"292": {
+"domain": "management",
+"note": ""
+},
+"293": {
+"domain": "management",
+"note": ""
+},
+"294": {
+"domain": "management",
+"note": ""
+},
+"295": {
+"domain": "concepts",
+"note": ""
+},
+"296": {
+"domain": "management",
+"note": ""
+},
+"297": {
+"domain": "management",
+"note": ""
+},
+"299": {
+"domain": "management",
+"note": ""
+},
+"300": {
+"domain": "management",
+"note": ""
+},
+"301": {
+"domain": "architecture",
+"note": ""
+},
+"302": {
+"domain": "concepts",
+"note": ""
+},
+"303": {
+"domain": "concepts",
+"note": ""
+},
+"307": {
+"domain": "architecture",
+"note": ""
+},
+"309": {
+"domain": "architecture",
+"note": ""
+},
+"310": {
+"domain": "architecture",
+"note": ""
+},
+"315": {
+"domain": "concepts",
+"note": ""
+},
+"316": {
+"domain": "concepts",
+"note": ""
+},
+"324": {
+"domain": "management",
+"note": ""
+},
+"326": {
+"domain": "concepts",
+"note": ""
+},
+"329": {
+"domain": "architecture",
+"note": ""
+},
+"330": {
+"domain": "management",
+"note": "Outdated: Azure Blueprints is deprecated/retired (July 2026); use Azure Policy/Deployment Stacks, no listed option is current."
+},
+"333": {
+"domain": "management",
+"note": ""
+},
+"335": {
+"domain": "management",
+"note": ""
+},
+"336": {
+"domain": "architecture",
+"note": ""
+},
+"337": {
+"domain": "concepts",
+"note": ""
+},
+"339": {
+"domain": "management",
+"note": ""
+},
+"340": {
+"domain": "management",
+"note": ""
+},
+"348": {
+"domain": "concepts",
+"note": ""
+},
+"349": {
+"domain": "management",
+"note": ""
+},
+"352": {
+"domain": "management",
+"note": ""
+},
+"354": {
+"domain": "management",
+"note": ""
+},
+"358": {
+"domain": "management",
+"note": ""
+},
+"359": {
+"domain": "concepts",
+"note": ""
+},
+"360": {
+"domain": "management",
+"note": ""
+},
+"363": {
+"domain": "management",
+"note": ""
+},
+"367": {
+"domain": "concepts",
+"note": ""
+},
+"368": {
+"domain": "management",
+"note": ""
+},
+"370": {
+"domain": "concepts",
+"note": ""
+},
+"371": {
+"domain": "management",
+"note": ""
+},
+"373": {
+"domain": "concepts",
+"note": ""
+},
+"380": {
+"domain": "concepts",
+"note": ""
+},
+"381": {
+"domain": "management",
+"note": ""
+},
+"383": {
+"domain": "management",
+"note": ""
+},
+"385": {
+"domain": "management",
+"note": ""
+},
+"388": {
+"domain": "concepts",
+"note": ""
+},
+"390": {
+"domain": "management",
+"note": ""
+},
+"393": {
+"domain": "concepts",
+"note": ""
+},
+"404": {
+"domain": "concepts",
+"note": ""
+},
+"413": {
+"domain": "concepts",
+"note": ""
+},
+"414": {
+"domain": "architecture",
+"note": ""
+},
+"417": {
+"domain": "management",
+"note": ""
+},
+"419": {
+"domain": "concepts",
+"note": ""
+},
+"420": {
+"domain": "concepts",
+"note": ""
+},
+"422": {
+"domain": "concepts",
+"note": ""
+},
+"424": {
+"domain": "concepts",
+"note": ""
+},
+"428": {
+"domain": "concepts",
+"note": ""
+},
+"430": {
+"domain": "concepts",
+"note": ""
+},
+"431": {
+"domain": "concepts",
+"note": ""
+},
+"432": {
+"domain": "concepts",
+"note": ""
+},
+"435": {
+"domain": "concepts",
+"note": ""
+},
+"437": {
+"domain": "concepts",
+"note": ""
+},
+"438": {
+"domain": "concepts",
+"note": ""
+},
+"442": {
+"domain": "architecture",
+"note": "Likely wrong: Basic plan meets 10 GB, custom domain, dedicated instances and load balancing at lower cost; correct answer is B."
+},
+"446": {
+"domain": "concepts",
+"note": ""
+},
+"447": {
+"domain": "concepts",
+"note": ""
+},
+"450": {
+"domain": "concepts",
+"note": ""
+},
+"453": {
+"domain": "architecture",
+"note": ""
+},
+"457": {
+"domain": "concepts",
+"note": ""
+},
+"460": {
+"domain": "concepts",
+"note": ""
+},
+"462": {
+"domain": "architecture",
+"note": ""
+},
+"463": {
+"domain": "concepts",
+"note": ""
+},
+"464": {
+"domain": "concepts",
+"note": ""
+},
+"465": {
+"domain": "architecture",
+"note": ""
+},
+"468": {
+"domain": "concepts",
+"note": ""
+},
+"469": {
+"domain": "architecture",
+"note": ""
+},
+"471": {
+"domain": "architecture",
+"note": ""
+},
+"472": {
+"domain": "architecture",
+"note": ""
+}
+}

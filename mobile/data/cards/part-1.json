@@ -1,0 +1,557 @@
+[
+ {
+  "skill": "regions-region-pairs-and-sovereign-regio",
+  "facts": [
+   "A region is a geographic area with one or more datacenters linked by a low-latency network.",
+   "Region pairs are in the same geography (except Brazil South), used for geo-replication and sequenced updates.",
+   "Sovereign regions are isolated Azure instances for compliance: Azure Government (US) and Azure China (21Vianet).",
+   "Azure Government is for US federal, state, local government entities and their contractors.",
+   "Azure China is operated by 21Vianet; Microsoft does not directly run those datacenters."
+  ],
+  "pick": [
+   {
+    "when": "Cloud for US government agency or contractor",
+    "use": "Azure Government"
+   },
+   {
+    "when": "Azure in mainland China, legal data residency",
+    "use": "Azure China (21Vianet)"
+   },
+   {
+    "when": "Geo-replication to a paired region in same geography",
+    "use": "Region pair"
+   }
+  ],
+  "traps": [
+   "Azure Government is not open to European or Canadian government contractors.",
+   "A region is not the same as an availability zone."
+  ]
+ },
+ {
+  "skill": "availability-zones",
+  "facts": [
+   "AZs are physically separate datacenters within one region, each with independent power, cooling, networking.",
+   "Zone-enabled regions have a minimum of three zones; not all regions support AZs.",
+   "AZs protect against datacenter failure, not a whole-region failure.",
+   "Two or more VMs in different AZs give a 99.99% VM SLA; an availability set gives 99.95%.",
+   "AZs work with many services (VMs, disks, storage ZRS, etc.), not just VMs."
+  ],
+  "pick": [
+   {
+    "when": "Stay available if a single datacenter fails",
+    "use": "Deploy VMs across two or more availability zones"
+   },
+   {
+    "when": "99.99% VM availability",
+    "use": "2+ VMs in different availability zones"
+   },
+   {
+    "when": "Survive entire region failure",
+    "use": "Region pairs / geo-redundancy, not AZs"
+   }
+  ],
+  "traps": [
+   "AZs do not protect against a region failure.",
+   "Availability zones are not Azure regions."
+  ]
+ },
+ {
+  "skill": "azure-datacenters",
+  "facts": [
+   "Azure datacenters are physical facilities Microsoft owns and operates worldwide.",
+   "Datacenters are grouped into regions, and within regions into availability zones.",
+   "Microsoft is responsible for physical security, power, cooling and networking (shared responsibility).",
+   "Customers choose the region where resources are deployed; datacenters themselves are not selectable."
+  ],
+  "pick": [],
+  "traps": [
+   "The customer is not responsible for physical datacenter security in IaaS, PaaS or SaaS."
+  ]
+ },
+ {
+  "skill": "resources-and-resource-groups",
+  "facts": [
+   "A resource is any manageable item in Azure (VM, VNet, database).",
+   "Every resource exists in exactly one resource group.",
+   "A resource group is a logical container; resources in it can be in different regions.",
+   "Resources can interact with resources in other resource groups.",
+   "Deleting a resource group deletes all resources in it; groups cannot be nested."
+  ],
+  "pick": [
+   {
+    "when": "Place a new VM in Azure",
+    "use": "A resource group"
+   },
+   {
+    "when": "Remove all related resources at once",
+    "use": "Delete the resource group"
+   }
+  ],
+  "traps": [
+   "A resource cannot be in two resource groups.",
+   "Resource groups cannot be nested, and do not limit resource region."
+  ]
+ },
+ {
+  "skill": "subscriptions",
+  "facts": [
+   "A subscription is a unit of management, billing and scale; costs are reported per subscription.",
+   "A subscription trusts exactly one Microsoft Entra tenant; a tenant can have many subscriptions.",
+   "Need separate payment options per department: create a subscription for each.",
+   "Raise subscription limits/quotas by creating a new support request.",
+   "Resources (e.g. VMs) can be moved between subscriptions; a subscription is the first thing to create."
+  ],
+  "pick": [
+   {
+    "when": "Different payment option for each department",
+    "use": "A subscription per department"
+   },
+   {
+    "when": "Increase subscription limits (e.g. SQL managed instances)",
+    "use": "Create a new support request"
+   },
+   {
+    "when": "First thing to create when starting in Azure",
+    "use": "A subscription"
+   }
+  ],
+  "traps": [
+   "A support plan upgrade does not raise quotas; a support request does.",
+   "One subscription cannot trust multiple tenants."
+  ]
+ },
+ {
+  "skill": "management-groups",
+  "facts": [
+   "Management groups sit above subscriptions and organize them into a hierarchy.",
+   "Policies and RBAC applied to a management group are inherited by all its subscriptions.",
+   "Hierarchy supports up to six levels of depth, excluding the root and the subscription level.",
+   "Each directory has a single top-level root management group."
+  ],
+  "pick": [
+   {
+    "when": "Govern compliance/access across multiple subscriptions",
+    "use": "Management groups"
+   },
+   {
+    "when": "Apply one policy to many subscriptions",
+    "use": "Management group"
+   }
+  ],
+  "traps": [
+   "Resource groups cannot span subscriptions, so they are not for cross-subscription governance."
+  ]
+ },
+ {
+  "skill": "hierarchy-of-resource-groups-subscriptio",
+  "facts": [
+   "Order top to bottom: management groups, subscriptions, resource groups, resources.",
+   "Settings (policy, RBAC) inherit downward through the hierarchy.",
+   "Segment departments using multiple subscriptions or multiple resource groups.",
+   "Regions do not define management boundaries; Entra directories are not used to segment departments here."
+  ],
+  "pick": [
+   {
+    "when": "Segment Azure for departments with separate admins",
+    "use": "Multiple subscriptions or multiple resource groups"
+   },
+   {
+    "when": "Governance above subscriptions",
+    "use": "Management groups"
+   }
+  ],
+  "traps": [
+   "Do not place resource groups above subscriptions in the order."
+  ]
+ },
+ {
+  "skill": "compare-compute-types-containers-vms-fun",
+  "facts": [
+   "VMs (IaaS): full OS control; you patch and manage the OS.",
+   "Containers virtualize the OS (not hardware); lightweight, fast to start, scale out.",
+   "ACI: simplest way to run a container without managing servers; AKS orchestrates containers at scale.",
+   "Azure Functions: serverless, event-triggered code, pay for execution, automatic scaling.",
+   "Azure Machine Learning builds/trains custom models; Azure AI services give prebuilt API-based AI."
+  ],
+  "pick": [
+   {
+    "when": "Run a container quickly without managing VMs",
+    "use": "Azure Container Instances"
+   },
+   {
+    "when": "Orchestrate/manage many containers",
+    "use": "Azure Kubernetes Service"
+   },
+   {
+    "when": "Event-driven code, no server management",
+    "use": "Azure Functions"
+   },
+   {
+    "when": "Full OS control, lift and shift",
+    "use": "Azure Virtual Machines"
+   },
+   {
+    "when": "Build, test, deploy predictive models",
+    "use": "Azure Machine Learning"
+   },
+   {
+    "when": "Millions of IoT devices uploading data",
+    "use": "Azure IoT Hub"
+   }
+  ],
+  "traps": [
+   "Functions is serverless but not a container manager.",
+   "Azure Virtual Desktop does not manage containers."
+  ]
+ },
+ {
+  "skill": "vm-options-vms-vm-scale-sets-availabilit",
+  "facts": [
+   "VM scale sets: create and manage a group of identical load-balanced VMs that autoscale on demand or schedule.",
+   "Availability sets spread VMs across fault domains (power/network) and update domains (planned reboots); no extra cost.",
+   "Azure Virtual Desktop: cloud-hosted Windows desktops and apps, supports multi-session Windows.",
+   "Azure DevTest Labs: quickly create and remove many customized VMs for dev/test.",
+   "Spot VMs use unused capacity at a discount but can be evicted."
+  ],
+  "pick": [
+   {
+    "when": "Group of identical VMs that autoscale",
+    "use": "VM Scale Sets"
+   },
+   {
+    "when": "Reduce impact of hardware failure or maintenance in a region",
+    "use": "Availability set"
+   },
+   {
+    "when": "Deploy/remove 50 customized dev VMs weekly",
+    "use": "Azure DevTest Labs"
+   },
+   {
+    "when": "Virtualized desktops and apps in the cloud",
+    "use": "Azure Virtual Desktop"
+   },
+   {
+    "when": "Cheap interruptible workloads",
+    "use": "Spot VMs"
+   }
+  ],
+  "traps": [
+   "Scale sets are not the dev/test lab answer.",
+   "Availability sets protect in a datacenter, not against datacenter failure (use AZs)."
+  ]
+ },
+ {
+  "skill": "resources-required-for-virtual-machines",
+  "facts": [
+   "Every VM needs a virtual network for its network interface.",
+   "A VM also needs compute size (vCPU/RAM) and disks (OS disk plus optional data disks).",
+   "A public IP address is optional, not required.",
+   "VM size drives vCPU, RAM, disk and network throughput."
+  ],
+  "pick": [
+   {
+    "when": "Additional resource required by a VM",
+    "use": "A virtual network"
+   }
+  ],
+  "traps": [
+   "Public IP, service endpoint and Azure Firewall are not required for a VM."
+  ]
+ },
+ {
+  "skill": "application-hosting-web-apps-containers-",
+  "facts": [
+   "Azure App Service hosts web apps, API apps, WebJobs and mobile app backends (PaaS, HTTP-based).",
+   "Free and Shared tiers run on shared compute; Basic and above use dedicated VMs.",
+   "Standard tier and above add autoscale, deployment slots and custom domains/SSL.",
+   "Azure CDN caches content near users, best for global delivery of large video files.",
+   "Hosting options span a spectrum: VMs (IaaS), containers, App Service (PaaS), Functions (serverless)."
+  ],
+  "pick": [
+   {
+    "when": "Host web app/API without managing servers",
+    "use": "Azure App Service"
+   },
+   {
+    "when": "Best video playback for worldwide users",
+    "use": "Content delivery network (CDN)"
+   },
+   {
+    "when": "Web apps needing custom domains and autoscale",
+    "use": "App Service Standard plan"
+   },
+   {
+    "when": "Full control of the hosting OS",
+    "use": "Azure Virtual Machines"
+   }
+  ],
+  "traps": [
+   "Traffic Manager and Application Gateway are not for content caching.",
+   "ExpressRoute is not an app delivery feature."
+  ]
+ },
+ {
+  "skill": "virtual-networking-vnets-subnets-peering",
+  "facts": [
+   "VNet features: isolation and segmentation, internet access, Azure and on-premises connectivity, routing, filtering.",
+   "Site-to-Site VPN links on-premises VPN device to Azure VPN gateway over the internet, encrypted.",
+   "Point-to-Site VPN: individual client computer (remote workers) connects to a VNet.",
+   "ExpressRoute: dedicated private connection not over the internet; operates at OSI Layer 3.",
+   "NSGs filter traffic by IP, service tag or ASG; VNet peering connects VNets; Azure DNS hosts domains but can't register them."
+  ],
+  "pick": [
+   {
+    "when": "Remote workers connect to a VNet",
+    "use": "Point-to-Site VPN"
+   },
+   {
+    "when": "Connect on-premises network to Azure over the internet",
+    "use": "Site-to-Site VPN (VPN gateway)"
+   },
+   {
+    "when": "Private connection not crossing the internet",
+    "use": "ExpressRoute"
+   },
+   {
+    "when": "Limit connections between web and DB servers",
+    "use": "Network security groups"
+   },
+   {
+    "when": "Filter inbound to many VNets centrally",
+    "use": "Azure Firewall"
+   },
+   {
+    "when": "Separate network segment for a server",
+    "use": "A separate virtual network"
+   },
+   {
+    "when": "Represent on-premises VPN device in Azure",
+    "use": "Local network gateway"
+   },
+   {
+    "when": "Protect websites from attacks, with reports",
+    "use": "DDoS protection"
+   }
+  ],
+  "traps": [
+   "NSG default rules exist and allow some traffic.",
+   "Traffic Manager is DNS-based load balancing, not VM internet access.",
+   "Azure DNS cannot buy domain names."
+  ]
+ },
+ {
+  "skill": "public-and-private-endpoints",
+  "facts": [
+   "Public endpoint: reachable over the internet via a public IP.",
+   "Service endpoint extends VNet identity to a service (e.g. Storage) over the Azure backbone, not the internet.",
+   "Private endpoint gives a service a private IP inside your VNet via Azure Private Link.",
+   "Service endpoints keep traffic off the public internet but the service keeps a public endpoint."
+  ],
+  "pick": [
+   {
+    "when": "Keep VNet traffic to Storage off the internet",
+    "use": "Service endpoint"
+   },
+   {
+    "when": "Access PaaS service via private IP in your VNet",
+    "use": "Private endpoint (Private Link)"
+   }
+  ],
+  "traps": [
+   "An NSG or VPN Gateway does not route storage traffic privately; a service endpoint does."
+  ]
+ },
+ {
+  "skill": "compare-azure-storage-services",
+  "facts": [
+   "Five services: Blobs, Files, Queues, Disks, Tables.",
+   "Blobs: unstructured object storage; Files: SMB/NFS shares; Queues: async messaging; Disks: VM block storage; Tables: NoSQL key-value.",
+   "Map a network drive from Windows computers: Azure Files (File service).",
+   "Queue messages can be up to 64 KB each.",
+   "Cosmos DB: globally distributed multi-model NoSQL (JSON documents, multi-region writes)."
+  ],
+  "pick": [
+   {
+    "when": "Map a network drive from Windows 10",
+    "use": "Azure Files"
+   },
+   {
+    "when": "Store unmanaged VM data disks",
+    "use": "Blob storage (page blobs)"
+   },
+   {
+    "when": "Async messaging between app components",
+    "use": "Queue storage"
+   },
+   {
+    "when": "Unstructured data: images, video, backups",
+    "use": "Blob storage"
+   },
+   {
+    "when": "JSON documents with multi-region writes",
+    "use": "Azure Cosmos DB"
+   },
+   {
+    "when": "Large analytics data in Power BI, infrequent access",
+    "use": "Azure Data Lake / Synapse Analytics"
+   }
+  ],
+  "traps": [
+   "A VM data disk is not a mappable network drive.",
+   "Azure SQL Database is relational, not for file shares."
+  ]
+ },
+ {
+  "skill": "storage-tiers",
+  "facts": [
+   "Blob access tiers: Hot, Cool, Cold, Archive.",
+   "Hot: frequently accessed, highest storage cost, lowest access cost.",
+   "Minimum retention: Cool 30 days, Cold 90 days, Archive 180 days.",
+   "Archive: lowest storage cost, highest retrieval cost and latency (hours); data is offline.",
+   "Archive can only be set per blob, not as the account default tier."
+  ],
+  "pick": [
+   {
+    "when": "Frequently read and written data",
+    "use": "Hot tier"
+   },
+   {
+    "when": "Infrequently accessed, kept at least 30 days",
+    "use": "Cool tier"
+   },
+   {
+    "when": "Lowest storage cost for rarely used data",
+    "use": "Archive tier"
+   },
+   {
+    "when": "Long-term backups, offline OK",
+    "use": "Archive tier"
+   }
+  ],
+  "traps": [
+   "Archive is cheapest to store but costliest to retrieve.",
+   "Archive cannot be the account-level default."
+  ]
+ },
+ {
+  "skill": "redundancy-options",
+  "facts": [
+   "Azure always keeps 3 copies in the primary region.",
+   "LRS: 3 copies in one datacenter (minimum option); ZRS: 3 copies across 3 availability zones.",
+   "GRS: LRS in primary plus LRS in secondary = 6 copies; GZRS: ZRS primary plus LRS secondary = 6 copies.",
+   "Secondary region is read-only only with RA-GRS or RA-GZRS (read access).",
+   "Order least to most redundant: LRS, ZRS, GRS, RA-GRS, GZRS, RA-GZRS."
+  ],
+  "pick": [
+   {
+    "when": "Cheapest, protects against disk/rack failure",
+    "use": "LRS"
+   },
+   {
+    "when": "Survive datacenter failure within a region",
+    "use": "ZRS"
+   },
+   {
+    "when": "Replicate to a paired region",
+    "use": "GRS"
+   },
+   {
+    "when": "Read data from secondary region before failover",
+    "use": "RA-GRS or RA-GZRS"
+   },
+   {
+    "when": "Maximum resilience",
+    "use": "GZRS / RA-GZRS"
+   }
+  ],
+  "traps": [
+   "GRS is 6 copies, LRS is 3; do not confuse with GZRS count (also 6).",
+   "Plain GRS secondary is not readable until failover."
+  ]
+ },
+ {
+  "skill": "storage-account-options-and-storage-type",
+  "facts": [
+   "Standard general-purpose v2 is the default type for blobs, files, queues and tables.",
+   "Premium types: block blobs, file shares (SMB and NFS), page blobs.",
+   "Account name: 3-24 chars, lowercase letters and numbers, globally unique.",
+   "Endpoint: https://<account>.<service>.core.windows.net (blob, file, queue, table, dfs for Data Lake Gen2).",
+   "Create a new file share under the Azure Files service in the storage account."
+  ],
+  "pick": [
+   {
+    "when": "Default for most scenarios",
+    "use": "Standard general-purpose v2"
+   },
+   {
+    "when": "High-performance file shares, SMB and NFS",
+    "use": "Premium file shares"
+   },
+   {
+    "when": "Low latency, small objects, high transactions",
+    "use": "Premium block blobs"
+   },
+   {
+    "when": "VM disks/page blobs only",
+    "use": "Premium page blobs"
+   }
+  ],
+  "traps": [
+   "Data Lake Gen2 uses the .dfs endpoint, not .blob."
+  ]
+ },
+ {
+  "skill": "moving-files-azcopy-storage-explorer-azu",
+  "facts": [
+   "AzCopy: command-line tool to copy blobs/files between storage accounts or from other sources; sync is one-way.",
+   "Storage Explorer: GUI app for Windows, macOS, Linux; uses AzCopy under the hood.",
+   "Azure File Sync: syncs an on-premises Windows file server with an Azure file share, bi-directional.",
+   "File Sync supports cloud tiering: hot files stay local, cold files in the cloud.",
+   "File Sync needs the Azure File Sync agent installed on Windows Server."
+  ],
+  "pick": [
+   {
+    "when": "Command-line copy to blob storage",
+    "use": "AzCopy"
+   },
+   {
+    "when": "GUI to manage blobs and files",
+    "use": "Azure Storage Explorer"
+   },
+   {
+    "when": "Sync on-premises Windows file server with cloud",
+    "use": "Azure File Sync"
+   }
+  ],
+  "traps": [
+   "AzCopy sync is not two-way; File Sync is.",
+   "Storage Explorer is not an on-premises sync tool."
+  ]
+ },
+ {
+  "skill": "migration-azure-migrate-azure-data-box",
+  "facts": [
+   "Azure Migrate: central hub to discover, assess and migrate servers, databases, web apps to Azure.",
+   "Azure Data Box: physical device shipped by Microsoft for offline bulk transfer (up to 80 TB per device).",
+   "Use Data Box when network bandwidth is too limited for online transfer.",
+   "Data Box supports import and export; disks are securely wiped after upload (NIST 800-88r1)."
+  ],
+  "pick": [
+   {
+    "when": "Assess and migrate on-premises servers and apps",
+    "use": "Azure Migrate"
+   },
+   {
+    "when": "Move tens of TB offline, slow network",
+    "use": "Azure Data Box"
+   },
+   {
+    "when": "Export large data out of Azure physically",
+    "use": "Azure Data Box"
+   }
+  ],
+  "traps": [
+   "Data Box is offline; Azure Migrate is online tooling."
+  ]
+ }
+]

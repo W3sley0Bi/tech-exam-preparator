@@ -1,0 +1,342 @@
+[
+ {
+  "id": "describe-cloud-computing",
+  "domain": "concepts",
+  "title": "Describe cloud computing",
+  "path": "training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/",
+  "skills": [
+   {
+    "id": "define-cloud-computing",
+    "name": "Define cloud computing"
+   },
+   {
+    "id": "describe-the-shared-responsibility-model",
+    "name": "Describe the shared responsibility model"
+   },
+   {
+    "id": "define-cloud-models-including-public-pri",
+    "name": "Define cloud models, including public, private, and hybrid"
+   },
+   {
+    "id": "identify-appropriate-use-cases-for-each-",
+    "name": "Identify appropriate use cases for each cloud model"
+   },
+   {
+    "id": "describe-the-consumption-based-model",
+    "name": "Describe the consumption-based model"
+   },
+   {
+    "id": "compare-cloud-pricing-models",
+    "name": "Compare cloud pricing models"
+   },
+   {
+    "id": "describe-serverless",
+    "name": "Describe serverless"
+   }
+  ]
+ },
+ {
+  "id": "describe-the-benefits-of-using-cloud-ser",
+  "domain": "concepts",
+  "title": "Describe the benefits of using cloud services",
+  "path": "training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/",
+  "skills": [
+   {
+    "id": "high-availability-and-scalability",
+    "name": "High availability and scalability"
+   },
+   {
+    "id": "reliability-and-predictability",
+    "name": "Reliability and predictability"
+   },
+   {
+    "id": "security-and-governance",
+    "name": "Security and governance"
+   },
+   {
+    "id": "manageability",
+    "name": "Manageability"
+   }
+  ]
+ },
+ {
+  "id": "describe-cloud-service-types",
+  "domain": "concepts",
+  "title": "Describe cloud service types",
+  "path": "training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/",
+  "skills": [
+   {
+    "id": "infrastructure-as-a-service-iaas",
+    "name": "Infrastructure as a service (IaaS)"
+   },
+   {
+    "id": "platform-as-a-service-paas",
+    "name": "Platform as a service (PaaS)"
+   },
+   {
+    "id": "software-as-a-service-saas",
+    "name": "Software as a service (SaaS)"
+   },
+   {
+    "id": "use-cases-for-iaas-paas-and-saas",
+    "name": "Use cases for IaaS, PaaS, and SaaS"
+   }
+  ]
+ },
+ {
+  "id": "core-architectural-components",
+  "domain": "architecture",
+  "title": "Core architectural components",
+  "path": "training/paths/azure-fundamentals-describe-azure-architecture-services/",
+  "skills": [
+   {
+    "id": "regions-region-pairs-and-sovereign-regio",
+    "name": "Regions, region pairs, and sovereign regions"
+   },
+   {
+    "id": "availability-zones",
+    "name": "Availability zones"
+   },
+   {
+    "id": "azure-datacenters",
+    "name": "Azure datacenters"
+   },
+   {
+    "id": "resources-and-resource-groups",
+    "name": "Resources and resource groups"
+   },
+   {
+    "id": "subscriptions",
+    "name": "Subscriptions"
+   },
+   {
+    "id": "management-groups",
+    "name": "Management groups"
+   },
+   {
+    "id": "hierarchy-of-resource-groups-subscriptio",
+    "name": "Hierarchy of resource groups, subscriptions, and management groups"
+   }
+  ]
+ },
+ {
+  "id": "compute-and-networking",
+  "domain": "architecture",
+  "title": "Compute and networking",
+  "path": "training/paths/azure-fundamentals-describe-azure-architecture-services/",
+  "skills": [
+   {
+    "id": "compare-compute-types-containers-vms-fun",
+    "name": "Compare compute types: containers, VMs, functions"
+   },
+   {
+    "id": "vm-options-vms-vm-scale-sets-availabilit",
+    "name": "VM options: VMs, VM Scale Sets, availability sets, Azure Virtual Desktop"
+   },
+   {
+    "id": "resources-required-for-virtual-machines",
+    "name": "Resources required for virtual machines"
+   },
+   {
+    "id": "application-hosting-web-apps-containers-",
+    "name": "Application hosting: web apps, containers, VMs"
+   },
+   {
+    "id": "virtual-networking-vnets-subnets-peering",
+    "name": "Virtual networking: VNets, subnets, peering, Azure DNS, VPN Gateway, ExpressRoute"
+   },
+   {
+    "id": "public-and-private-endpoints",
+    "name": "Public and private endpoints"
+   }
+  ]
+ },
+ {
+  "id": "storage",
+  "domain": "architecture",
+  "title": "Storage",
+  "path": "training/paths/azure-fundamentals-describe-azure-architecture-services/",
+  "skills": [
+   {
+    "id": "compare-azure-storage-services",
+    "name": "Compare Azure Storage services"
+   },
+   {
+    "id": "storage-tiers",
+    "name": "Storage tiers"
+   },
+   {
+    "id": "redundancy-options",
+    "name": "Redundancy options"
+   },
+   {
+    "id": "storage-account-options-and-storage-type",
+    "name": "Storage account options and storage types"
+   },
+   {
+    "id": "moving-files-azcopy-storage-explorer-azu",
+    "name": "Moving files: AzCopy, Storage Explorer, Azure File Sync"
+   },
+   {
+    "id": "migration-azure-migrate-azure-data-box",
+    "name": "Migration: Azure Migrate, Azure Data Box"
+   }
+  ]
+ },
+ {
+  "id": "identity-access-and-security",
+  "domain": "architecture",
+  "title": "Identity, access, and security",
+  "path": "training/paths/azure-fundamentals-describe-azure-architecture-services/",
+  "skills": [
+   {
+    "id": "microsoft-entra-id-and-entra-domain-serv",
+    "name": "Microsoft Entra ID and Entra Domain Services"
+   },
+   {
+    "id": "authentication-sso-mfa-passwordless",
+    "name": "Authentication: SSO, MFA, passwordless"
+   },
+   {
+    "id": "external-identities",
+    "name": "External identities"
+   },
+   {
+    "id": "microsoft-entra-conditional-access",
+    "name": "Microsoft Entra Conditional Access"
+   },
+   {
+    "id": "azure-role-based-access-control-rbac",
+    "name": "Azure role-based access control (RBAC)"
+   },
+   {
+    "id": "zero-trust",
+    "name": "Zero Trust"
+   },
+   {
+    "id": "defense-in-depth-model",
+    "name": "Defense-in-depth model"
+   },
+   {
+    "id": "microsoft-defender-for-cloud",
+    "name": "Microsoft Defender for Cloud"
+   }
+  ]
+ },
+ {
+  "id": "cost-management",
+  "domain": "management",
+  "title": "Cost management",
+  "path": "training/paths/describe-azure-management-governance/",
+  "skills": [
+   {
+    "id": "factors-that-can-affect-costs",
+    "name": "Factors that can affect costs"
+   },
+   {
+    "id": "pricing-calculator",
+    "name": "Pricing calculator"
+   },
+   {
+    "id": "cost-management-capabilities",
+    "name": "Cost management capabilities"
+   },
+   {
+    "id": "purpose-of-tags",
+    "name": "Purpose of tags"
+   }
+  ]
+ },
+ {
+  "id": "governance-and-compliance",
+  "domain": "management",
+  "title": "Governance and compliance",
+  "path": "training/paths/describe-azure-management-governance/",
+  "skills": [
+   {
+    "id": "microsoft-purview",
+    "name": "Microsoft Purview"
+   },
+   {
+    "id": "azure-policy",
+    "name": "Azure Policy"
+   },
+   {
+    "id": "resource-locks",
+    "name": "Resource locks"
+   }
+  ]
+ },
+ {
+  "id": "managing-and-deploying-resources",
+  "domain": "management",
+  "title": "Managing and deploying resources",
+  "path": "training/paths/describe-azure-management-governance/",
+  "skills": [
+   {
+    "id": "azure-portal",
+    "name": "Azure portal"
+   },
+   {
+    "id": "cloud-shell-azure-cli-azure-powershell",
+    "name": "Cloud Shell, Azure CLI, Azure PowerShell"
+   },
+   {
+    "id": "azure-arc",
+    "name": "Azure Arc"
+   },
+   {
+    "id": "infrastructure-as-code-iac",
+    "name": "Infrastructure as code (IaC)"
+   },
+   {
+    "id": "azure-resource-manager-arm-and-arm-templ",
+    "name": "Azure Resource Manager (ARM) and ARM templates"
+   }
+  ]
+ },
+ {
+  "id": "monitoring",
+  "domain": "management",
+  "title": "Monitoring",
+  "path": "training/paths/describe-azure-management-governance/",
+  "skills": [
+   {
+    "id": "azure-advisor",
+    "name": "Azure Advisor"
+   },
+   {
+    "id": "azure-service-health",
+    "name": "Azure Service Health"
+   },
+   {
+    "id": "azure-monitor-log-analytics-alerts-appli",
+    "name": "Azure Monitor: Log Analytics, alerts, Application Insights"
+   }
+  ]
+ },
+ {
+  "id": "older-exam-topics-not-in-the-july-2026-o",
+  "domain": "extra",
+  "title": "Older exam topics (not in the July 2026 outline)",
+  "path": "",
+  "skills": [
+   {
+    "id": "slas-and-composite-slas",
+    "name": "SLAs and composite SLAs"
+   },
+   {
+    "id": "service-lifecycle-preview-and-general-av",
+    "name": "Service lifecycle: preview and general availability"
+   },
+   {
+    "id": "azure-support-plans",
+    "name": "Azure support plans"
+   },
+   {
+    "id": "retired-or-renamed-services-blueprints-a",
+    "name": "Retired or renamed services (Blueprints, Azure Germany, classic roles, etc.)"
+   }
+  ]
+ }
+]

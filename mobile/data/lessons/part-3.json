@@ -1,0 +1,538 @@
+[
+ {
+  "skill": "azure-portal",
+  "sections": [
+   {
+    "title": "Azure portal: web-based management",
+    "points": [
+     "The Azure portal is a browser-based console at portal.azure.com for creating and managing all your Azure resources in one place.",
+     "Because it runs in a browser, it works on any OS and device: Windows, macOS, Linux, iOS, Android. Nothing has to be installed.",
+     "It needs an internet connection and a sign-in. Command-line management is a separate option (Azure CLI, Azure PowerShell, Cloud Shell).",
+     "From a phone or tablet, use the Azure portal or Cloud Shell; locally installed tools (Windows PowerShell, Azure Storage Explorer) are not the answer for mobile.",
+     "Cloud services and other resources can be managed from the portal, the command line, or APIs; management is not limited to Windows devices."
+    ],
+    "qs": [
+     68,
+     84,
+     324,
+     112,
+     119,
+     123
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-portal/azure-portal-overview"
+   },
+   {
+    "title": "Marketplace and portal blades",
+    "points": [
+     "Azure Marketplace: catalog to find, try, and buy Microsoft and third-party solutions, such as VM images and security appliances, to deploy to a subscription.",
+     "Microsoft Store is for consumer/Microsoft products, not Azure deployments; a subscription is a billing and access boundary, not a store.",
+     "Monitor blade: monitor health and performance of services and resources.",
+     "Advisor blade: personalized recommendations, including security; Microsoft Defender for Cloud is the dedicated security posture service."
+    ],
+    "qs": [
+     41,
+     47,
+     79
+    ]
+   }
+  ]
+ },
+ {
+  "skill": "cloud-shell-azure-cli-azure-powershell",
+  "sections": [
+   {
+    "title": "Azure Cloud Shell",
+    "points": [
+     "Cloud Shell is an authenticated, browser-accessible shell for managing Azure. Nothing needs to be installed locally.",
+     "Start it from a web browser: the Azure portal toolbar or shell.azure.com. It works from any OS, including Android tablets and Chrome OS.",
+     "You choose Bash or PowerShell as the experience. Azure CLI (az) commands run in both.",
+     "To create a VM from an Android tablet: the Azure portal, Cloud Shell (Bash), or Cloud Shell (PowerShell). The PowerApps portal does not manage Azure VMs.",
+     "Azure CLI is not installed by default on Windows 11; Cloud Shell has it preinstalled."
+    ],
+    "qs": [
+     80,
+     117,
+     90,
+     385,
+     300,
+     383,
+     398,
+     93,
+     105,
+     118
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/cloud-shell/overview"
+   },
+   {
+    "title": "Azure CLI: where it runs",
+    "points": [
+     "Azure CLI (az commands) is cross-platform: install it on Windows, macOS, or Linux.",
+     "On Windows you can run az from Command Prompt or Windows PowerShell (or Windows Terminal). Tools like Firewall or Network and Sharing Center are unrelated.",
+     "Azure CLI and Azure PowerShell both run on Windows, Linux, and macOS; the Azure portal works in any browser.",
+     "So a Windows 10, Ubuntu, or macOS computer can use the Azure CLI, Azure PowerShell, and the portal."
+    ],
+    "qs": [
+     94,
+     95,
+     116,
+     96
+    ]
+   },
+   {
+    "title": "Azure PowerShell: running PowerShell scripts",
+    "points": [
+     "Azure PowerShell (the Az module) manages Azure with PowerShell cmdlets and is cross-platform: Windows, macOS, and Linux.",
+     "To run a PowerShell script that creates resources you need PowerShell with the Az module installed, or Cloud Shell (PowerShell) from a browser.",
+     "Having only Azure CLI tools installed does not let you run PowerShell scripts; CLI uses az commands.",
+     "The Az module needs a supported PowerShell version (Windows PowerShell 5.1 or PowerShell 7.x). Old PowerShell Core 6.0 is out of support.",
+     "Valid hosts: Windows with the Az module, Chrome OS using Cloud Shell, or macOS/Linux with a supported PowerShell and Az."
+    ],
+    "qs": [
+     71,
+     72,
+     74,
+     101,
+     371,
+     115
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/cloud-shell/overview"
+   }
+  ]
+ },
+ {
+  "skill": "azure-arc",
+  "sections": [
+   {
+    "title": "Azure Arc projects non-Azure resources",
+    "points": [
+     "Azure Arc extends Azure Resource Manager to resources outside Azure: you project them into Azure and manage them like Azure resources.",
+     "On-premises Windows Server and Linux servers (physical or virtual) can be managed from the Azure portal by connecting them to Arc.",
+     "Azure Arc is the answer for a unified way to project and manage non-Azure resources in ARM.",
+     "Not Arc: Azure AD Connect syncs identities; Azure Migrate assesses and moves workloads; Front Door is a web traffic service; AKS runs Kubernetes in Azure."
+    ],
+    "qs": [
+     122,
+     349,
+     360
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-arc/overview"
+   },
+   {
+    "title": "Arc for hybrid and multicloud governance",
+    "points": [
+     "Arc supports servers, Kubernetes clusters, and data services (SQL Server, PostgreSQL) hosted on-premises, at the edge, or in other clouds.",
+     "It applies Azure management and governance (Azure Policy, Azure Monitor, RBAC) consistently across hybrid and multicloud environments.",
+     "Arc-enabled Kubernetes can manage clusters at scale, and third-party or non-Azure databases can be managed as Arc-enabled data services.",
+     "Azure Policy defines rules; Arc is what extends compliance and monitoring reach to resources outside Azure."
+    ],
+    "qs": [
+     365,
+     366
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-arc/overview"
+   }
+  ]
+ },
+ {
+  "skill": "infrastructure-as-code-iac",
+  "sections": [
+   {
+    "title": "Azure DevTest Labs",
+    "points": [
+     "DevTest Labs lets teams quickly create and remove environments (VMs) from ARM templates, with policies, quotas, and auto-shutdown to control cost.",
+     "It minimizes admin effort for developers who repeatedly deploy and delete many VMs.",
+     "Scale sets: autoscale identical VMs. Reserved VM Instances: discounted committed-use pricing. Azure Virtual Desktop: hosted desktops."
+    ],
+    "qs": [
+     91
+    ]
+   },
+   {
+    "title": "Azure DevOps services: Repos",
+    "points": [
+     "Azure DevOps is a set of development services: Repos, Pipelines, Boards, Test Plans, and Artifacts.",
+     "Azure Repos: Git (and TFVC) version control tools to manage code.",
+     "Azure Pipelines: CI/CD builds and deployments. Azure Boards: work tracking.",
+     "Infrastructure as code (templates, scripts) is stored and versioned in source control such as Repos."
+    ],
+    "qs": [
+     126
+    ]
+   }
+  ]
+ },
+ {
+  "skill": "azure-resource-manager-arm-and-arm-templ",
+  "sections": [
+   {
+    "title": "ARM templates: repeatable deployments",
+    "points": [
+     "ARM templates are declarative JSON files that define infrastructure; this is infrastructure as code.",
+     "One template can define many resources and be deployed repeatedly with the same result, so each resource does not need its own template.",
+     "Deploy templates through the Azure portal, Azure CLI, Azure PowerShell, or REST API.",
+     "For identical resources across business units, use ARM templates. Management groups organize subscriptions; API Management publishes APIs; scale sets scale VMs.",
+     "Resource groups are logical containers; Azure Policy enforces rules on what can be deployed. Neither deploys resources from a definition."
+    ],
+    "qs": [
+     66,
+     77,
+     88,
+     98,
+     106,
+     328,
+     332,
+     363
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/overview"
+   },
+   {
+    "title": "ARM as the management layer and APIs",
+    "points": [
+     "Azure Resource Manager is the deployment and management service for Azure. Every tool (portal, CLI, PowerShell, SDKs) calls the ARM REST APIs.",
+     "A desktop application interacts with Azure and manages resources by calling APIs (REST/SDKs).",
+     "Templates describe what to deploy; CLI and Cloud Shell are tools that call the APIs."
+    ],
+    "qs": [
+     354
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview"
+   }
+  ]
+ },
+ {
+  "skill": "azure-advisor",
+  "sections": [
+   {
+    "title": "What Azure Advisor does",
+    "points": [
+     "Advisor is a free personalized cloud consultant: it analyzes your resource configuration and usage and recommends best practices.",
+     "Recommendation categories: Reliability, Security, Operational excellence, Performance, and Cost.",
+     "It covers resources across multiple subscriptions and can alert you to new recommendations.",
+     "It does not estimate costs of a planned solution (pricing calculator), assess on-premises migration (Azure Migrate), or integrate AD (Azure AD Connect).",
+     "Advisor does not list backed-up VMs, configure VM network settings, or set a deadline for acting; acting on security advice improves your secure score."
+    ],
+    "qs": [
+     263,
+     299,
+     92,
+     346,
+     396,
+     86
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/advisor/advisor-overview"
+   },
+   {
+    "title": "Advisor cost recommendations",
+    "points": [
+     "Advisor identifies underutilized or idle resources, such as VMs with low CPU use, and suggests resizing, shutting down, or buying reservations.",
+     "Use Advisor to get recommendations that reduce Azure costs.",
+     "Cost Management + Billing analyzes spending and budgets. The pricing calculator estimates new deployments. Reservations are a discount, not an analyzer.",
+     "Service Health reports Azure incidents, not savings."
+    ],
+    "qs": [
+     108,
+     409,
+     417
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/advisor/advisor-overview"
+   },
+   {
+    "title": "Advisor versus related services",
+    "points": [
+     "Azure Advisor: recommendations to improve an environment. Azure Monitor: health and performance data. Application Insights: monitors web apps.",
+     "Azure DevOps: integrated code deployment and planning. Azure Cognitive Services (AI services): prebuilt AI APIs.",
+     "In the portal, use the Advisor blade for security recommendations and the Monitor blade for health of services."
+    ],
+    "qs": [
+     76,
+     407
+    ]
+   }
+  ]
+ },
+ {
+  "skill": "azure-service-health",
+  "sections": [
+   {
+    "title": "Azure Service Health scope",
+    "points": [
+     "Azure Service Health gives a personalized view of the health of the Azure services, regions, and resources you use.",
+     "It covers service issues, planned maintenance, and health advisories, and sits alongside Azure status (global) and Resource health (individual resources).",
+     "You can create service health alerts to be notified of incidents and planned maintenance.",
+     "It reports and notifies; it cannot prevent a service failure.",
+     "Azure Advisor gives recommendations; Azure Monitor gives telemetry; neither is the planned maintenance notification service."
+    ],
+    "qs": [
+     338,
+     375,
+     28,
+     73
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/service-health/overview"
+   },
+   {
+    "title": "Finding health notifications in the portal",
+    "points": [
+     "In the portal, Service Health is reached from Help + support and from Azure Monitor.",
+     "Use it to view planned maintenance events and service failure notifications that can affect your subscription.",
+     "For a VM in a region, check Service Health (under Monitor) for outages in that region and service."
+    ],
+    "qs": [
+     75,
+     128
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/service-health/overview"
+   }
+  ]
+ },
+ {
+  "skill": "azure-monitor-log-analytics-alerts-appli",
+  "sections": [
+   {
+    "title": "Azure Monitor as the central data platform",
+    "points": [
+     "Azure Monitor collects, analyzes, and acts on telemetry from Azure, on-premises, and other clouds, across multiple subscriptions.",
+     "Monitor data (metrics and logs) is stored; log data goes to a Log Analytics workspace.",
+     "Log Analytics is the tool where you run Kusto (KQL) queries to compare events across many resources.",
+     "Azure AD activity logs can be routed to Azure Monitor. Azure Monitor integrates with Application Insights and Log Analytics.",
+     "Event Hubs streams events, Stream Analytics processes streams, Service Health is health reporting; they are not the monitoring repository."
+    ],
+    "qs": [
+     21,
+     368,
+     333,
+     358,
+     192
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-monitor/overview"
+   },
+   {
+    "title": "Azure Monitor alerts",
+    "points": [
+     "Alerts notify you or run automation when a condition is met on metrics, logs (including Log Analytics workspace data), or activity log events.",
+     "For example, an activity log alert can fire when an administrator stops a VM.",
+     "Alerts use action groups to send notifications such as email, SMS, voice, or push and to trigger webhooks, runbooks, and Logic Apps.",
+     "Azure Monitor can monitor on-premises computers, not only Azure VMs."
+    ],
+    "qs": [
+     87,
+     125
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-overview"
+   },
+   {
+    "title": "Application Insights",
+    "points": [
+     "Application Insights is an Azure Monitor feature for application performance management.",
+     "Use it for web apps: page load times in the browser, request rates, response times, failures, and dependencies.",
+     "Log Analytics queries log data, Network Watcher diagnoses networks, and alerts only notify."
+    ],
+    "qs": [
+     64,
+     352
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview"
+   },
+   {
+    "title": "Activity log: who did what",
+    "points": [
+     "The Azure activity log records subscription-level events: who did what, and when, for write operations such as stopping a VM.",
+     "Use it to find which user turned off a VM; it keeps data for a limited time (90 days by default)."
+    ],
+    "qs": [
+     131
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/activity-log"
+   }
+  ]
+ },
+ {
+  "skill": "slas-and-composite-slas",
+  "sections": [
+   {
+    "title": "What an SLA guarantees",
+    "points": [
+     "An Azure SLA is a formal Microsoft commitment to performance standards, mainly uptime (availability), not features, bandwidth, or performance.",
+     "Monthly uptime % = (Maximum Available Minutes - Downtime Minutes) / Maximum Available Minutes x 100.",
+     "If the SLA is not met, you receive service credits for that service against your bill, not a refund of other services.",
+     "Azure SLAs vary by service and configuration; most paid services start at 99.9%. Microsoft Entra ID Premium P2 is covered at 99.9%, whereas Free has no SLA.",
+     "Services in preview are excluded from SLAs."
+    ],
+    "qs": [
+     230,
+     334,
+     262,
+     369,
+     259,
+     290,
+     298
+    ]
+   },
+   {
+    "title": "Composite SLAs",
+    "points": [
+     "A composite SLA covers an application that depends on multiple services. Multiply the individual SLAs together.",
+     "Example: 99.95% x 99.99% = 99.94%. 99.9% x 99.99% = 99.89%.",
+     "Do not use the minimum, maximum, or divide. Chaining dependencies lowers the composite.",
+     "Redundant paths (for example, resources in multiple regions) can raise the effective SLA."
+    ],
+    "qs": [
+     248,
+     266
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/reliability/availability-zones-overview"
+   },
+   {
+    "title": "Raising availability for a VM workload",
+    "points": [
+     "VM SLAs rise with redundancy: a single VM with premium storage 99.9%, availability sets 99.95%, two or more VMs across availability zones 99.99%.",
+     "To reach 99.99%, deploy at least two VMs spread across two or more availability zones; one zone or one VM is not enough.",
+     "Deploying to multiple regions can increase guaranteed uptime; buying multiple subscriptions does not."
+    ],
+    "qs": [
+     99,
+     111,
+     249
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/virtual-machines/availability"
+   }
+  ]
+ },
+ {
+  "skill": "service-lifecycle-preview-and-general-av",
+  "sections": [
+   {
+    "title": "Private preview, public preview, GA",
+    "points": [
+     "Typical lifecycle: private preview, public preview, general availability (GA).",
+     "Private preview: invitation only for selected customers. Public preview: available to any customer with an Azure subscription. GA: released to all customers.",
+     "Preview services are visible in the regular portal and can be managed with portal, CLI, and PowerShell; the portal labels previews.",
+     "Preview pricing is often discounted; GA is billed at normal rates, so the price does not drop at GA.",
+     "After GA, services continue to receive new features, and existing preview resources generally need not be recreated."
+    ],
+    "qs": [
+     232,
+     237,
+     245,
+     254
+    ]
+   },
+   {
+    "title": "Preview terms: SLA and support",
+    "points": [
+     "Public preview services are excluded from SLAs; each preview defines its own terms and support.",
+     "There is no standard SLA percentage for previews.",
+     "Previews can technically be used in production but this is not recommended, because there is no SLA guarantee.",
+     "Private previews do not require a separate portal."
+    ],
+    "qs": [
+     269,
+     275,
+     280
+    ]
+   },
+   {
+    "title": "Modern Lifecycle Policy",
+    "points": [
+     "The Modern Lifecycle Policy applies to continuously serviced products and services.",
+     "If there is no successor, Microsoft gives at least 12 months' notice before ending support (excluding free services and previews).",
+     "There is no fixed five-year mainstream support term under this policy (that is the Fixed Policy)."
+    ],
+    "qs": [
+     250,
+     283
+    ]
+   }
+  ]
+ },
+ {
+  "skill": "azure-support-plans",
+  "sections": [
+   {
+    "title": "Support plan tiers",
+    "points": [
+     "Basic: included with all subscriptions; 24/7 billing and subscription support, docs, forums, Advisor, and Service Health.",
+     "Developer: business-hours technical support by email. Standard: 24/7 technical support by phone and email.",
+     "Professional Direct: Standard-level support plus architectural guidance. Premier: highest tier for enterprise customers with an Enterprise Agreement.",
+     "An Azure free account has the Basic plan. Community forums are open to everyone, not only pay-as-you-go.",
+     "Support requests can be opened under every plan, including Basic (nontechnical for Basic); the plan decides the support type and response."
+    ],
+    "qs": [
+     1,
+     293,
+     282,
+     292
+    ]
+   },
+   {
+    "title": "Phone and email access to engineers",
+    "points": [
+     "Basic has no technical support. Developer has email only, during business hours.",
+     "Standard, Professional Direct, and Premier include phone and email access to support engineers 24/7.",
+     "The lowest-cost plan with 24/7 phone access to engineers is Standard."
+    ],
+    "qs": [
+     233,
+     234,
+     235,
+     240,
+     297
+    ]
+   },
+   {
+    "title": "Architectural guidance",
+    "points": [
+     "Professional Direct includes architecture support and guidance on workload design.",
+     "It is the lowest-cost plan offering this; Premier costs more, and Standard/Developer lack it."
+    ],
+    "qs": [
+     219,
+     236
+    ]
+   },
+   {
+    "title": "Opening requests and quota increases",
+    "points": [
+     "Create a support request in the Azure portal, from Help + support, or from a resource's Support + troubleshooting menu.",
+     "Quota increases are also requested via Help + support (new support request, quota issue type).",
+     "support.microsoft.com is not where Azure support requests are created."
+    ],
+    "qs": [
+     251,
+     294
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/azure-portal/supportability/how-to-create-azure-support-request"
+   }
+  ]
+ },
+ {
+  "skill": "retired-or-renamed-services-blueprints-a",
+  "sections": [
+   {
+    "title": "Azure Germany",
+    "points": [
+     "Azure Germany was a separate sovereign instance of Azure in German datacenters for data residency.",
+     "It was available to eligible customers and partners globally, not only German residents or German-registered enterprises.",
+     "The service has been retired in favor of Azure regions in Germany."
+    ],
+    "qs": [
+     180
+    ]
+   },
+   {
+    "title": "Azure Blueprints",
+    "points": [
+     "A blueprint packages artifacts into a repeatable definition: ARM templates, Azure Policy assignments, role assignments (RBAC), and resource groups.",
+     "You assign a blueprint to a subscription, not to a resource group.",
+     "Blueprint resource locks (Read Only or Do Not Delete) are enforced by the assignment and re-applied, even if someone removes the lock manually.",
+     "Azure Blueprints (Preview) is scheduled to be retired on January 31, 2027."
+    ],
+    "qs": [
+     222,
+     330
+    ],
+    "link": "https://learn.microsoft.com/en-us/azure/governance/blueprints/overview"
+   }
+  ]
+ }
+]
