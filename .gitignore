@@ -2,3 +2,9 @@ node_modules/
 .DS_Store
 .claude/settings.local.json
 __pycache__/
+
+# Third-party exam question data — not redistributed (see README)
+web/data/raw/
+web/data/convert/out/batch-*.json
+web/img/q/
+mobile/assets/q/

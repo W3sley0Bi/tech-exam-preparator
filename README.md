@@ -31,3 +31,14 @@ cd mobile && npm run sync-data
 - Logic (ported 1:1 from `web/app.js`): `mobile/lib/logic/*`, store `mobile/lib/store.ts`
 - Mascot + icon source: `mobile/design/nimbus.py` (regenerates `icon.svg`, splash)
 - Architecture contract the agents built against: `mobile/design/CONTRACT.md`
+
+## Question data
+
+Exam questions are **not included** — they are third-party content and not covered by this repo's license.
+`web/data/questions.js` and `mobile/data/questions.json` ship as empty stubs; the apps run with notes, lessons and cards only.
+To use your own question set, put `page-*.json` files in `web/data/raw/` (format: see `web/build.py`), run
+`python3 web/build.py`, then `cd mobile && npm run sync-data`.
+
+## License
+
+MIT — covers the code and the original notes, lessons and diagrams in this repo.
